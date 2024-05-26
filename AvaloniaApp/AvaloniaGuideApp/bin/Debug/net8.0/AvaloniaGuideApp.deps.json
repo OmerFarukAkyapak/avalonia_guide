@@ -13,7 +13,7 @@
           "Avalonia.Diagnostics": "11.0.10",
           "Avalonia.Fonts.Inter": "11.0.10",
           "Avalonia.ReactiveUI": "11.0.10",
-          "Avalonia.Themes.Fluent": "11.0.10"
+          "FluentAvaloniaUI": "2.0.5"
         },
         "runtime": {
           "AvaloniaGuideApp.dll": {}
@@ -110,6 +110,17 @@
           "lib/net6.0/Avalonia.Controls.DataGrid.dll": {
             "assemblyVersion": "11.0.10.0",
             "fileVersion": "11.0.10.0"
+          }
+        }
+      },
+      "Avalonia.Controls.ItemsRepeater/11.0.4": {
+        "dependencies": {
+          "Avalonia": "11.0.10"
+        },
+        "runtime": {
+          "lib/net6.0/Avalonia.Controls.ItemsRepeater.dll": {
+            "assemblyVersion": "11.0.4.0",
+            "fileVersion": "11.0.4.0"
           }
         }
       },
@@ -223,17 +234,6 @@
           }
         }
       },
-      "Avalonia.Themes.Fluent/11.0.10": {
-        "dependencies": {
-          "Avalonia": "11.0.10"
-        },
-        "runtime": {
-          "lib/net6.0/Avalonia.Themes.Fluent.dll": {
-            "assemblyVersion": "11.0.10.0",
-            "fileVersion": "11.0.10.0"
-          }
-        }
-      },
       "Avalonia.Themes.Simple/11.0.10": {
         "dependencies": {
           "Avalonia": "11.0.10"
@@ -279,6 +279,23 @@
           "lib/net6.0/DynamicData.dll": {
             "assemblyVersion": "7.9.0.0",
             "fileVersion": "7.9.5.54039"
+          }
+        }
+      },
+      "FluentAvaloniaUI/2.0.5": {
+        "dependencies": {
+          "Avalonia": "11.0.10",
+          "Avalonia.Controls.ColorPicker": "11.0.10",
+          "Avalonia.Controls.DataGrid": "11.0.10",
+          "Avalonia.Controls.ItemsRepeater": "11.0.4",
+          "Avalonia.Skia": "11.0.10",
+          "MicroCom.CodeGenerator.MSBuild": "0.11.0",
+          "MicroCom.Runtime": "0.11.0"
+        },
+        "runtime": {
+          "lib/net6.0/FluentAvalonia.dll": {
+            "assemblyVersion": "2.0.5.0",
+            "fileVersion": "2.0.5.0"
           }
         }
       },
@@ -350,6 +367,7 @@
           }
         }
       },
+      "MicroCom.CodeGenerator.MSBuild/0.11.0": {},
       "MicroCom.Runtime/0.11.0": {
         "runtime": {
           "lib/net5.0/MicroCom.Runtime.dll": {
@@ -969,6 +987,13 @@
       "path": "avalonia.controls.datagrid/11.0.10",
       "hashPath": "avalonia.controls.datagrid.11.0.10.nupkg.sha512"
     },
+    "Avalonia.Controls.ItemsRepeater/11.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wpohui8M3BHskyfZuyF1GorDyL4K/ShWBRvi1V2iH7Vj/YqgWTqGtxi8YEmlbOm9SG+hw8bblGAjmk0WvB4o2w==",
+      "path": "avalonia.controls.itemsrepeater/11.0.4",
+      "hashPath": "avalonia.controls.itemsrepeater.11.0.4.nupkg.sha512"
+    },
     "Avalonia.Desktop/11.0.10": {
       "type": "package",
       "serviceable": true,
@@ -1025,13 +1050,6 @@
       "path": "avalonia.skia/11.0.10",
       "hashPath": "avalonia.skia.11.0.10.nupkg.sha512"
     },
-    "Avalonia.Themes.Fluent/11.0.10": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-V7xu7ddtUFwYHb+u3S4he2/PGGUHkeTI66j3PyGTZi0Uz8Ma4prb/Lgz7Qd/vpO4lukxw1G4DmxB1tClNS9qUw==",
-      "path": "avalonia.themes.fluent/11.0.10",
-      "hashPath": "avalonia.themes.fluent.11.0.10.nupkg.sha512"
-    },
     "Avalonia.Themes.Simple/11.0.10": {
       "type": "package",
       "serviceable": true,
@@ -1059,6 +1077,13 @@
       "sha512": "sha512-xFwVha7o3qUtVYxco5p+7Urcztc/m1gmaEUxOG0i7LNe+vfCfyb0ECAsT2FLm3zOPHb0g8s9qVu5LfPKfRNVng==",
       "path": "dynamicdata/7.9.5",
       "hashPath": "dynamicdata.7.9.5.nupkg.sha512"
+    },
+    "FluentAvaloniaUI/2.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-curz95eyIqswA9X95AsZnvfPvtekFJkQGF34iLflhGdgdb2WL8as+O9k1FBddBoBvykCTyNfgva9q1npUsj92A==",
+      "path": "fluentavaloniaui/2.0.5",
+      "hashPath": "fluentavaloniaui.2.0.5.nupkg.sha512"
     },
     "HarfBuzzSharp/7.3.0": {
       "type": "package",
@@ -1094,6 +1119,13 @@
       "sha512": "sha512-ulEewLMk+dNmbmpy15ny/YusI6JNUWqchF080TV2jgfFBXPXjWm767JleDi/S7hp8eDeEN6GYIIxpvNr5fLvIw==",
       "path": "harfbuzzsharp.nativeassets.win32/7.3.0",
       "hashPath": "harfbuzzsharp.nativeassets.win32.7.3.0.nupkg.sha512"
+    },
+    "MicroCom.CodeGenerator.MSBuild/0.11.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CiRuIIvycn7RqT7p72+JdJsw1/No/1nc0Vs45Qkbvkn/uryWU57dGAUaqy9p2trRDvbsRBdQgF1hWLNUpgUSQw==",
+      "path": "microcom.codegenerator.msbuild/0.11.0",
+      "hashPath": "microcom.codegenerator.msbuild.0.11.0.nupkg.sha512"
     },
     "MicroCom.Runtime/0.11.0": {
       "type": "package",

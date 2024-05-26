@@ -2,14 +2,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="AvaloniaGuideApp.App"
              xmlns:local="using:AvaloniaGuideApp"
-             RequestedThemeVariant="Light">
-             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+			 xmlns:sty="using:FluentAvalonia.Styling">
+             <!-- 
+			  RequestedThemeVariant="Light"
+			 "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. 
+			 -->
 
     <Application.DataTemplates>
         <local:ViewLocator/>
     </Application.DataTemplates>
   
     <Application.Styles>
-        <FluentTheme />
+		<sty:FluentAvaloniaTheme />
     </Application.Styles>
 </Application>

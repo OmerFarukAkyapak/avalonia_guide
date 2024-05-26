@@ -72,9 +72,9 @@
               "target": "Package",
               "version": "[11.0.10, )"
             },
-            "Avalonia.Themes.Fluent": {
+            "FluentAvaloniaUI": {
               "target": "Package",
-              "version": "[11.0.10, )"
+              "version": "[2.0.5, )"
             }
           },
           "imports": [

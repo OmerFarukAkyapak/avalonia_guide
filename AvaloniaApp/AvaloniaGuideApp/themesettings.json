@@ -1,0 +1,11 @@
+{
+  "tsAppTheme": "Dark",
+  "tsFlowDirection": 0,
+  "tsUseCustomAccent": true,
+  "tsCustomAccentColor": {
+    "r": 180,
+    "g": 13,
+    "b": 209,
+    "a": 255
+  }
+}

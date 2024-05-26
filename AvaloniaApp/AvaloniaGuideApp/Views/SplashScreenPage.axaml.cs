@@ -1,15 +1,18 @@
-using Avalonia.Controls;
 using Avalonia.Threading;
 using System.Threading.Tasks;
 using System;
+using FluentAvalonia.UI.Windowing;
 
 namespace AvaloniaGuideApp;
 
-public partial class SplashScreenPage : Window
+public partial class SplashScreenPage : AppWindow
 {
     public SplashScreenPage()
     {
         InitializeComponent();
+        CanResize = false;
+        ShowAsDialog = true;
+        TitleBar.Height = 0;
     }
 
     public async Task InitApp()

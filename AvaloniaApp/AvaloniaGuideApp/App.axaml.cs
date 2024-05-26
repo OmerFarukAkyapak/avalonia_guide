@@ -17,6 +17,9 @@ namespace AvaloniaGuideApp
         {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
+                var theme = new ThemeSettingsWindowViewModel();
+                theme.LoadSettings();
+
                 var splashScreen = new SplashScreenPage();
 
                 desktop.MainWindow = splashScreen;

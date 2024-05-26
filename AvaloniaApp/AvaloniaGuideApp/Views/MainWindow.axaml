@@ -15,9 +15,22 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
+	<StackPanel VerticalAlignment="Center" Spacing="10">
+		
+		<Button Name="btnShowSplash" 
+				Content="Show Splash Screen"
+				HorizontalAlignment="Center" 
+				VerticalAlignment="Center"
+				Click="btnShowSplash_Click"/>
+
+		<Button Name="btnThemeSettings"
+				Content="Show Theme Settings Screen"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				Click="btnThemeSettings_Click"/>
+		
+	</StackPanel>
 	
-	<Button Name="btnShowSplash" Content="Show Splash Screen"
-			HorizontalAlignment="Center" VerticalAlignment="Center"
-			Click="btnShowSplash_Click"/>
+	
 
 </Window>

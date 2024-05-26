@@ -15,6 +15,7 @@ C:\Users\faruk\OneDrive\Masaüstü\projects\avalonia ui\avalonia\AvaloniaApp\Ava
 C:\Users\faruk\OneDrive\Masaüstü\projects\avalonia ui\avalonia\AvaloniaApp\AvaloniaGuideApp\bin\Debug\net8.0\Avalonia.dll
 C:\Users\faruk\OneDrive\Masaüstü\projects\avalonia ui\avalonia\AvaloniaApp\AvaloniaGuideApp\bin\Debug\net8.0\Avalonia.Controls.ColorPicker.dll
 C:\Users\faruk\OneDrive\Masaüstü\projects\avalonia ui\avalonia\AvaloniaApp\AvaloniaGuideApp\bin\Debug\net8.0\Avalonia.Controls.DataGrid.dll
+C:\Users\faruk\OneDrive\Masaüstü\projects\avalonia ui\avalonia\AvaloniaApp\AvaloniaGuideApp\bin\Debug\net8.0\Avalonia.Controls.ItemsRepeater.dll
 C:\Users\faruk\OneDrive\Masaüstü\projects\avalonia ui\avalonia\AvaloniaApp\AvaloniaGuideApp\bin\Debug\net8.0\Avalonia.Desktop.dll
 C:\Users\faruk\OneDrive\Masaüstü\projects\avalonia ui\avalonia\AvaloniaApp\AvaloniaGuideApp\bin\Debug\net8.0\Avalonia.Diagnostics.dll
 C:\Users\faruk\OneDrive\Masaüstü\projects\avalonia ui\avalonia\AvaloniaApp\AvaloniaGuideApp\bin\Debug\net8.0\Avalonia.Fonts.Inter.dll
@@ -23,11 +24,11 @@ C:\Users\faruk\OneDrive\Masaüstü\projects\avalonia ui\avalonia\AvaloniaApp\Ava
 C:\Users\faruk\OneDrive\Masaüstü\projects\avalonia ui\avalonia\AvaloniaApp\AvaloniaGuideApp\bin\Debug\net8.0\Avalonia.ReactiveUI.dll
 C:\Users\faruk\OneDrive\Masaüstü\projects\avalonia ui\avalonia\AvaloniaApp\AvaloniaGuideApp\bin\Debug\net8.0\Avalonia.Remote.Protocol.dll
 C:\Users\faruk\OneDrive\Masaüstü\projects\avalonia ui\avalonia\AvaloniaApp\AvaloniaGuideApp\bin\Debug\net8.0\Avalonia.Skia.dll
-C:\Users\faruk\OneDrive\Masaüstü\projects\avalonia ui\avalonia\AvaloniaApp\AvaloniaGuideApp\bin\Debug\net8.0\Avalonia.Themes.Fluent.dll
 C:\Users\faruk\OneDrive\Masaüstü\projects\avalonia ui\avalonia\AvaloniaApp\AvaloniaGuideApp\bin\Debug\net8.0\Avalonia.Themes.Simple.dll
 C:\Users\faruk\OneDrive\Masaüstü\projects\avalonia ui\avalonia\AvaloniaApp\AvaloniaGuideApp\bin\Debug\net8.0\Avalonia.Win32.dll
 C:\Users\faruk\OneDrive\Masaüstü\projects\avalonia ui\avalonia\AvaloniaApp\AvaloniaGuideApp\bin\Debug\net8.0\Avalonia.X11.dll
 C:\Users\faruk\OneDrive\Masaüstü\projects\avalonia ui\avalonia\AvaloniaApp\AvaloniaGuideApp\bin\Debug\net8.0\DynamicData.dll
+C:\Users\faruk\OneDrive\Masaüstü\projects\avalonia ui\avalonia\AvaloniaApp\AvaloniaGuideApp\bin\Debug\net8.0\FluentAvalonia.dll
 C:\Users\faruk\OneDrive\Masaüstü\projects\avalonia ui\avalonia\AvaloniaApp\AvaloniaGuideApp\bin\Debug\net8.0\HarfBuzzSharp.dll
 C:\Users\faruk\OneDrive\Masaüstü\projects\avalonia ui\avalonia\AvaloniaApp\AvaloniaGuideApp\bin\Debug\net8.0\MicroCom.Runtime.dll
 C:\Users\faruk\OneDrive\Masaüstü\projects\avalonia ui\avalonia\AvaloniaApp\AvaloniaGuideApp\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll

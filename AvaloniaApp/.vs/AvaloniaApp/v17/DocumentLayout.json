@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|c:\\users\\faruk\\onedrive\\masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\avaloniaapp\\avaloniaguideapp\\views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|solutionrelative:avaloniaguideapp\\views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|c:\\users\\faruk\\onedrive\\masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\avaloniaapp\\avaloniaguideapp\\app.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|solutionrelative:avaloniaguideapp\\app.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|c:\\users\\faruk\\onedrive\\masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\avaloniaapp\\avaloniaguideapp\\views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|solutionrelative:avaloniaguideapp\\views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|c:\\users\\faruk\\onedrive\\masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\avaloniaapp\\avaloniaguideapp\\views\\splashscreenpage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|solutionrelative:avaloniaguideapp\\views\\splashscreenpage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|c:\\users\\faruk\\onedrive\\masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\avaloniaapp\\avaloniaguideapp\\views\\splashscreenpage.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
       "RelativeMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|solutionrelative:avaloniaguideapp\\views\\splashscreenpage.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|c:\\users\\faruk\\onedrive\\masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\avaloniaapp\\avaloniaguideapp\\views\\themesettingswindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|solutionrelative:avaloniaguideapp\\views\\themesettingswindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|c:\\users\\faruk\\onedrive\\masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\avaloniaapp\\avaloniaguideapp\\views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|solutionrelative:avaloniaguideapp\\views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|c:\\users\\faruk\\onedrive\\masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\avaloniaapp\\avaloniaguideapp\\views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|solutionrelative:avaloniaguideapp\\views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|c:\\users\\faruk\\onedrive\\masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\avaloniaapp\\avaloniaguideapp\\app.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|solutionrelative:avaloniaguideapp\\app.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,69 +34,81 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.axaml",
-              "DocumentMoniker": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\MainWindow.axaml",
-              "RelativeDocumentMoniker": "AvaloniaGuideApp\\Views\\MainWindow.axaml",
-              "ToolTip": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\MainWindow.axaml",
-              "RelativeToolTip": "AvaloniaGuideApp\\Views\\MainWindow.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-14T12:03:04.47Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainWindow.axaml.cs",
-              "DocumentMoniker": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\MainWindow.axaml.cs",
-              "RelativeDocumentMoniker": "AvaloniaGuideApp\\Views\\MainWindow.axaml.cs",
-              "ToolTip": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\MainWindow.axaml.cs",
-              "RelativeToolTip": "AvaloniaGuideApp\\Views\\MainWindow.axaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAhAAAA",
+              "Title": "SplashScreenPage.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\SplashScreenPage.axaml.cs",
+              "RelativeDocumentMoniker": "AvaloniaGuideApp\\Views\\SplashScreenPage.axaml.cs",
+              "ToolTip": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\SplashScreenPage.axaml.cs",
+              "RelativeToolTip": "AvaloniaGuideApp\\Views\\SplashScreenPage.axaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T12:24:30.652Z",
+              "WhenOpened": "2024-05-26T12:14:53.387Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "App.axaml.cs",
-              "DocumentMoniker": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\App.axaml.cs",
-              "RelativeDocumentMoniker": "AvaloniaGuideApp\\App.axaml.cs",
-              "ToolTip": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\App.axaml.cs",
-              "RelativeToolTip": "AvaloniaGuideApp\\App.axaml.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAxwCEAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T12:09:32.448Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "SplashScreenPage.axaml",
               "DocumentMoniker": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\SplashScreenPage.axaml",
               "RelativeDocumentMoniker": "AvaloniaGuideApp\\Views\\SplashScreenPage.axaml",
               "ToolTip": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\SplashScreenPage.axaml",
               "RelativeToolTip": "AvaloniaGuideApp\\Views\\SplashScreenPage.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-14T12:05:15.383Z",
+              "WhenOpened": "2024-05-26T12:14:46.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ThemeSettingsWindow.axaml",
+              "DocumentMoniker": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\ThemeSettingsWindow.axaml",
+              "RelativeDocumentMoniker": "AvaloniaGuideApp\\Views\\ThemeSettingsWindow.axaml",
+              "ToolTip": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\ThemeSettingsWindow.axaml",
+              "RelativeToolTip": "AvaloniaGuideApp\\Views\\ThemeSettingsWindow.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-26T12:13:25.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\App.axaml.cs",
+              "RelativeDocumentMoniker": "AvaloniaGuideApp\\App.axaml.cs",
+              "ToolTip": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\App.axaml.cs",
+              "RelativeToolTip": "AvaloniaGuideApp\\App.axaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T12:12:21.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\MainWindow.axaml.cs",
+              "RelativeDocumentMoniker": "AvaloniaGuideApp\\Views\\MainWindow.axaml.cs",
+              "ToolTip": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\MainWindow.axaml.cs",
+              "RelativeToolTip": "AvaloniaGuideApp\\Views\\MainWindow.axaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T12:11:45.996Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "SplashScreenPage.axaml.cs",
-              "DocumentMoniker": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\SplashScreenPage.axaml.cs",
-              "RelativeDocumentMoniker": "AvaloniaGuideApp\\Views\\SplashScreenPage.axaml.cs",
-              "ToolTip": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\SplashScreenPage.axaml.cs",
-              "RelativeToolTip": "AvaloniaGuideApp\\Views\\SplashScreenPage.axaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T12:05:14.372Z",
+              "Title": "MainWindow.axaml",
+              "DocumentMoniker": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\MainWindow.axaml",
+              "RelativeDocumentMoniker": "AvaloniaGuideApp\\Views\\MainWindow.axaml",
+              "ToolTip": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\MainWindow.axaml",
+              "RelativeToolTip": "AvaloniaGuideApp\\Views\\MainWindow.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-26T12:10:10.746Z",
               "EditorCaption": ""
             }
           ]
