@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\faruk\\OneDrive\\Masaüstü\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\AvaloniaGuideApp.csproj": {}
+    "C:\\Users\\faruk\\OneDrive\\Masaüstü\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\AvaloniaGuideApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\faruk\\OneDrive\\Masaüstü\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\AvaloniaGuideApp.csproj": {
+    "C:\\Users\\faruk\\OneDrive\\Masaüstü\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\AvaloniaGuideApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\faruk\\OneDrive\\Masaüstü\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\AvaloniaGuideApp.csproj",
+        "projectUniqueName": "C:\\Users\\faruk\\OneDrive\\Masaüstü\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\AvaloniaGuideApp.csproj",
         "projectName": "AvaloniaGuideApp",
-        "projectPath": "C:\\Users\\faruk\\OneDrive\\Masaüstü\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\AvaloniaGuideApp.csproj",
+        "projectPath": "C:\\Users\\faruk\\OneDrive\\Masaüstü\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\AvaloniaGuideApp.csproj",
         "packagesPath": "C:\\Users\\faruk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\faruk\\OneDrive\\Masaüstü\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\obj\\",
+        "outputPath": "C:\\Users\\faruk\\OneDrive\\Masaüstü\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",

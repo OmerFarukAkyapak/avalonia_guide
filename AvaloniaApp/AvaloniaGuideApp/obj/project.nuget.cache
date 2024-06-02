@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dxoisyigZw9vBibfL7z6LjToNimKVSduKNpLH5XBwMIv72ih7YiQzLEbLWENLya++oVS6ebqTCCcGvfdeQoSNw==",
+  "dgSpecHash": "q8og089CCq0Ad2uDbRgyJD/fjZmn9C8vXv1A3XNiG9iGHQKGGqFHS3uNqr0RhBvQYeea0YZ6IimQm5LkKU255w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\faruk\\OneDrive\\Masaüstü\\projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\AvaloniaGuideApp.csproj",
+  "projectFilePath": "C:\\Users\\faruk\\OneDrive\\Masaüstü\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\AvaloniaGuideApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\faruk\\.nuget\\packages\\avalonia\\11.0.10\\avalonia.11.0.10.nupkg.sha512",
     "C:\\Users\\faruk\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.0.2023020321\\avalonia.angle.windows.natives.2.1.0.2023020321.nupkg.sha512",

@@ -13,18 +13,21 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AvaloniaGuideApp
-build_property.ProjectDir = C:\Users\faruk\OneDrive\Masaüstü\projects\avalonia ui\avalonia\AvaloniaApp\AvaloniaGuideApp\
+build_property.ProjectDir = C:\Users\faruk\OneDrive\Masaüstü\Projects\avalonia ui\avalonia\AvaloniaApp\AvaloniaGuideApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[C:/Users/faruk/OneDrive/Masaüstü/projects/avalonia ui/avalonia/AvaloniaApp/AvaloniaGuideApp/App.axaml]
+[C:/Users/faruk/OneDrive/Masaüstü/Projects/avalonia ui/avalonia/AvaloniaApp/AvaloniaGuideApp/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/faruk/OneDrive/Masaüstü/projects/avalonia ui/avalonia/AvaloniaApp/AvaloniaGuideApp/Views/MainWindow.axaml]
+[C:/Users/faruk/OneDrive/Masaüstü/Projects/avalonia ui/avalonia/AvaloniaApp/AvaloniaGuideApp/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/faruk/OneDrive/Masaüstü/projects/avalonia ui/avalonia/AvaloniaApp/AvaloniaGuideApp/Views/SplashScreenPage.axaml]
+[C:/Users/faruk/OneDrive/Masaüstü/Projects/avalonia ui/avalonia/AvaloniaApp/AvaloniaGuideApp/Views/SplashScreenPage.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/faruk/OneDrive/Masaüstü/projects/avalonia ui/avalonia/AvaloniaApp/AvaloniaGuideApp/Views/ThemeSettingsWindow.axaml]
+[C:/Users/faruk/OneDrive/Masaüstü/Projects/avalonia ui/avalonia/AvaloniaApp/AvaloniaGuideApp/Views/TextInputDialog.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/faruk/OneDrive/Masaüstü/Projects/avalonia ui/avalonia/AvaloniaApp/AvaloniaGuideApp/Views/ThemeSettingsWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

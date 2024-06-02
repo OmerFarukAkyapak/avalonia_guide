@@ -1,0 +1,61 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="475" d:DesignHeight="180"
+		Width="475" Height="180"
+        x:Class="AvaloniaGuideApp.TextInputDialog"
+		Icon="/Assets/avalonia-logo.ico"
+        Title="TextInputDialog"
+		WindowStartupLocation="CenterScreen"
+		ExtendClientAreaToDecorationsHint="True"
+		ExtendClientAreaChromeHints="NoChrome"
+		ExtendClientAreaTitleBarHeightHint="0"
+		KeyDown="Window_KeyDown">
+
+	<Border BorderBrush="Black" BorderThickness="3">
+
+		<Grid RowDefinitions="Auto,Auto,Auto,Auto"
+		  Margin="10">
+
+			<StackPanel Grid.Row="0" Orientation="Horizontal" Spacing="5"
+						Margin="0 0 0 10">
+
+				<Image Source="/Assets/avalonia-logo.ico"
+					   Width="16"
+					   Height="16"/>
+
+				<Label Name="lblTitle" Content="Title"/>
+
+
+			</StackPanel>
+
+			<Label Grid.Row="1"
+				   Name="lbl"
+				   Margin="0 0 0 10"
+				   Content="Value"/>
+
+			<TextBox Grid.Row="2"
+					 Name="txtBox"
+					 Watermark="Type.."/>
+
+			<StackPanel Grid.Row="3"
+						Margin="0 20 0 0"
+						Orientation="Horizontal"
+						HorizontalAlignment="Right">
+
+				<Button Content="OK"
+						Name="btnOK"
+						Click="ButtonOK_Click"
+						Margin="0 0 10 0"/>
+
+				<Button Content="Cancel"
+						Name="btnCancel"
+						Click="ButtonCancel_Click"/>
+
+			</StackPanel>
+
+		</Grid>
+	</Border>
+
+</Window>

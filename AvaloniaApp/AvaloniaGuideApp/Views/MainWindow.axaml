@@ -11,15 +11,15 @@
         Icon="/Assets/avalonia-logo.ico"
         Title="Avalonia Guide Application">
 
-    <Design.DataContext>
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
+	<Design.DataContext>
+		<vm:MainWindowViewModel/>
+	</Design.DataContext>
 
 	<StackPanel VerticalAlignment="Center" Spacing="10">
-		
-		<Button Name="btnShowSplash" 
+
+		<Button Name="btnShowSplash"
 				Content="Show Splash Screen"
-				HorizontalAlignment="Center" 
+				HorizontalAlignment="Center"
 				VerticalAlignment="Center"
 				Click="btnShowSplash_Click"/>
 
@@ -28,9 +28,24 @@
 				HorizontalAlignment="Center"
 				VerticalAlignment="Center"
 				Click="btnThemeSettings_Click"/>
-		
+
+		<StackPanel Orientation="Horizontal"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Center"
+					Spacing="10">
+
+			<Button Name="btnTextInputDialog"
+					Content="Show Text Input Dialog"
+					Click="btnTextInputDialog_Click"/>
+			
+			<TextBox Name="txtTextInputResult"
+					 IsReadOnly="True"
+					 Text="Text Input Result :"/>
+
+		</StackPanel>
+
 	</StackPanel>
-	
-	
+
+
 
 </Window>

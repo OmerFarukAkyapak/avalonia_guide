@@ -24,5 +24,20 @@ namespace AvaloniaGuideApp.Views
             var themeSettings = new ThemeSettingsWindow();
             themeSettings.Show();
         }
+
+        private async void btnTextInputDialog_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            var result = await TextInputDialog.Prompt(
+                parentWindow: this,
+                title: "Text Input Dialog Title",
+                caption: "Caption",
+                isRequired: true
+            );
+
+            if (result != null)
+            {
+                txtTextInputResult.Text = $"Text Input Result : {result}";
+            }
+        }
     }
 }
