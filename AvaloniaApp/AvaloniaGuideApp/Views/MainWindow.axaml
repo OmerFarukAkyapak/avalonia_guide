@@ -3,8 +3,9 @@
         xmlns:vm="using:AvaloniaGuideApp.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-		Width="1200" Height="800"
+        mc:Ignorable="d" 
+		d:DesignWidth="800" Width="800"
+		d:DesignHeight="600" Height="600"
         x:Class="AvaloniaGuideApp.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
 		WindowStartupLocation="CenterOwner"
@@ -29,21 +30,24 @@
 				VerticalAlignment="Center"
 				Click="btnThemeSettings_Click"/>
 
+		<Button Name="btnTextInputDialog"
+				Content="Show Text Input Dialog"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				Click="btnTextInputDialog_Click"/>
+
 		<StackPanel Orientation="Horizontal"
 					HorizontalAlignment="Center"
 					VerticalAlignment="Center"
 					Spacing="10">
 
-			<Button Name="btnTextInputDialog"
-					Content="Show Text Input Dialog"
-					Click="btnTextInputDialog_Click"/>
-			
+			<TextBlock Text="Text Input Result :"
+					   VerticalAlignment="Center"/>
+
 			<TextBox Name="txtTextInputResult"
-					 IsReadOnly="True"
-					 Text="Text Input Result :"/>
+					 IsReadOnly="True"/>
 
 		</StackPanel>
-
 	</StackPanel>
 
 

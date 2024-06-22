@@ -2,8 +2,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="475" d:DesignHeight="180"
-		Width="475" Height="180"
+        mc:Ignorable="d"
+		d:DesignWidth="475" Width="475"
+		d:DesignHeight="180" Height="180"
         x:Class="AvaloniaGuideApp.TextInputDialog"
 		Icon="/Assets/avalonia-logo.ico"
         Title="TextInputDialog"
@@ -11,14 +12,17 @@
 		ExtendClientAreaToDecorationsHint="True"
 		ExtendClientAreaChromeHints="NoChrome"
 		ExtendClientAreaTitleBarHeightHint="0"
+		CanResize="False"
 		KeyDown="Window_KeyDown">
 
 	<Border BorderBrush="Black" BorderThickness="3">
 
 		<Grid RowDefinitions="Auto,Auto,Auto,Auto"
-		  Margin="10">
+			  Margin="10">
 
-			<StackPanel Grid.Row="0" Orientation="Horizontal" Spacing="5"
+			<StackPanel Grid.Row="0"
+						Orientation="Horizontal"
+						Spacing="5"
 						Margin="0 0 0 10">
 
 				<Image Source="/Assets/avalonia-logo.ico"
@@ -26,7 +30,6 @@
 					   Height="16"/>
 
 				<Label Name="lblTitle" Content="Title"/>
-
 
 			</StackPanel>
 

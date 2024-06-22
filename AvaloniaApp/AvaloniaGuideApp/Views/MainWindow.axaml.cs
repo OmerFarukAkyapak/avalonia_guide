@@ -36,7 +36,7 @@ namespace AvaloniaGuideApp.Views
 
             if (result != null)
             {
-                txtTextInputResult.Text = $"Text Input Result : {result}";
+                txtTextInputResult.Text = result;
             }
         }
     }

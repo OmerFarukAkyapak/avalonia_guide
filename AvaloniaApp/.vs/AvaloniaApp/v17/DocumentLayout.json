@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|c:\\users\\faruk\\onedrive\\masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\avaloniaapp\\avaloniaguideapp\\views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|solutionrelative:avaloniaguideapp\\views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|c:\\users\\faruk\\onedrive\\masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\avaloniaapp\\avaloniaguideapp\\views\\textinputdialog.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|solutionrelative:avaloniaguideapp\\views\\textinputdialog.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|c:\\users\\faruk\\onedrive\\masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\avaloniaapp\\avaloniaguideapp\\views\\textinputdialog.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|solutionrelative:avaloniaguideapp\\views\\textinputdialog.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|c:\\users\\faruk\\onedrive\\masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\avaloniaapp\\avaloniaguideapp\\views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
       "RelativeMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|solutionrelative:avaloniaguideapp\\views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|c:\\users\\faruk\\onedrive\\masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\avaloniaapp\\avaloniaguideapp\\views\\textinputdialog.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|solutionrelative:avaloniaguideapp\\views\\textinputdialog.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+      "AbsoluteMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|c:\\users\\faruk\\onedrive\\masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\avaloniaapp\\avaloniaguideapp\\views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|solutionrelative:avaloniaguideapp\\views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +26,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "TextInputDialog.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\TextInputDialog.axaml.cs",
+              "RelativeDocumentMoniker": "AvaloniaGuideApp\\Views\\TextInputDialog.axaml.cs",
+              "ToolTip": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\TextInputDialog.axaml.cs",
+              "RelativeToolTip": "AvaloniaGuideApp\\Views\\TextInputDialog.axaml.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAgwCoAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-22T12:02:47.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "TextInputDialog.axaml",
               "DocumentMoniker": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\TextInputDialog.axaml",
               "RelativeDocumentMoniker": "AvaloniaGuideApp\\Views\\TextInputDialog.axaml",
@@ -38,20 +55,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "MainWindow.axaml.cs",
               "DocumentMoniker": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\MainWindow.axaml.cs",
               "RelativeDocumentMoniker": "AvaloniaGuideApp\\Views\\MainWindow.axaml.cs",
               "ToolTip": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\MainWindow.axaml.cs",
               "RelativeToolTip": "AvaloniaGuideApp\\Views\\MainWindow.axaml.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAgwCYAAAAnAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-02T17:23:43.355Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainWindow.axaml",
               "DocumentMoniker": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\MainWindow.axaml",
               "RelativeDocumentMoniker": "AvaloniaGuideApp\\Views\\MainWindow.axaml",
