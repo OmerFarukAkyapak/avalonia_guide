@@ -5,9 +5,9 @@ using FluentAvalonia.UI.Windowing;
 
 namespace AvaloniaGuideApp;
 
-public partial class SplashScreenPage : AppWindow
+public partial class SplashScreenWindow : AppWindow
 {
-    public SplashScreenPage()
+    public SplashScreenWindow()
     {
         InitializeComponent();
         CanResize = false;

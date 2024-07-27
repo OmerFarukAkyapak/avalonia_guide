@@ -4,7 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="500"
         Width="500" Height="500"
-        x:Class="AvaloniaGuideApp.SplashScreenPage"
+        x:Class="AvaloniaGuideApp.SplashScreenWindow"
         Topmost="True"
 		WindowStartupLocation="CenterOwner">
 

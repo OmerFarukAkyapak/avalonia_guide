@@ -12,7 +12,7 @@ namespace AvaloniaGuideApp.Views
 
         private async void btnShowSplash_Click(object? sender, RoutedEventArgs e)
         {
-            var splashScreen = new SplashScreenPage();
+            var splashScreen = new SplashScreenWindow();
             splashScreen.Show();
 
             await splashScreen.InitApp();

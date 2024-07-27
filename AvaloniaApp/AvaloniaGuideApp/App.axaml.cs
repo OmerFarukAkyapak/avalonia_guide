@@ -20,7 +20,7 @@ namespace AvaloniaGuideApp
                 var theme = new ThemeSettingsWindowViewModel();
                 theme.LoadSettings();
 
-                var splashScreen = new SplashScreenPage();
+                var splashScreen = new SplashScreenWindow();
 
                 desktop.MainWindow = splashScreen;
                 splashScreen.Show();
