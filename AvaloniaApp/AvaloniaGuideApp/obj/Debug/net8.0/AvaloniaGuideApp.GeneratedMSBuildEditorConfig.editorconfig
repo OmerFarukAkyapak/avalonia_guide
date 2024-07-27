@@ -20,6 +20,9 @@ build_property.EnableGeneratedComInterfaceComImportInterop =
 [C:/Users/faruk/OneDrive/Masaüstü/Projects/avalonia ui/avalonia/AvaloniaApp/AvaloniaGuideApp/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/faruk/OneDrive/Masaüstü/Projects/avalonia ui/avalonia/AvaloniaApp/AvaloniaGuideApp/Views/ConverterUsageWithDataGridWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/faruk/OneDrive/Masaüstü/Projects/avalonia ui/avalonia/AvaloniaApp/AvaloniaGuideApp/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

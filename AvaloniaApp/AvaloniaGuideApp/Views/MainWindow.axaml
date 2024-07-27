@@ -48,6 +48,12 @@
 					 IsReadOnly="True"/>
 
 		</StackPanel>
+
+		<Button Name="btnShowConverterUsage"
+				Content="Show Converter Usage with DataGrid"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				Click="btnShowConverterUsage_Click"/>
 	</StackPanel>
 
 

@@ -39,5 +39,11 @@ namespace AvaloniaGuideApp.Views
                 txtTextInputResult.Text = result;
             }
         }
+
+        private void btnShowConverterUsage_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            var converterUsageWithDataGrid = new ConverterUsageWithDataGridWindow();
+            converterUsageWithDataGrid.Show();
+        }
     }
 }
