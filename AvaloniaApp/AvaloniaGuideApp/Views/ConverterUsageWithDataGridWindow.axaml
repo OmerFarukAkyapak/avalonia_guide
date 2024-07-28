@@ -11,6 +11,7 @@
         x:Class="AvaloniaGuideApp.ConverterUsageWithDataGridWindow"
         x:DataType="vm:ConverterUsageWithDataGridWindowViewModel"
         Title="Converter Usage With DataGrid"
+		Icon="/Assets/avalonia-logo.ico"
 		WindowStartupLocation="CenterOwner">
 
 	<Window.Resources>
@@ -26,21 +27,21 @@
 					  ItemsSource="{Binding People}"
 					  AutoGenerateColumns="False">
 				<DataGrid.Columns>
-					<DataGridCheckBoxColumn Header="Selected" Binding="{Binding IsSelected}" Width="Auto"/>
+					<DataGridCheckBoxColumn Header="Selected" 
+											Binding="{Binding IsSelected}" 
+											Width="Auto"/>
 
 					<DataGridTextColumn Header="Name"
                                         Width="*"
                                         Binding="{Binding Name}" />
 
 					<DataGridTemplateColumn Header="Sex"
-                                            Width="*">
+                                            Width="*">						
 						<DataGridTemplateColumn.CellTemplate>
 							<DataTemplate>
-
 								<TextBlock Text="{Binding Sex}"
-										  Background="{Binding Sex, Converter={StaticResource SexStatusToBackgroundColorConverter}}"
-										  Padding="5"/>
-
+										   Background="{Binding Sex, Converter={StaticResource SexStatusToBackgroundColorConverter}}"
+										   Padding="5"/>
 							</DataTemplate>
 						</DataGridTemplateColumn.CellTemplate>
 					</DataGridTemplateColumn>
@@ -50,7 +51,7 @@
                                         Binding="{Binding Age}" />
 
 					<DataGridTemplateColumn Header="Is Adult"
-                                            Width="*">
+                                            Width="*">					
 						<DataGridTemplateColumn.CellTemplate>
 							<DataTemplate>
 								<CheckBox IsChecked="{Binding Age, Converter={StaticResource AgeToIsAdultConverter}, Mode=OneWay}"
@@ -69,8 +70,9 @@
 							Spacing="10">
 
 					<TextBox Text="{Binding NewPersonName, Mode=TwoWay}"
-                         Watermark="Name"
-                         Width="200"/>
+							 Watermark="Name"
+							Width="200"/>
+					
 					<ComboBox ItemsSource="{Binding SexTypeList}"
 							  SelectedItem="{Binding SelectedSexType}"/>
 

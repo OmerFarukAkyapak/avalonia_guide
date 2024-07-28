@@ -5,6 +5,7 @@
         mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="500"
         Width="500" Height="500"
         x:Class="AvaloniaGuideApp.SplashScreenWindow"
+		Icon="/Assets/avalonia-logo.ico"
         Topmost="True"
 		WindowStartupLocation="CenterOwner">
 

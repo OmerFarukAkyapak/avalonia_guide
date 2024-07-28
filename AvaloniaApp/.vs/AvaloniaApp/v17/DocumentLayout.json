@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|c:\\users\\faruk\\onedrive\\masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\avaloniaapp\\avaloniaguideapp\\viewmodels\\converterusagewithdatagridwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|solutionrelative:avaloniaguideapp\\viewmodels\\converterusagewithdatagridwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|c:\\users\\faruk\\onedrive\\masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\avaloniaapp\\avaloniaguideapp\\views\\converterusagewithdatagridwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
       "RelativeMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|solutionrelative:avaloniaguideapp\\views\\converterusagewithdatagridwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|c:\\users\\faruk\\onedrive\\masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\avaloniaapp\\avaloniaguideapp\\viewmodels\\converterusagewithdatagridwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|solutionrelative:avaloniaguideapp\\viewmodels\\converterusagewithdatagridwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|c:\\users\\faruk\\onedrive\\masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\avaloniaapp\\avaloniaguideapp\\views\\converterusagewithdatagridwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|solutionrelative:avaloniaguideapp\\views\\converterusagewithdatagridwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|c:\\users\\faruk\\onedrive\\masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\avaloniaapp\\avaloniaguideapp\\converters\\sexstatustobackgroundcolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|solutionrelative:avaloniaguideapp\\converters\\sexstatustobackgroundcolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7C0965B-C854-4F3B-A0B7-2D30CE4E28AF}|AvaloniaGuideApp\\AvaloniaGuideApp.csproj|c:\\users\\faruk\\onedrive\\masa\u00FCst\u00FC\\projects\\avalonia ui\\avalonia\\avaloniaapp\\avaloniaguideapp\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -36,47 +40,60 @@
               "RelativeDocumentMoniker": "AvaloniaGuideApp\\Views\\ConverterUsageWithDataGridWindow.axaml.cs",
               "ToolTip": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\ConverterUsageWithDataGridWindow.axaml.cs",
               "RelativeToolTip": "AvaloniaGuideApp\\Views\\ConverterUsageWithDataGridWindow.axaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-27T14:20:50.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ConverterUsageWithDataGridWindowViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\ViewModels\\ConverterUsageWithDataGridWindowViewModel.cs",
-              "RelativeDocumentMoniker": "AvaloniaGuideApp\\ViewModels\\ConverterUsageWithDataGridWindowViewModel.cs",
-              "ToolTip": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\ViewModels\\ConverterUsageWithDataGridWindowViewModel.cs",
-              "RelativeToolTip": "AvaloniaGuideApp\\ViewModels\\ConverterUsageWithDataGridWindowViewModel.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAewGYAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-27T13:45:20.214Z",
+              "WhenOpened": "2024-07-28T12:32:43.271Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "SexStatusToBackgroundColorConverter.cs",
+              "DocumentMoniker": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Converters\\SexStatusToBackgroundColorConverter.cs",
+              "RelativeDocumentMoniker": "AvaloniaGuideApp\\Converters\\SexStatusToBackgroundColorConverter.cs",
+              "ToolTip": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Converters\\SexStatusToBackgroundColorConverter.cs",
+              "RelativeToolTip": "AvaloniaGuideApp\\Converters\\SexStatusToBackgroundColorConverter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-28T11:36:45.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Person.cs",
               "DocumentMoniker": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Models\\Person.cs",
               "RelativeDocumentMoniker": "AvaloniaGuideApp\\Models\\Person.cs",
               "ToolTip": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Models\\Person.cs",
               "RelativeToolTip": "AvaloniaGuideApp\\Models\\Person.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAIwB0AAAAPAAAA",
+              "ViewState": "AQIAABcAAAAAAAAAAAAIwBsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-27T11:36:54.28Z",
+              "WhenOpened": "2024-07-28T11:35:51.363Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ConverterUsageWithDataGridWindowViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\ViewModels\\ConverterUsageWithDataGridWindowViewModel.cs",
+              "RelativeDocumentMoniker": "AvaloniaGuideApp\\ViewModels\\ConverterUsageWithDataGridWindowViewModel.cs",
+              "ToolTip": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\ViewModels\\ConverterUsageWithDataGridWindowViewModel.cs",
+              "RelativeToolTip": "AvaloniaGuideApp\\ViewModels\\ConverterUsageWithDataGridWindowViewModel.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAuwGoAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-28T11:35:49.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "ConverterUsageWithDataGridWindow.axaml",
               "DocumentMoniker": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\ConverterUsageWithDataGridWindow.axaml",
               "RelativeDocumentMoniker": "AvaloniaGuideApp\\Views\\ConverterUsageWithDataGridWindow.axaml",
               "ToolTip": "C:\\Users\\faruk\\OneDrive\\Masa\u00FCst\u00FC\\Projects\\avalonia ui\\avalonia\\AvaloniaApp\\AvaloniaGuideApp\\Views\\ConverterUsageWithDataGridWindow.axaml",
               "RelativeToolTip": "AvaloniaGuideApp\\Views\\ConverterUsageWithDataGridWindow.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-27T11:34:26.761Z",
+              "WhenOpened": "2024-07-28T11:35:48.155Z",
               "EditorCaption": ""
             }
           ]
