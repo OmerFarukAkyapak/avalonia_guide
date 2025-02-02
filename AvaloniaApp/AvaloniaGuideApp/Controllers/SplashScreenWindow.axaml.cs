@@ -7,12 +7,27 @@ namespace AvaloniaGuideApp;
 
 public partial class SplashScreenWindow : AppWindow
 {
+    private readonly Action? _mainAction;
     public SplashScreenWindow()
     {
         InitializeComponent();
         CanResize = false;
         ShowAsDialog = true;
         TitleBar.Height = 0;
+    }
+    public SplashScreenWindow(Action mainAction)
+    {
+        InitializeComponent();
+        TitleBar.Height = 0;
+        this.CanResize = false;
+        this.ShowAsDialog = true;
+
+        _mainAction = mainAction;
+
+    }
+    private void Window_Loaded(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+        InitApp();
     }
 
     public async Task InitApp()
@@ -48,5 +63,13 @@ public partial class SplashScreenWindow : AppWindow
             Dispatcher.UIThread.Post(() => ProgressBar1.Value = progressValue);
             await Task.Delay(10);
         }
+
+        await Dispatcher.UIThread.InvokeAsync(() =>
+        {
+            _mainAction?.Invoke();
+            Close();
+        });
     }
+
+
 }

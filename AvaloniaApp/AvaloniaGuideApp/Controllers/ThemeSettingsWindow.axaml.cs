@@ -1,12 +1,12 @@
-using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Media;
 using AvaloniaGuideApp.ViewModels;
+using FluentAvalonia.UI.Windowing;
 using System.Runtime.CompilerServices;
 
 namespace AvaloniaGuideApp;
 
-public partial class ThemeSettingsWindow : Window
+public partial class ThemeSettingsWindow : AppWindow
 {
     private readonly ThemeSettingsWindowViewModel _themeSettings;
     public ThemeSettingsWindow()

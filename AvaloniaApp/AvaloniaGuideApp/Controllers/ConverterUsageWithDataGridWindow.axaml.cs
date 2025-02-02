@@ -1,9 +1,9 @@
-using Avalonia.Controls;
 using AvaloniaGuideApp.ViewModels;
+using FluentAvalonia.UI.Windowing;
 
 namespace AvaloniaGuideApp;
 
-public partial class ConverterUsageWithDataGridWindow : Window
+public partial class ConverterUsageWithDataGridWindow : AppWindow
 {
     ConverterUsageWithDataGridWindowViewModel _viewModel = new();
     public ConverterUsageWithDataGridWindow()

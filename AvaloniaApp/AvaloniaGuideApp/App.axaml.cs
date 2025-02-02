@@ -13,28 +13,33 @@ namespace AvaloniaGuideApp
             AvaloniaXamlLoader.Load(this);
         }
 
-        public override async void OnFrameworkInitializationCompleted()
+        public override void OnFrameworkInitializationCompleted()
         {
+
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
                 var theme = new ThemeSettingsWindowViewModel();
                 theme.LoadSettings();
 
-                var splashScreen = new SplashScreenWindow();
-
-                desktop.MainWindow = splashScreen;
-                splashScreen.Show();
-
-                await splashScreen.InitApp();
-
-                var main = new MainWindow
+#if DEBUG
+                // if debug mode is active, splash is closed
+                desktop.MainWindow = new MainWindow
                 {
-                    DataContext = new MainWindowViewModel(),
+                    DataContext = new MainWindowViewModel()
                 };
+#else
+        // if release mode is active, splash is opened
+        desktop.MainWindow = new SplashScreenWindow(() =>
+        {
+            var mainWindow = new MainWindow
+            {
+                DataContext = new MainWindowViewModel()
+            };
 
-                desktop.MainWindow = main;
-                main.Show();
-                splashScreen.Close();
+            mainWindow.Show();
+            desktop.MainWindow = mainWindow;
+        });
+#endif
             }
 
             base.OnFrameworkInitializationCompleted();

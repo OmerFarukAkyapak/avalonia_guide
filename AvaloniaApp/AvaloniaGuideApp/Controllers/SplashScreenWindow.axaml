@@ -6,7 +6,8 @@
         Width="500" Height="500"
         x:Class="AvaloniaGuideApp.SplashScreenWindow"
         Topmost="True"
-		WindowStartupLocation="CenterOwner">
+		WindowStartupLocation="CenterOwner"
+		Loaded="Window_Loaded">
 
 	<Panel>
 
