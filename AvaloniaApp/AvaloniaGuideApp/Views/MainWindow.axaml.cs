@@ -12,6 +12,7 @@ namespace AvaloniaGuideApp.Views
     public partial class MainWindow : AppWindow
     {
         private HomePageView _homePageView;
+        private AboutPageView _aboutPageView = new();
         public MainWindow()
         {
             InitializeComponent();
@@ -68,6 +69,17 @@ namespace AvaloniaGuideApp.Views
                 await ProgressDialog.ShowProgressDialogWithDurationTime(owner, "Closing", "The application is closing ...", 3);
                 Environment.Exit(0);
             }
+        }
+
+        private void AboutPage_Tapped(object? sender, Avalonia.Input.TappedEventArgs e)
+        {
+            var owner = VisualRoot as Window;
+            if (owner is null)
+            {
+                return;
+            }
+
+            navigateView.Content = _aboutPageView;
         }
     }
 }
