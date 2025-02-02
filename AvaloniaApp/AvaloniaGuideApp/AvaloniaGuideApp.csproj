@@ -13,17 +13,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="11.0.10" />
-    <PackageReference Include="Avalonia.Desktop" Version="11.0.10" />
-    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.10" />
-    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.10" />
-    <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.10" />
-    <PackageReference Include="FluentAvaloniaUI" Version="2.0.5" />
+	  <PackageReference Include="Avalonia" Version="11.1.4" />
+	  <PackageReference Include="Avalonia.Desktop" Version="11.1.4" />
+	  <PackageReference Include="Avalonia.Fonts.Inter" Version="11.1.4" />
+	  <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+	  <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.1.4" />
+	  <PackageReference Include="Avalonia.ReactiveUI" Version="11.1.4" />
+    <PackageReference Include="FluentAvaloniaUI" Version="2.1.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\SplashScreenWindow.axaml.cs">
+    <Compile Update="Controllers\SplashScreenWindow.axaml.cs">
       <DependentUpon>SplashScreenWindow.axaml</DependentUpon>
     </Compile>
   </ItemGroup>
