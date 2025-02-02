@@ -1,8 +1,6 @@
 using Avalonia.Controls;
-using Avalonia.Interactivity;
 using Avalonia.Styling;
 using AvaloniaGuideApp.Utils;
-using AvaloniaGuideApp.ViewModels;
 using FluentAvalonia.UI.Controls;
 using FluentAvalonia.UI.Windowing;
 using System;
