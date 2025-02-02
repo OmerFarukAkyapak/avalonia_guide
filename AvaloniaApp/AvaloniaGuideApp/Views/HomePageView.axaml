@@ -1,0 +1,46 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaGuideApp.HomePageView">
+	<StackPanel VerticalAlignment="Center" Grid.Column="1" Spacing="10">
+
+		<Button Name="btnShowSplash"
+				Content="Show Splash Screen"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				Click="btnShowSplash_Click"/>
+
+		<Button Name="btnThemeSettings"
+				Content="Show Theme Settings Screen"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				Click="btnThemeSettings_Click"/>
+
+		<Button Name="btnTextInputDialog"
+				Content="Show Text Input Dialog"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				Click="btnTextInputDialog_Click"/>
+
+		<StackPanel Orientation="Horizontal"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Center"
+					Spacing="10">
+
+			<TextBlock Text="Text Input Result :"
+					   VerticalAlignment="Center"/>
+
+			<TextBox Name="txtTextInputResult"
+					 IsReadOnly="True"/>
+
+		</StackPanel>
+
+		<Button Name="btnShowConverterUsage"
+				Content="Show Converter Usage with DataGrid"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				Click="btnShowConverterUsage_Click"/>
+	</StackPanel>
+</UserControl>

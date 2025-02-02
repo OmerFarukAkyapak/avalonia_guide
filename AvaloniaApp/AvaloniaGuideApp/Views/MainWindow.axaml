@@ -1,11 +1,12 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:AvaloniaGuideApp.ViewModels"
+		xmlns:ui="using:FluentAvalonia.UI.Controls"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" 
-		d:DesignWidth="800" Width="800"
-		d:DesignHeight="600" Height="600"
+        mc:Ignorable="d"
+		d:DesignWidth="960" Width="960"
+		d:DesignHeight="720" Height="720"
         x:Class="AvaloniaGuideApp.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
 		WindowStartupLocation="CenterOwner"
@@ -16,46 +17,81 @@
 		<vm:MainWindowViewModel/>
 	</Design.DataContext>
 
-	<StackPanel VerticalAlignment="Center" Spacing="10">
+	<Grid ColumnDefinitions="*">
 
-		<Button Name="btnShowSplash"
-				Content="Show Splash Screen"
-				HorizontalAlignment="Center"
-				VerticalAlignment="Center"
-				Click="btnShowSplash_Click"/>
-
-		<Button Name="btnThemeSettings"
-				Content="Show Theme Settings Screen"
-				HorizontalAlignment="Center"
-				VerticalAlignment="Center"
-				Click="btnThemeSettings_Click"/>
-
-		<Button Name="btnTextInputDialog"
-				Content="Show Text Input Dialog"
-				HorizontalAlignment="Center"
-				VerticalAlignment="Center"
-				Click="btnTextInputDialog_Click"/>
-
-		<StackPanel Orientation="Horizontal"
-					HorizontalAlignment="Center"
-					VerticalAlignment="Center"
-					Spacing="10">
-
-			<TextBlock Text="Text Input Result :"
-					   VerticalAlignment="Center"/>
-
-			<TextBox Name="txtTextInputResult"
-					 IsReadOnly="True"/>
-
-		</StackPanel>
-
-		<Button Name="btnShowConverterUsage"
-				Content="Show Converter Usage with DataGrid"
-				HorizontalAlignment="Center"
-				VerticalAlignment="Center"
-				Click="btnShowConverterUsage_Click"/>
-	</StackPanel>
+		<ui:NavigationView Name="navigateView" Grid.Row="0"
+						   Background="{DynamicResource Mirage}"
+						   IsPaneToggleButtonVisible="False"
+						   IsSettingsVisible="False"
+						   PaneDisplayMode="LeftCompact">
 
 
+			<ui:NavigationView.MenuItems>
+
+				<ui:NavigationViewItem IsHitTestVisible="False"
+									   Margin="0 5 0 20">
+
+					<ui:NavigationViewItem.Content>
+						<Image Source="/Assets/avalonia-logo.ico"
+							   Width="32"
+							   Height="32"
+							   RenderOptions.BitmapInterpolationMode="HighQuality"/>
+					</ui:NavigationViewItem.Content>
+
+				</ui:NavigationViewItem>
+
+				<ui:NavigationViewItem Content="Home Page"
+									   Tapped="HomePage_Tapped">
+
+					<ui:NavigationViewItem.Content>
+						<ui:SymbolIcon Symbol="Home"
+									   HorizontalAlignment="Center"
+									   VerticalAlignment="Center"
+									   Height="14"
+									   Width="14"/>
+					</ui:NavigationViewItem.Content>
+
+				</ui:NavigationViewItem>
+
+				<ui:NavigationViewItem Content="About"
+									   Tapped="">
+					<PathIcon Data="{DynamicResource info_regular}"
+								  Width="14" Height="14"
+								  ToolTip.Tip="About Us"
+								  HorizontalAlignment="Center"
+								  VerticalAlignment="Center"/>
+				</ui:NavigationViewItem>
+
+			</ui:NavigationView.MenuItems>
+
+
+			<ui:NavigationView.FooterMenuItems>
+
+				<ui:NavigationViewItem Content="Logout"
+					   Tapped="Theme_Tapped">
+					<ui:NavigationViewItem.Content>
+						<ui:SymbolIcon Name="themeSymbol"
+									   Symbol="WeatherSunny"
+									   HorizontalAlignment="Center"
+									   VerticalAlignment="Center"
+									   Height="14"
+									   Width="14"/>
+					</ui:NavigationViewItem.Content>
+				</ui:NavigationViewItem>
+
+				<ui:NavigationViewItem Content="Logout"
+									   Tapped="Logout_Tapped">
+					<ui:NavigationViewItem.Content>
+						<PathIcon Data="{DynamicResource power_regular}"
+								  Width="14" Height="14"
+								  ToolTip.Tip="Logout"
+								  HorizontalAlignment="Center"
+								  VerticalAlignment="Center"/>
+					</ui:NavigationViewItem.Content>
+				</ui:NavigationViewItem>
+			</ui:NavigationView.FooterMenuItems>
+		</ui:NavigationView>
+
+	</Grid>
 
 </Window>
