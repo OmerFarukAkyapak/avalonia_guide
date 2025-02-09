@@ -21,8 +21,14 @@ public partial class HomePageView : UserControl
 
     private void btnThemeSettings_Click(object? sender, RoutedEventArgs e)
     {
+        var owner = VisualRoot as Window;
+        if (owner is null)
+        {
+            return;
+        }
+
         var themeSettings = new ThemeSettingsWindow();
-        themeSettings.Show();
+        themeSettings.ShowDialog(owner);
     }
 
     private async void btnTextInputDialog_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)

@@ -15,8 +15,30 @@ namespace AvaloniaGuideApp.Views
         {
             InitializeComponent();
 
+            SetThemeSymbol();
+
             _homePageView = new HomePageView();
             navigateView.Content = _homePageView;
+        }
+
+        private void SetThemeSymbol()
+        {
+            if (App.Current is null || App.Current.RequestedThemeVariant is null)
+            {
+                return;
+            }
+
+            var appTheme = App.Current.RequestedThemeVariant.ToString();
+
+            if (ThemeVariant.Dark.Key.ToString() == appTheme)
+            {
+                themeSymbol.Symbol = Symbol.WeatherMoon;
+
+            }
+            else if (ThemeVariant.Light.Key.ToString() == appTheme)
+            {
+                themeSymbol.Symbol = Symbol.WeatherSunny;
+            }
         }
 
         private void Theme_Tapped(object? sender, Avalonia.Input.TappedEventArgs e)
@@ -51,6 +73,17 @@ namespace AvaloniaGuideApp.Views
             navigateView.Content = _homePageView;
         }
 
+        private void AboutPage_Tapped(object? sender, Avalonia.Input.TappedEventArgs e)
+        {
+            var owner = VisualRoot as Window;
+            if (owner is null)
+            {
+                return;
+            }
+
+            navigateView.Content = _aboutPageView;
+        }
+
         private async void Logout_Tapped(object? sender, Avalonia.Input.TappedEventArgs e)
         {
             var owner = VisualRoot as Window;
@@ -69,15 +102,39 @@ namespace AvaloniaGuideApp.Views
             }
         }
 
-        private void AboutPage_Tapped(object? sender, Avalonia.Input.TappedEventArgs e)
+
+        private bool _isClosing = false;
+        private async void Window_Closing(object? sender, Avalonia.Controls.WindowClosingEventArgs e)
         {
+            if (!_isClosing)
+            {
+                e.Cancel = true;
+            }
+
             var owner = VisualRoot as Window;
             if (owner is null)
             {
                 return;
             }
 
-            navigateView.Content = _aboutPageView;
+            string message = "Are you sure you want to exit?";
+
+            var result = await TaskDialogHelper.ShowQuestionDialogAsync(owner, "Exit", message);
+            if (result)
+            {
+
+                if (App.Current.RequestedThemeVariant is null)
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                ThemeHelper.SaveSettings(App.Current.RequestedThemeVariant);
+
+                e.Cancel = false;
+                _isClosing = true;
+                Environment.Exit(0);
+            }
         }
     }
 }

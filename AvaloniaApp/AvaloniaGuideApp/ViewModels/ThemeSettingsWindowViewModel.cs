@@ -9,6 +9,7 @@ using System.Text;
 using System.Text.Json;
 using Avalonia;
 using System.IO;
+using AvaloniaGuideApp.Models;
 
 namespace AvaloniaGuideApp.ViewModels
 {
@@ -28,21 +29,13 @@ namespace AvaloniaGuideApp.ViewModels
         private readonly FluentAvaloniaTheme _faTheme;
 
         public List<Color> PredefinedColors { get; private set; }
-        public class TSCustomAccentColorModel
-        {
-            public byte A { get; set; }
-            public byte R { get; set; }
-            public byte B { get; set; }
-            public byte G { get; set; }
-
-        }
 
         public class ThemeSettings
         {
             public string TSAppTheme { get; set; }
             public FlowDirection TSFlowDirection { get; set; }
             public bool TSUseCustomAccent { get; set; }
-            public TSCustomAccentColorModel TSCustomAccentColor { get; set; }
+            public CustomAccentColorARGB TSCustomAccentColor { get; set; }
         }
         public ThemeSettingsWindowViewModel()
         {
@@ -80,17 +73,18 @@ namespace AvaloniaGuideApp.ViewModels
 
                 string jsonString = File.ReadAllText(path);
                 var settings = JsonSerializer.Deserialize<ThemeSettings>(jsonString, options);
+                var settingsWithThemeHelper = JsonSerializer.Deserialize<ThemeModel>(jsonString, options);
 
                 if (settings != null)
                 {
-                    CurrentAppTheme = settings.TSAppTheme;
+                    CurrentAppTheme = settings.TSAppTheme ?? settingsWithThemeHelper.AppTheme.ToString();
                     CurrentFlowDirection = settings.TSFlowDirection;
                     UseCustomAccent = settings.TSUseCustomAccent;
                     CustomAccentColor = Color.FromArgb(
-                        settings.TSCustomAccentColor.A,
-                        settings.TSCustomAccentColor.R, 
-                        settings.TSCustomAccentColor.G, 
-                        settings.TSCustomAccentColor.B);
+                        settings.TSCustomAccentColor?.A ?? settingsWithThemeHelper.CustomAccentColor.A,
+                        settings.TSCustomAccentColor?.R ?? settingsWithThemeHelper.CustomAccentColor.R,
+                        settings.TSCustomAccentColor?.G ?? settingsWithThemeHelper.CustomAccentColor.G,
+                        settings.TSCustomAccentColor?.B ?? settingsWithThemeHelper.CustomAccentColor.B);
                 }
             }
             catch (Exception ex)
@@ -108,7 +102,7 @@ namespace AvaloniaGuideApp.ViewModels
                     TSAppTheme = CurrentAppTheme,
                     TSFlowDirection = CurrentFlowDirection,
                     TSUseCustomAccent = UseCustomAccent,
-                    TSCustomAccentColor = new TSCustomAccentColorModel
+                    TSCustomAccentColor = new CustomAccentColorARGB
                     {
                         A = CustomAccentColor.A,
                         R = CustomAccentColor.R,

@@ -5,13 +5,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-		d:DesignWidth="960" Width="960"
-		d:DesignHeight="720" Height="720"
+		d:DesignWidth="960" Width="960" MinWidth="960"
+		d:DesignHeight="720" Height="720" MinHeight="720"
         x:Class="AvaloniaGuideApp.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
 		WindowStartupLocation="CenterOwner"
         Icon="/Assets/avalonia-logo.ico"
-        Title="Avalonia Guide Application">
+        Title="Avalonia Guide Application"
+		Closing="Window_Closing">
 
 	<Design.DataContext>
 		<vm:MainWindowViewModel/>
@@ -19,12 +20,11 @@
 
 	<Grid ColumnDefinitions="*">
 
-		<ui:NavigationView Name="navigateView" Grid.Row="0"
-						   Background="{DynamicResource Mirage}"
+		<ui:NavigationView Grid.Row="0"
+						   Name="navigateView"
 						   IsPaneToggleButtonVisible="False"
 						   IsSettingsVisible="False"
 						   PaneDisplayMode="LeftCompact">
-
 
 			<ui:NavigationView.MenuItems>
 
@@ -45,21 +45,19 @@
 
 					<ui:NavigationViewItem.Content>
 						<ui:SymbolIcon Symbol="Home"
-									   HorizontalAlignment="Center"
-									   VerticalAlignment="Center"
 									   Height="14"
-									   Width="14"/>
+									   Width="14"
+									   ToolTip.Tip="Home"/>
 					</ui:NavigationViewItem.Content>
 
 				</ui:NavigationViewItem>
 
 				<ui:NavigationViewItem Content="About Page"
 									   Tapped="AboutPage_Tapped">
+
 					<PathIcon Data="{DynamicResource info_regular}"
-								  Width="14" Height="14"
-								  ToolTip.Tip="About Us"
-								  HorizontalAlignment="Center"
-								  VerticalAlignment="Center"/>
+							  Width="14" Height="14"
+							  ToolTip.Tip="About Us"/>
 				</ui:NavigationViewItem>
 
 			</ui:NavigationView.MenuItems>
@@ -68,12 +66,10 @@
 			<ui:NavigationView.FooterMenuItems>
 
 				<ui:NavigationViewItem Content="Logout"
-					   Tapped="Theme_Tapped">
+									   Tapped="Theme_Tapped">
 					<ui:NavigationViewItem.Content>
 						<ui:SymbolIcon Name="themeSymbol"
 									   Symbol="WeatherSunny"
-									   HorizontalAlignment="Center"
-									   VerticalAlignment="Center"
 									   Height="14"
 									   Width="14"/>
 					</ui:NavigationViewItem.Content>
@@ -84,9 +80,7 @@
 					<ui:NavigationViewItem.Content>
 						<PathIcon Data="{DynamicResource power_regular}"
 								  Width="14" Height="14"
-								  ToolTip.Tip="Logout"
-								  HorizontalAlignment="Center"
-								  VerticalAlignment="Center"/>
+								  ToolTip.Tip="Logout"/>
 					</ui:NavigationViewItem.Content>
 				</ui:NavigationViewItem>
 			</ui:NavigationView.FooterMenuItems>

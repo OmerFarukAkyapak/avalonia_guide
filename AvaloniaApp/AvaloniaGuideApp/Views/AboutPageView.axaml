@@ -2,7 +2,126 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="700"
              x:Class="AvaloniaGuideApp.AboutPageView">
-  Welcome to About Us Page!
+
+	<Border Padding="20">
+		<Grid ColumnDefinitions="2*,1.2*">
+
+			<StackPanel Spacing="20"
+						Grid.Column="1"
+						VerticalAlignment="Center"
+						HorizontalAlignment="Center">
+
+				<Border BorderThickness="5"
+						BorderBrush="Black"
+						CornerRadius="5"
+						HorizontalAlignment="Center">
+					<Image Source="/Assets/me.png"
+						   RenderOptions.BitmapInterpolationMode="HighQuality"/>
+				</Border>
+
+
+				<StackPanel Orientation="Horizontal"
+							VerticalAlignment="Center"
+							HorizontalAlignment="Center"
+							Spacing="10">
+
+					<Button Content="LinkedIn"
+							Click="LinkedIn_Click">
+						<Button.Content>
+							<Image Source="/Assets/linkedin.png"
+								   Width="24"
+								   Height="24"
+								   RenderOptions.BitmapInterpolationMode="HighQuality"/>
+						</Button.Content>
+					</Button>
+					<Button Content="GitHub"
+							Click="GitHub_Click">
+						<Button.Content>
+							<Image Source="/Assets/github.png"
+								   Width="24"
+								   Height="24"
+								   RenderOptions.BitmapInterpolationMode="HighQuality"/>
+						</Button.Content>
+					</Button>
+					<Button Content="Medium"
+							Click="Medium_Click">
+						<Button.Content>
+							<Image Source="/Assets/medium.png"
+								   Width="24"
+								   Height="24"
+								   RenderOptions.BitmapInterpolationMode="HighQuality"/>
+						</Button.Content>
+					</Button>
+				</StackPanel>
+			</StackPanel>
+
+			<StackPanel Grid.Column="0" 
+						Spacing="15" 
+						Margin="20 20 40 20"
+						VerticalAlignment="Center"
+						HorizontalAlignment="Center">
+				<StackPanel>
+					<TextBlock FontSize="24"  FontWeight="Bold">
+						<Run Text="👋 About Me"/>
+						
+					</TextBlock>
+					
+					<TextBlock TextWrapping="Wrap">
+						<LineBreak/>
+						Hi! I’m Ömer Faruk Akyapak, a passionate software developer with a strong focus on backend, mobile, web, and desktop development.
+						I currently work at trex Digital Manufacturing, where I’m part of the Platform and Services team, solving complex problems and delivering platform-based solutions.
+					</TextBlock>
+				</StackPanel>
+
+				<Separator/>
+
+				<StackPanel>
+					<TextBlock FontSize="24"  FontWeight="Bold">
+						<Run Text="🌱 My Interests"/>
+					</TextBlock>
+					<TextBlock  TextWrapping="Wrap">
+						<LineBreak/>
+						Since my university years, I've been deeply interested in Process Tracking with IoT, MES, MOM, SCADA, and ERP systems.
+						In 2021, I developed my first MOM project with two talented colleagues, and that experience sparked my continued passion for these areas.
+					</TextBlock>
+				</StackPanel>
+
+				<Separator/>
+
+				<StackPanel>
+					<TextBlock FontSize="24" FontWeight="Bold">
+						<Run Text="💻 Technologies and Skills"/>
+					</TextBlock>
+					<TextBlock>
+						<LineBreak/>
+						- C#, ASP.NET, .NET Core, Avalonia
+						<LineBreak/>
+						- React, React Native, Flutter
+						<LineBreak/>
+						- JavaScript, HTML, CSS, XAML
+						<LineBreak/>
+						- SQL
+					</TextBlock>
+				</StackPanel>
+
+				<Separator/>
+				
+				<StackPanel>
+					<TextBlock FontSize="24"  FontWeight="Bold">
+						<Run Text="📚 Sharing Knowledge"/>
+					</TextBlock>
+					<TextBlock TextWrapping="Wrap">
+						<LineBreak/>
+						I believe in continuous learning and the importance of sharing knowledge.
+						I frequently write about my experiences and insights on platforms like Medium.
+						If you're interested in reading about my work, feel free to check out my Medium account.
+					</TextBlock>
+				</StackPanel>
+			</StackPanel>
+		</Grid>
+	</Border>
+
+
 </UserControl>
