@@ -4,25 +4,39 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="AvaloniaGuideApp.InputDialogPageView">
+	<ScrollViewer Padding="20" >
+		<StackPanel Spacing="20">
 
-	<StackPanel VerticalAlignment="Center" Spacing="20">
-		<Button Name="btnTextInputDialog"
-				Content="Show Text Input Dialog"
-				HorizontalAlignment="Center"
-				VerticalAlignment="Center"
-				Click="btnTextInputDialog_Click"/>
+			<StackPanel Spacing="10">
+				<TextBlock Text="Text Input Dialog Page"
+						   FontWeight="Bold"
+						   FontSize="24"/>
+				<Separator/>
+			</StackPanel>
 
-		<StackPanel Orientation="Horizontal"
-					HorizontalAlignment="Center"
-					VerticalAlignment="Center"
-					Spacing="10">
+			<StackPanel VerticalAlignment="Center" Spacing="20">
+				<Button Name="btnTextInputDialog"
+						Content="Show Text Input Dialog"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						Click="btnTextInputDialog_Click"/>
 
-			<TextBlock Text="Text Input Result :"
-					   VerticalAlignment="Center"/>
+				<StackPanel Orientation="Horizontal"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Spacing="10">
 
-			<TextBox Name="txtTextInputResult"
-					 IsReadOnly="True"/>
+					<TextBlock Text="Text Input Result :"
+							   VerticalAlignment="Center"/>
 
+					<TextBox Name="txtTextInputResult"
+							 IsReadOnly="True"/>
+
+				</StackPanel>
+			</StackPanel>
 		</StackPanel>
-	</StackPanel>
+
+	</ScrollViewer>
+
+
 </UserControl>

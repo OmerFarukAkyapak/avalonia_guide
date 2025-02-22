@@ -14,82 +14,92 @@
 
 	</UserControl.Resources>
 
-	<Border>
-		<Grid RowDefinitions="*,Auto">
+	<ScrollViewer Padding="20">
+		<StackPanel Spacing="20">
 
-			<DataGrid Grid.Row="0"
-					  ItemsSource="{Binding People}"
-					  AutoGenerateColumns="False">
-				<DataGrid.Columns>
-					<DataGridCheckBoxColumn Header="Selected"
-											Binding="{Binding IsSelected}"
-											Width="Auto"/>
+			<StackPanel Spacing="10">
+				<TextBlock Text="Data Grid With Converter Page"
+						   FontWeight="Bold"
+						   FontSize="24"/>
+				<Separator/>
+			</StackPanel>
+			<Grid RowDefinitions="*,Auto">
 
-					<DataGridTextColumn Header="Name"
-                                        Width="*"
-                                        Binding="{Binding Name}" />
+				<DataGrid Grid.Row="0"
+						  ItemsSource="{Binding People}"
+						  AutoGenerateColumns="False">
+					<DataGrid.Columns>
+						<DataGridCheckBoxColumn Header="Selected"
+												Binding="{Binding IsSelected}"
+												Width="Auto"/>
 
-					<DataGridTemplateColumn Header="Sex"
-                                            Width="*">
-						<DataGridTemplateColumn.CellTemplate>
-							<DataTemplate>
-								<TextBlock Text="{Binding Sex}"
-										   Background="{Binding Sex, Converter={StaticResource SexStatusToBackgroundColorConverter}}"
-										   Padding="5"/>
-							</DataTemplate>
-						</DataGridTemplateColumn.CellTemplate>
-					</DataGridTemplateColumn>
+						<DataGridTextColumn Header="Name"
+											Width="*"
+											Binding="{Binding Name}" />
 
-					<DataGridTextColumn Header="Age"
-                                        Width="*"
-                                        Binding="{Binding Age}" />
+						<DataGridTemplateColumn Header="Sex"
+												Width="*">
+							<DataGridTemplateColumn.CellTemplate>
+								<DataTemplate>
+									<TextBlock Text="{Binding Sex}"
+											   Background="{Binding Sex, Converter={StaticResource SexStatusToBackgroundColorConverter}}"
+											   Padding="5"/>
+								</DataTemplate>
+							</DataGridTemplateColumn.CellTemplate>
+						</DataGridTemplateColumn>
 
-					<DataGridTemplateColumn Header="Is Adult"
-                                            Width="*">
-						<DataGridTemplateColumn.CellTemplate>
-							<DataTemplate>
-								<CheckBox IsChecked="{Binding Age, Converter={StaticResource AgeToIsAdultConverter}, Mode=OneWay}"
-                                          IsEnabled="False"/>
-							</DataTemplate>
-						</DataGridTemplateColumn.CellTemplate>
-					</DataGridTemplateColumn>
-				</DataGrid.Columns>
-			</DataGrid>
+						<DataGridTextColumn Header="Age"
+											Width="*"
+											Binding="{Binding Age}" />
 
-			<StackPanel Grid.Row="1"
-                        HorizontalAlignment="Center"
-                        Spacing="10"
-                        Margin="20">
-				<StackPanel Orientation="Horizontal"
-							Spacing="10">
+						<DataGridTemplateColumn Header="Is Adult"
+												Width="*">
+							<DataGridTemplateColumn.CellTemplate>
+								<DataTemplate>
+									<CheckBox IsChecked="{Binding Age, Converter={StaticResource AgeToIsAdultConverter}, Mode=OneWay}"
+											  IsEnabled="False"/>
+								</DataTemplate>
+							</DataGridTemplateColumn.CellTemplate>
+						</DataGridTemplateColumn>
+					</DataGrid.Columns>
+				</DataGrid>
 
-					<TextBox Text="{Binding NewPersonName, Mode=TwoWay}"
-							 Watermark="Name"
-							Width="200"/>
+				<StackPanel Grid.Row="1"
+							HorizontalAlignment="Right"
+							Spacing="10"
+							Margin="20 20 0 0">
+					<StackPanel Orientation="Horizontal"
+								Spacing="10">
 
-					<ComboBox ItemsSource="{Binding SexTypeList}"
-							  SelectedItem="{Binding SelectedSexType}"/>
+						<TextBox Text="{Binding NewPersonName, Mode=TwoWay}"
+								 Watermark="Name"
+								Width="200"/>
 
-					<TextBox Text="{Binding NewPersonAge, Mode=TwoWay}"
-							 Watermark="Age"/>
+						<ComboBox ItemsSource="{Binding SexTypeList}"
+								  SelectedItem="{Binding SelectedSexType}"/>
+
+						<TextBox Text="{Binding NewPersonAge, Mode=TwoWay}"
+								 Watermark="Age"/>
 
 
-					<Button Content="Add Person"
-							Command="{Binding AddPersonCommand}" />
+						<Button Content="Add Person"
+								Command="{Binding AddPersonCommand}" />
 
+					</StackPanel>
+
+					<Button Content="Delete Selected Person"
+							Command="{Binding DeleteSelectedPersonCommand}"
+							HorizontalAlignment="Right"/>
+
+					<ui:TeachingTip Title="Error"
+									PreferredPlacement="BottomLeft"
+									Background="Red"
+									IsOpen="{Binding IsOpenError, Mode=TwoWay}"
+									Subtitle="{Binding ErrorMessage}"/>
 				</StackPanel>
 
-				<Button Content="Delete Selected Person"
-                        Command="{Binding DeleteSelectedPersonCommand}"
-						HorizontalAlignment="Right"/>
+			</Grid>
+		</StackPanel>
 
-				<ui:TeachingTip Title="Error"
-								PreferredPlacement="BottomLeft"
-								Background="Red"
-								IsOpen="{Binding IsOpenError, Mode=TwoWay}"
-								Subtitle="{Binding ErrorMessage}"/>
-			</StackPanel>
-
-		</Grid>
-	</Border>
+	</ScrollViewer>
 </UserControl>

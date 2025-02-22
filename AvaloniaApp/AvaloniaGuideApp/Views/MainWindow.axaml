@@ -55,7 +55,7 @@
 
 					<PathIcon Data="{DynamicResource info_regular}"
 							  Width="14" Height="14"
-							  ToolTip.Tip="About Us"/>
+							  ToolTip.Tip="About"/>
 				</ui:NavigationViewItem>
 
 			</ui:NavigationView.MenuItems>

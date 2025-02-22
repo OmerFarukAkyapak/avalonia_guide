@@ -8,17 +8,14 @@
              x:Class="AvaloniaGuideApp.HomePageView">
 
 
-	<ScrollViewer Padding="30">
+	<ScrollViewer Padding="20">
 		<StackPanel Spacing="20">
 
 			<StackPanel Spacing="10">
 				<TextBlock Text="Home Page"
 						   FontWeight="Bold"
-						   FontSize="22"/>
-
-				<TextBlock Text="View ..."
-					   FontWeight="DemiBold"
-					   FontSize="16"/>
+						   FontSize="24"/>
+				<Separator/>
 			</StackPanel>
 
 			<ItemsControl ItemsSource="{Binding Pages}">
