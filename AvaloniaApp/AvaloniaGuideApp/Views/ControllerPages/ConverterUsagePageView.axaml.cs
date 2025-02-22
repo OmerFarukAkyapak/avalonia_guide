@@ -1,12 +1,12 @@
+using Avalonia.Controls;
 using AvaloniaGuideApp.ViewModels;
-using FluentAvalonia.UI.Windowing;
 
 namespace AvaloniaGuideApp;
 
-public partial class ConverterUsageWithDataGridWindow : AppWindow
+public partial class ConverterUsagePageView : UserControl
 {
     ConverterUsageWithDataGridWindowViewModel _viewModel = new();
-    public ConverterUsageWithDataGridWindow()
+    public ConverterUsagePageView()
     {
         InitializeComponent();
         DataContext = _viewModel;

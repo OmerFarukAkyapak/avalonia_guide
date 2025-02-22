@@ -13,21 +13,21 @@ namespace AvaloniaGuideApp.ViewModels
         public ObservableCollection<Person> People
         {
             get => _people;
-            set => this.RaiseAndSetIfChanged(ref _people, value);
+            set => RaiseAndSetIfChanged(ref _people, value);
         }
 
         private ObservableCollection<SexTypes> _sexTypeList;
         public ObservableCollection<SexTypes> SexTypeList
         {
             get => _sexTypeList;
-            set => this.RaiseAndSetIfChanged(ref _sexTypeList, value);
+            set => RaiseAndSetIfChanged(ref _sexTypeList, value);
         }
 
         private string _newPersonName;
         public string NewPersonName
         {
             get => _newPersonName;
-            set => this.RaiseAndSetIfChanged(ref _newPersonName, value);
+            set => RaiseAndSetIfChanged(ref _newPersonName, value);
         }
 
 
@@ -35,14 +35,14 @@ namespace AvaloniaGuideApp.ViewModels
         public SexTypes SelectedSexType
         {
             get => _selectedSexType;
-            set => this.RaiseAndSetIfChanged(ref _selectedSexType, value);
+            set => RaiseAndSetIfChanged(ref _selectedSexType, value);
         }
 
         private string _newPersonAge;
         public string NewPersonAge
         {
             get => _newPersonAge;
-            set => this.RaiseAndSetIfChanged(ref _newPersonAge, value);
+            set => RaiseAndSetIfChanged(ref _newPersonAge, value);
 
         }
 
@@ -50,14 +50,14 @@ namespace AvaloniaGuideApp.ViewModels
         public bool IsOpenError
         {
             get => _isOpenError;
-            set => this.RaiseAndSetIfChanged(ref _isOpenError, value);
+            set => RaiseAndSetIfChanged(ref _isOpenError, value);
         }
 
         private string _errorMessage;
         public string ErrorMessage
         {
             get => _errorMessage;
-            set => this.RaiseAndSetIfChanged(ref _errorMessage, value);
+            set => RaiseAndSetIfChanged(ref _errorMessage, value);
         }
 
         public ReactiveCommand<Unit, Unit> AddPersonCommand { get; }

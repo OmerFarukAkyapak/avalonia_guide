@@ -3,44 +3,66 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 xmlns:vm="using:AvaloniaGuideApp.ViewModels"
+			 x:DataType="vm:HomePageViewModel"
              x:Class="AvaloniaGuideApp.HomePageView">
-	<StackPanel VerticalAlignment="Center" Grid.Column="1" Spacing="10">
 
-		<Button Name="btnShowSplash"
-				Content="Show Splash Screen"
-				HorizontalAlignment="Center"
-				VerticalAlignment="Center"
-				Click="btnShowSplash_Click"/>
 
-		<Button Name="btnThemeSettings"
-				Content="Show Theme Settings Screen"
-				HorizontalAlignment="Center"
-				VerticalAlignment="Center"
-				Click="btnThemeSettings_Click"/>
+	<ScrollViewer Padding="30">
+		<StackPanel Spacing="20">
 
-		<Button Name="btnTextInputDialog"
-				Content="Show Text Input Dialog"
-				HorizontalAlignment="Center"
-				VerticalAlignment="Center"
-				Click="btnTextInputDialog_Click"/>
+			<StackPanel Spacing="10">
+				<TextBlock Text="Home Page"
+						   FontWeight="Bold"
+						   FontSize="22"/>
 
-		<StackPanel Orientation="Horizontal"
-					HorizontalAlignment="Center"
-					VerticalAlignment="Center"
-					Spacing="10">
+				<TextBlock Text="View ..."
+					   FontWeight="DemiBold"
+					   FontSize="16"/>
+			</StackPanel>
 
-			<TextBlock Text="Text Input Result :"
-					   VerticalAlignment="Center"/>
+			<ItemsControl ItemsSource="{Binding Pages}">
+				<ItemsControl.ItemsPanel>
+					<ItemsPanelTemplate>
+						<WrapPanel />
+					</ItemsPanelTemplate>
+				</ItemsControl.ItemsPanel>
+				<ItemsControl.ItemTemplate>
+					<DataTemplate>
 
-			<TextBox Name="txtTextInputResult"
-					 IsReadOnly="True"/>
+						<Button Tag="{Binding Name}"
+								Margin="5"
+								Height="90"
+								Width="235"
+								Click="Page_Click">
+							<Button.Content>
 
+								<Panel Height="90"
+									   Width="235">
+
+									<StackPanel Spacing="5"
+												HorizontalAlignment="Center"
+												VerticalAlignment="Center">
+										<TextBlock Text="{Binding Name}"
+												   FontWeight="DemiBold"
+												   HorizontalAlignment="Center"/>
+
+										<Separator />
+
+										<TextBlock Text="{Binding Description}"
+												   TextWrapping="Wrap"
+												   FontSize="10"
+												   HorizontalAlignment="Center"/>
+
+									</StackPanel>
+								</Panel>
+
+							</Button.Content>
+						</Button>
+					</DataTemplate>
+				</ItemsControl.ItemTemplate>
+			</ItemsControl>
 		</StackPanel>
+	</ScrollViewer>
 
-		<Button Name="btnShowConverterUsage"
-				Content="Show Converter Usage with DataGrid"
-				HorizontalAlignment="Center"
-				VerticalAlignment="Center"
-				Click="btnShowConverterUsage_Click"/>
-	</StackPanel>
 </UserControl>

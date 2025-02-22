@@ -1,6 +1,8 @@
 using Avalonia.Controls;
 using Avalonia.Styling;
+using AvaloniaGuideApp.Models;
 using AvaloniaGuideApp.Utils;
+using AvaloniaGuideApp.ViewModels;
 using FluentAvalonia.UI.Controls;
 using FluentAvalonia.UI.Windowing;
 using System;
@@ -9,16 +11,19 @@ namespace AvaloniaGuideApp.Views
 {
     public partial class MainWindow : AppWindow
     {
-        private HomePageView _homePageView;
-        private AboutPageView _aboutPageView = new();
+        private MainWindowViewModel _viewModel = new();
         public MainWindow()
         {
+
             InitializeComponent();
+            DataContext = _viewModel;
 
             SetThemeSymbol();
+        }
 
-            _homePageView = new HomePageView();
-            navigateView.Content = _homePageView;
+        private void Window_Loaded(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            MainWindowViewModel.InstanceMainWindow = this;
         }
 
         private void SetThemeSymbol()
@@ -65,23 +70,12 @@ namespace AvaloniaGuideApp.Views
 
         private void HomePage_Tapped(object? sender, Avalonia.Input.TappedEventArgs e)
         {
-            if (_homePageView is null)
-            {
-                _homePageView = new HomePageView();
-
-            }
-            navigateView.Content = _homePageView;
+            _viewModel.NavigateToPage(PagesEnum.HomePage);
         }
 
         private void AboutPage_Tapped(object? sender, Avalonia.Input.TappedEventArgs e)
         {
-            var owner = VisualRoot as Window;
-            if (owner is null)
-            {
-                return;
-            }
-
-            navigateView.Content = _aboutPageView;
+            _viewModel.NavigateToPage(PagesEnum.AboutPage);
         }
 
         private async void Logout_Tapped(object? sender, Avalonia.Input.TappedEventArgs e)

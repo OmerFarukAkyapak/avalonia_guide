@@ -1,9 +1,61 @@
-﻿namespace AvaloniaGuideApp.ViewModels
+﻿using Avalonia.Controls;
+using AvaloniaGuideApp.Models;
+
+namespace AvaloniaGuideApp.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
-#pragma warning disable CA1822 // Mark members as static
-        public string Greeting => "Welcome to Avalonia!";
-#pragma warning restore CA1822 // Mark members as static
+        private UserControl _currentPage = new HomePageView();
+        public UserControl CurrentPage
+        {
+            get => _currentPage;
+            set => RaiseAndSetIfChanged(ref _currentPage, value);
+        }
+
+        public static Window InstanceMainWindow { get; set; }
+
+        public static MainWindowViewModel InstanceMainWindowVM { get; private set; }
+
+        #region Pages
+        private HomePageView _homePage = new();
+        private AboutPageView _aboutPage = new();
+        private SplashScreenPageView _splashPage = new();
+        private ThemeSettingsPageView _themeSettingsPage = new();
+        private InputDialogPageView _textInputDialogPage = new();
+        private ConverterUsagePageView _converterUsagePage = new();
+        #endregion
+
+        public MainWindowViewModel()
+        {
+            InstanceMainWindowVM = this;
+        }
+
+        public void NavigateToPage(PagesEnum page)
+        {
+            switch (page)
+            {
+                case PagesEnum.HomePage:
+                    InstanceMainWindowVM.CurrentPage = _homePage;
+                    break;
+                case PagesEnum.AboutPage:
+                    InstanceMainWindowVM.CurrentPage = _aboutPage;
+                    break;
+                case PagesEnum.SplashPage:
+                    InstanceMainWindowVM.CurrentPage = _splashPage;
+                    break;
+                case PagesEnum.ThemeSettingsPage:
+                    InstanceMainWindowVM.CurrentPage = _themeSettingsPage;
+                    break;
+                case PagesEnum.TextInputDialogPage:
+                    InstanceMainWindowVM.CurrentPage = _textInputDialogPage;
+                    break;
+                case PagesEnum.ConverterUsagePage:
+                    InstanceMainWindowVM.CurrentPage = _converterUsagePage;
+                    break;
+                default:
+                    break;
+            }
+        }
+
     }
 }

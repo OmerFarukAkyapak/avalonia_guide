@@ -5,18 +5,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-		d:DesignWidth="960" Width="960" MinWidth="960"
-		d:DesignHeight="720" Height="720" MinHeight="720"
+		d:DesignWidth="1090" Width="1090" MinWidth="960" MaxWidth="1360"
+		d:DesignHeight="720" Height="720" MinHeight="720" MaxHeight="880"
         x:Class="AvaloniaGuideApp.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
 		WindowStartupLocation="CenterOwner"
         Icon="/Assets/avalonia-logo.ico"
         Title="Avalonia Guide Application"
+		Loaded="Window_Loaded"
 		Closing="Window_Closing">
-
-	<Design.DataContext>
-		<vm:MainWindowViewModel/>
-	</Design.DataContext>
 
 	<Grid ColumnDefinitions="*">
 
@@ -24,7 +21,8 @@
 						   Name="navigateView"
 						   IsPaneToggleButtonVisible="False"
 						   IsSettingsVisible="False"
-						   PaneDisplayMode="LeftCompact">
+						   PaneDisplayMode="LeftCompact"
+						   Content="{Binding CurrentPage}">
 
 			<ui:NavigationView.MenuItems>
 

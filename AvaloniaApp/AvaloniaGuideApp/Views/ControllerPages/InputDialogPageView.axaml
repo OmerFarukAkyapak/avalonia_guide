@@ -1,0 +1,28 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaGuideApp.InputDialogPageView">
+
+	<StackPanel VerticalAlignment="Center" Spacing="20">
+		<Button Name="btnTextInputDialog"
+				Content="Show Text Input Dialog"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				Click="btnTextInputDialog_Click"/>
+
+		<StackPanel Orientation="Horizontal"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Center"
+					Spacing="10">
+
+			<TextBlock Text="Text Input Result :"
+					   VerticalAlignment="Center"/>
+
+			<TextBox Name="txtTextInputResult"
+					 IsReadOnly="True"/>
+
+		</StackPanel>
+	</StackPanel>
+</UserControl>

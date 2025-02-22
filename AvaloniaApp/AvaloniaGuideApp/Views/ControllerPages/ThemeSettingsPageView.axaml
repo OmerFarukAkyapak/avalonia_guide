@@ -1,24 +1,13 @@
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-		xmlns:ui="using:FluentAvalonia.UI.Controls"
-		xmlns:vm="using:AvaloniaGuideApp.ViewModels"
-        mc:Ignorable="d" d:DesignWidth="780" d:DesignHeight="580"
-		Width="780" Height="580"
-        x:Class="AvaloniaGuideApp.ThemeSettingsWindow"
-		x:DataType="vm:ThemeSettingsWindowViewModel"
-        x:CompileBindings="True"
-        Title="Theme Settings"
-		Icon="/Assets/avalonia-logo.ico"
-		WindowStartupLocation="CenterOwner"
-		Closing="Window_Closing">
-
-	<Design.DataContext>
-		<vm:ThemeSettingsWindowViewModel/>
-	</Design.DataContext>
-	
-
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="800"
+			 xmlns:ui="using:FluentAvalonia.UI.Controls"
+			 xmlns:vm="using:AvaloniaGuideApp.ViewModels"
+			 x:DataType="vm:ThemeSettingsWindowViewModel"
+             x:Class="AvaloniaGuideApp.ThemeSettingsPageView"
+			 Unloaded="UserControl_Unloaded">
 	<ScrollViewer Padding="{StaticResource SampleAppPageMargin}">
 
 		<StackPanel Spacing="8" Margin="10">
@@ -225,5 +214,4 @@
 
 		</StackPanel>
 	</ScrollViewer>
-
-</Window>
+</UserControl>

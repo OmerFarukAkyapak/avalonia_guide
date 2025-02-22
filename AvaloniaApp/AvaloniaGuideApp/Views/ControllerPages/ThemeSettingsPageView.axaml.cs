@@ -1,20 +1,18 @@
+using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Media;
 using AvaloniaGuideApp.ViewModels;
-using FluentAvalonia.UI.Windowing;
 using System.Runtime.CompilerServices;
 
 namespace AvaloniaGuideApp;
 
-public partial class ThemeSettingsWindow : AppWindow
+public partial class ThemeSettingsPageView : UserControl
 {
-    private readonly ThemeSettingsWindowViewModel _themeSettings;
-    public ThemeSettingsWindow()
+    private readonly ThemeSettingsWindowViewModel _viewModel = new();
+    public ThemeSettingsPageView()
     {
         InitializeComponent();
-
-        _themeSettings = new ThemeSettingsWindowViewModel();
-        DataContext = _themeSettings;
+        DataContext = _viewModel;
     }
 
     protected override void OnLoaded(RoutedEventArgs e)
@@ -31,8 +29,8 @@ public partial class ThemeSettingsWindow : AppWindow
         }
     }
 
-    private void Window_Closing(object? sender, Avalonia.Controls.WindowClosingEventArgs e)
+    private void UserControl_Unloaded(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        _themeSettings.SaveSettings();
+        _viewModel.SaveSettings();
     }
 }

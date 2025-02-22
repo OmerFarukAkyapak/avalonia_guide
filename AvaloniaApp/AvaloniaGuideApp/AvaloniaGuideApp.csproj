@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Controllers\SplashScreenWindow.axaml.cs">
+    <Compile Update="Views\SplashScreenWindow.axaml.cs">
       <DependentUpon>SplashScreenWindow.axaml</DependentUpon>
     </Compile>
   </ItemGroup>
