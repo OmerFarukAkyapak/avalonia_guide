@@ -23,6 +23,7 @@ namespace AvaloniaGuideApp.ViewModels
         private ThemeSettingsPageView _themeSettingsPage = new();
         private InputDialogPageView _textInputDialogPage = new();
         private ConverterUsagePageView _converterUsagePage = new();
+        private TaskDialogPageView _taskDialogPage = new();
         #endregion
 
         public MainWindowViewModel()
@@ -51,6 +52,9 @@ namespace AvaloniaGuideApp.ViewModels
                     break;
                 case PagesEnum.ConverterUsagePage:
                     InstanceMainWindowVM.CurrentPage = _converterUsagePage;
+                    break;
+                case PagesEnum.TaskDialogPage:
+                    InstanceMainWindowVM.CurrentPage = _taskDialogPage;
                     break;
                 default:
                     break;

@@ -1,0 +1,65 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaGuideApp.TaskDialogPageView">
+	<ScrollViewer Padding="20" >
+		<StackPanel Spacing="20">
+
+			<StackPanel Spacing="15">
+				<TextBlock Text="Task Dialogs Page"
+						   FontWeight="Bold"
+						   FontSize="24"/>
+				<Separator/>
+			</StackPanel>
+
+			<StackPanel VerticalAlignment="Center" Spacing="20">
+				<Button Content="Show Warning Dialog"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						Click="btnWarning_Click"/>
+
+				<Button Content="Show Error Dialog"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						Click="btnError_Click"/>
+
+				<Button Content="Show Success Dialog"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						Click="btnSuccess_Click"/>
+
+				<Button Content="Show Information Dialog"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						Click="btnInformation_Click"/>
+
+				<Button Content="Show Question Dialog"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						Click="btnQuestion_Click"/>
+
+				<StackPanel Orientation="Horizontal"
+							Spacing="10"
+							HorizontalAlignment="Center">
+					
+					<TextBlock Text="Dialog Result :"
+							   VerticalAlignment="Center"
+						       HorizontalAlignment="Center"/>
+
+					<TextBlock Name="txtDialogResult"
+							   VerticalAlignment="Center"
+							   HorizontalAlignment="Center"
+							   FontWeight="Bold"/>
+
+				</StackPanel>
+
+
+
+
+			</StackPanel>
+		</StackPanel>
+
+	</ScrollViewer>
+</UserControl>

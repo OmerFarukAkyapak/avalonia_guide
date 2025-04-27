@@ -34,7 +34,14 @@ namespace AvaloniaGuideApp.ViewModels
                     Name = "Converter Usage",
                     Description = "Shows a window with a data grid.",
                     Page = PagesEnum.ConverterUsagePage
+                },
+                new PageModel
+                {
+                    Name = "Task Dialog",
+                    Description = "Shows a window with task dialogs.",
+                    Page = PagesEnum.TaskDialogPage
                 }
+
             };
         }
     }
