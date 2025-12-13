@@ -2,7 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
 			 xmlns:ui="using:FluentAvalonia.UI.Controls"
              xmlns:vm="using:AvaloniaGuideApp.ViewModels"
              xmlns:local="clr-namespace:AvaloniaGuideApp.Converters"
@@ -23,13 +23,15 @@
 						   FontSize="24"/>
 				<Separator/>
 			</StackPanel>
+
 			<Grid RowDefinitions="*,Auto">
 
 				<DataGrid Grid.Row="0"
+						  GridLinesVisibility="All"
 						  ItemsSource="{Binding People}"
 						  AutoGenerateColumns="False">
 					<DataGrid.Columns>
-						<DataGridCheckBoxColumn Header="Selected"
+						<DataGridCheckBoxColumn Header="*"
 												Binding="{Binding IsSelected}"
 												Width="Auto"/>
 
@@ -41,23 +43,29 @@
 												Width="*">
 							<DataGridTemplateColumn.CellTemplate>
 								<DataTemplate>
-									<TextBlock Text="{Binding Sex}"
-											   Background="{Binding Sex, Converter={StaticResource SexStatusToBackgroundColorConverter}}"
-											   Padding="5"/>
+									<Border CornerRadius="10"
+											Margin="0 5"
+											Background="{Binding Sex, Converter={StaticResource SexStatusToBackgroundColorConverter}}"
+											HorizontalAlignment="Center">
+										<TextBlock Text="{Binding Sex}" 
+												   Padding="5"/>
+									</Border>
+
 								</DataTemplate>
 							</DataGridTemplateColumn.CellTemplate>
 						</DataGridTemplateColumn>
 
 						<DataGridTextColumn Header="Age"
 											Width="*"
-											Binding="{Binding Age}" />
+											Binding="{Binding Age}"/>
 
 						<DataGridTemplateColumn Header="Is Adult"
 												Width="*">
 							<DataGridTemplateColumn.CellTemplate>
 								<DataTemplate>
 									<CheckBox IsChecked="{Binding Age, Converter={StaticResource AgeToIsAdultConverter}, Mode=OneWay}"
-											  IsEnabled="False"/>
+											  IsEnabled="False"
+											  HorizontalAlignment="Center"/>
 								</DataTemplate>
 							</DataGridTemplateColumn.CellTemplate>
 						</DataGridTemplateColumn>
@@ -65,9 +73,13 @@
 				</DataGrid>
 
 				<StackPanel Grid.Row="1"
-							HorizontalAlignment="Right"
-							Spacing="10"
-							Margin="20 20 0 0">
+							Margin="0 100 0 0"
+							Spacing="10">
+
+					<TextBlock Text="Person Management"
+							   FontWeight="Bold"
+							   FontSize="16"/>
+
 					<StackPanel Orientation="Horizontal"
 								Spacing="10">
 
@@ -76,20 +88,47 @@
 								Width="200"/>
 
 						<ComboBox ItemsSource="{Binding SexTypeList}"
-								  SelectedItem="{Binding SelectedSexType}"/>
+								  SelectedItem="{Binding SelectedSexType}"
+								  Height="38"/>
 
 						<TextBox Text="{Binding NewPersonAge, Mode=TwoWay}"
 								 Watermark="Age"/>
 
 
-						<Button Content="Add Person"
-								Command="{Binding AddPersonCommand}" />
+						<Button Command="{Binding AddPersonCommand}">
+							<Button.Content>
+								<StackPanel Orientation="Horizontal"
+											Spacing="10">
+									<Image Source="/Assets/plus.png"
+										   RenderOptions.BitmapInterpolationMode="HighQuality"
+										   Width="16"
+										   Height="16"/>
+
+
+									<Label Content="Add Person"/>
+								</StackPanel>
+
+							</Button.Content>
+						</Button>
+
+						<Button Command="{Binding DeleteSelectedPersonCommand}"
+								HorizontalAlignment="Right">
+							<Button.Content>
+								<StackPanel Orientation="Horizontal"
+											Spacing="10">
+									<Image Source="/Assets/delete.png"
+										   RenderOptions.BitmapInterpolationMode="HighQuality"
+										   Width="16"
+										   Height="16"/>
+
+
+									<Label Content="Delete Selected Person"/>
+								</StackPanel>
+
+							</Button.Content>
+						</Button>
 
 					</StackPanel>
-
-					<Button Content="Delete Selected Person"
-							Command="{Binding DeleteSelectedPersonCommand}"
-							HorizontalAlignment="Right"/>
 
 					<ui:TeachingTip Title="Error"
 									PreferredPlacement="BottomLeft"

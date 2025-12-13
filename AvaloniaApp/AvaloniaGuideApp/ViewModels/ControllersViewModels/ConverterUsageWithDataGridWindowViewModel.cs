@@ -69,10 +69,10 @@ namespace AvaloniaGuideApp.ViewModels
 
             People = new ObservableCollection<Person>()
             {
-                new Person { Name = "Çisil", Age = 21, Sex = SexTypes.Female },
+                new Person { Name = "Fatma", Age = 21, Sex = SexTypes.Female },
                 new Person { Name = "Faruk", Age = 31, Sex = SexTypes.Male },
                 new Person { Name = "Cem", Age = 16, Sex = SexTypes.Male },
-                new Person { Name = "Arda", Age = 22, Sex = SexTypes.Unknown }
+                new Person { Name = "Deniz", Age = 22, Sex = SexTypes.Unknown }
             };
 
             AddPersonCommand = ReactiveCommand.Create(AddPerson);
@@ -83,6 +83,12 @@ namespace AvaloniaGuideApp.ViewModels
         {
             try
             {
+                if (NewPersonAge is null || NewPersonName is null)
+                {
+                    ShowErrorMessage($"Please fill the requiremt fields!");
+                    return;
+                }
+
                 if (!int.TryParse(NewPersonAge.ToString(), out int age) || age < 0)
                 {
                     ShowErrorMessage("Please enter a valid age.");

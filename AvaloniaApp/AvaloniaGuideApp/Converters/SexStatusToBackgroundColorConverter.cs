@@ -14,8 +14,8 @@ namespace AvaloniaGuideApp.Converters
             {
                 return sex switch
                 {
-                    SexTypes.Male => Brushes.LightBlue,
-                    SexTypes.Female => Brushes.LightPink,
+                    SexTypes.Male => Brushes.Blue,
+                    SexTypes.Female => Brushes.HotPink,
                     _ => Brushes.LightGray
                 };
             }
