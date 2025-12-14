@@ -1,4 +1,4 @@
-﻿using Avalonia.Media;
+﻿using Avalonia.Media.Imaging;
 
 namespace AvaloniaGuideApp.Models
 {
@@ -6,7 +6,7 @@ namespace AvaloniaGuideApp.Models
     {
         public string Name { get; set; }
         public string Description { get; set; }
-
+        public Bitmap Icon { get; set; }
         public PagesEnum Page { get; set; }
        
     }

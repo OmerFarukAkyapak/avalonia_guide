@@ -1,11 +1,11 @@
 <UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
 			 xmlns:vm="using:AvaloniaGuideApp.ViewModels"
 			 x:DataType="vm:HomePageViewModel"
-             x:Class="AvaloniaGuideApp.HomePageView">
+			 x:Class="AvaloniaGuideApp.HomePageView">
 
 
 	<ScrollViewer Padding="20">
@@ -40,9 +40,22 @@
 									<StackPanel Spacing="5"
 												HorizontalAlignment="Center"
 												VerticalAlignment="Center">
-										<TextBlock Text="{Binding Name}"
-												   FontWeight="DemiBold"
-												   HorizontalAlignment="Center"/>
+
+										<StackPanel Orientation="Horizontal"
+													HorizontalAlignment="Center"
+													Spacing="10">
+
+											<Image Source="{Binding Icon}"
+												   Width="16"
+												   Height="16"
+												   RenderOptions.BitmapInterpolationMode="HighQuality"/>
+
+											<TextBlock Text="{Binding Name}"
+													   FontWeight="DemiBold"
+													   HorizontalAlignment="Center"/>
+										</StackPanel>
+
+
 
 										<Separator />
 
