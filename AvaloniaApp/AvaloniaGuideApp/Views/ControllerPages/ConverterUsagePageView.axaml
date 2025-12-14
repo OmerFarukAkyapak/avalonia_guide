@@ -1,13 +1,14 @@
 <UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
 			 xmlns:ui="using:FluentAvalonia.UI.Controls"
-             xmlns:vm="using:AvaloniaGuideApp.ViewModels"
-             xmlns:local="clr-namespace:AvaloniaGuideApp.Converters"
+			 xmlns:AvaloniaEdit="clr-namespace:AvaloniaEdit;assembly=AvaloniaEdit"
+			 xmlns:vm="using:AvaloniaGuideApp.ViewModels"
+			 xmlns:local="clr-namespace:AvaloniaGuideApp.Converters"
 			 x:DataType="vm:ConverterUsageWithDataGridWindowViewModel"
-             x:Class="AvaloniaGuideApp.ConverterUsagePageView">
+			 x:Class="AvaloniaGuideApp.ConverterUsagePageView">
 	<UserControl.Resources>
 		<local:AgeToIsAdultConverter x:Key="AgeToIsAdultConverter" />
 		<local:SexStatusToBackgroundColorConverter x:Key="SexStatusToBackgroundColorConverter" />
@@ -47,7 +48,7 @@
 											Margin="0 5"
 											Background="{Binding Sex, Converter={StaticResource SexStatusToBackgroundColorConverter}}"
 											HorizontalAlignment="Center">
-										<TextBlock Text="{Binding Sex}" 
+										<TextBlock Text="{Binding Sex}"
 												   Padding="5"/>
 									</Border>
 
@@ -85,7 +86,7 @@
 
 						<TextBox Text="{Binding NewPersonName, Mode=TwoWay}"
 								 Watermark="Name"
-								Width="200"/>
+								 Width="200"/>
 
 						<ComboBox ItemsSource="{Binding SexTypeList}"
 								  SelectedItem="{Binding SelectedSexType}"
@@ -138,7 +139,18 @@
 				</StackPanel>
 
 			</Grid>
+
+			<AvaloniaEdit:TextEditor Name="splashCodeEditor"
+									 Margin="20 0"
+									 Height="600"
+									 BorderThickness="5"
+									 BorderBrush="Gray"
+									 Padding="10"
+									 IsReadOnly="True"
+									 FontFamily="Cascadia Code,Consolas,Menlo,Monospace"
+									 FontSize="14"/>
 		</StackPanel>
+
 
 	</ScrollViewer>
 </UserControl>

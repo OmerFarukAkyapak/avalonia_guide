@@ -15,7 +15,7 @@
 		CanResize="False"
 		KeyDown="Window_KeyDown">
 
-	<Border BorderBrush="Black" BorderThickness="3">
+	<Border BorderBrush="Gray" BorderThickness="1">
 
 		<Grid RowDefinitions="Auto,Auto,Auto,Auto"
 			  Margin="10">

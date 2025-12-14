@@ -1,9 +1,10 @@
 <UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="AvaloniaGuideApp.InputDialogPageView">
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 xmlns:AvaloniaEdit="clr-namespace:AvaloniaEdit;assembly=AvaloniaEdit"
+			 x:Class="AvaloniaGuideApp.InputDialogPageView">
 	<ScrollViewer Padding="20" >
 		<StackPanel Spacing="20">
 
@@ -14,7 +15,8 @@
 				<Separator/>
 			</StackPanel>
 
-			<StackPanel VerticalAlignment="Center" Spacing="20">
+			<StackPanel VerticalAlignment="Center"
+						Spacing="20">
 				<Button Name="btnTextInputDialog"
 						Content="Show Text Input Dialog"
 						HorizontalAlignment="Center"
@@ -31,9 +33,19 @@
 
 					<TextBox Name="txtTextInputResult"
 							 IsReadOnly="True"/>
-
 				</StackPanel>
+
+
 			</StackPanel>
+			<AvaloniaEdit:TextEditor Name="splashCodeEditor"
+									 Margin="20 0"
+									 Height="600"
+									 BorderThickness="5"
+									 BorderBrush="Gray"
+									 Padding="10"
+									 IsReadOnly="True"
+									 FontFamily="Cascadia Code,Consolas,Menlo,Monospace"
+									 FontSize="14"/>
 		</StackPanel>
 
 	</ScrollViewer>

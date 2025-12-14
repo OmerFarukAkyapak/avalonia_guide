@@ -1,9 +1,10 @@
 <UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="AvaloniaGuideApp.SplashScreenPageView">
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 xmlns:AvaloniaEdit="clr-namespace:AvaloniaEdit;assembly=AvaloniaEdit"
+			 x:Class="AvaloniaGuideApp.SplashScreenPageView">
 
 	<ScrollViewer Padding="20">
 
@@ -16,12 +17,22 @@
 				<Separator/>
 			</StackPanel>
 
-			<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+			<StackPanel VerticalAlignment="Center"
+						HorizontalAlignment="Center"
+						Spacing="20">
 				<Button Name="btnShowSplash"
-					Content="Show Splash Screen"
-					HorizontalAlignment="Center"
-					VerticalAlignment="Center"
-					Click="ShowSplash_Click"/>
+						Content="Show Splash Screen"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						Click="ShowSplash_Click"/>
+
+				<AvaloniaEdit:TextEditor Name="splashCodeEditor"
+										 BorderThickness="5"
+										 BorderBrush="Gray"
+										 Padding="10"
+										 IsReadOnly="True"
+										 FontFamily="Cascadia Code,Consolas,Menlo,Monospace"
+										 FontSize="14"/>
 			</StackPanel>
 
 		</StackPanel>
