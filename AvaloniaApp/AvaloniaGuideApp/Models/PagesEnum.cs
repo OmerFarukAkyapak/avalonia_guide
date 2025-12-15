@@ -9,5 +9,6 @@
         TextInputDialogPage = 5,
         ConverterUsagePage = 6,
         TaskDialogPage = 7,
+        ProgressRingPage = 8
     }
 }
