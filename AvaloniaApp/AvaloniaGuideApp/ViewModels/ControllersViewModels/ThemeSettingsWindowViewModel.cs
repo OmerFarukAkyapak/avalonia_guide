@@ -20,7 +20,6 @@ namespace AvaloniaGuideApp.ViewModels
         private string _currentAppTheme;
         private FlowDirection _currentFlowDirection;
         private Color? _listBoxColor;
-        private bool _ignoreSetListBoxColor = false;
 
         private const string _fileName = "themesettings.json";
         private const string _system = "System";

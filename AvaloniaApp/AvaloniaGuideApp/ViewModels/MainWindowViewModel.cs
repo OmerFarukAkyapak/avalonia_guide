@@ -24,6 +24,7 @@ namespace AvaloniaGuideApp.ViewModels
         private InputDialogPageView _textInputDialogPage = new();
         private ConverterUsagePageView _converterUsagePage = new();
         private TaskDialogPageView _taskDialogPage = new();
+        private ProgressRingPageView _progressRingPage = new();
         #endregion
 
         public MainWindowViewModel()
@@ -55,6 +56,9 @@ namespace AvaloniaGuideApp.ViewModels
                     break;
                 case PagesEnum.TaskDialogPage:
                     InstanceMainWindowVM.CurrentPage = _taskDialogPage;
+                    break;
+                case PagesEnum.ProgressRingPage:
+                    InstanceMainWindowVM.CurrentPage = _progressRingPage;
                     break;
                 default:
                     break;

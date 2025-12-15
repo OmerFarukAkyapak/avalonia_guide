@@ -1,7 +1,7 @@
+using System;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
 using AvaloniaGuideApp.ViewModels;
-using System;
 
 namespace AvaloniaGuideApp
 {

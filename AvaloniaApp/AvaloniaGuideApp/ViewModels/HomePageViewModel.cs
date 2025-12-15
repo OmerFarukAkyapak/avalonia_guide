@@ -1,7 +1,7 @@
-﻿using Avalonia.Media.Imaging;
+﻿using System;
 using Avalonia.Platform;
+using Avalonia.Media.Imaging;
 using AvaloniaGuideApp.Models;
-using System;
 using System.Collections.ObjectModel;
 
 namespace AvaloniaGuideApp.ViewModels
@@ -48,6 +48,13 @@ namespace AvaloniaGuideApp.ViewModels
                     Description = "Shows a window with task dialogs.",
                     Icon = LoadIcon("/Assets/dialog.png"),
                     Page = PagesEnum.TaskDialogPage
+                },
+                new PageModel
+                {
+                    Name = "Progress Ring Dialog",
+                    Description = "Shows a dialog to progressing ring.",
+                    Icon = LoadIcon("/Assets/progress.png"),
+                    Page = PagesEnum.ProgressRingPage
                 }
 
             };

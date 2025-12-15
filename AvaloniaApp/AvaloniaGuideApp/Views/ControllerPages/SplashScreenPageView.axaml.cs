@@ -46,28 +46,28 @@ public partial class SplashScreenPageView : UserControl
     private const string SplashXamlCode =
     @"<Panel>
 
-    <StackPanel Spacing=""20""
-                HorizontalAlignment=""Center""
-                VerticalAlignment=""Center"">
+        <StackPanel Spacing=""20""
+                    HorizontalAlignment=""Center""
+                    VerticalAlignment=""Center"">
 
-        <Image Source=""/Assets/avalonia-logo.ico""
-               Width=""250""
-               Height=""250""
-               RenderOptions.BitmapInterpolationMode=""HighQuality""/>
+            <Image Source=""/Assets/avalonia-logo.ico""
+                   Width=""250""
+                   Height=""250""
+                   RenderOptions.BitmapInterpolationMode=""HighQuality""/>
 
-        <TextBlock Text=""Avalonia Guide App""
-                   FontSize=""48""/>
+            <TextBlock Text=""Avalonia Guide App""
+                       FontSize=""48""/>
 
-        <ProgressBar MaxWidth=""200""
-                     Height=""10""
-                     BorderThickness=""1""
-                     Margin=""0 10 0 0""/>
+            <ProgressBar MaxWidth=""200""
+                         Height=""10""
+                         BorderThickness=""1""
+                         Margin=""0 10 0 0""/>
 
-        <TextBlock Text=""Loading...""
-                   HorizontalAlignment=""Center""
-                   FontSize=""20""/>
+            <TextBlock Text=""Loading...""
+                       HorizontalAlignment=""Center""
+                       FontSize=""20""/>
 
-    </StackPanel>
+        </StackPanel>
 
-</Panel>";
+    </Panel>";
 }

@@ -1,12 +1,12 @@
 <UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="800"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="800"
 			 xmlns:ui="using:FluentAvalonia.UI.Controls"
 			 xmlns:vm="using:AvaloniaGuideApp.ViewModels"
 			 x:DataType="vm:ThemeSettingsWindowViewModel"
-             x:Class="AvaloniaGuideApp.ThemeSettingsPageView"
+			 x:Class="AvaloniaGuideApp.ThemeSettingsPageView"
 			 Unloaded="UserControl_Unloaded">
 
 	<ScrollViewer Padding="20">
@@ -18,107 +18,107 @@
 						   FontSize="24"/>
 				<Separator/>
 			</StackPanel>
-			
+
 			<Grid>
 
 				<DockPanel HorizontalAlignment="Left">
 					<Image Source="/Assets/avalonia-logo.ico"
-                           DockPanel.Dock="Left"
-                           Height="80"
-                           RenderOptions.BitmapInterpolationMode="HighQuality"/>
+						   DockPanel.Dock="Left"
+						   Height="80"
+						   RenderOptions.BitmapInterpolationMode="HighQuality"/>
 
 					<StackPanel Spacing="0" Margin="15 0">
 						<TextBlock Text="Avalonia Guide Application Theme"
-                                   Theme="{StaticResource TitleTextBlockStyle}" />
+								   Theme="{StaticResource TitleTextBlockStyle}" />
 
 						<TextBlock Text="{Binding CurrentVersion}"
-                                   Theme="{StaticResource BodyTextBlockStyle}" />
+								   Theme="{StaticResource BodyTextBlockStyle}" />
 
 						<TextBlock Text="MIT License"
-                                   Theme="{StaticResource CaptionTextBlockStyle}" />
+								   Theme="{StaticResource CaptionTextBlockStyle}" />
 					</StackPanel>
 				</DockPanel>
 
 			</Grid>
 
 			<ui:SettingsExpander Header="App Theme"
-                                 IconSource="DarkTheme"
-                                 Description="Change the current app theme">
+								 IconSource="DarkTheme"
+								 Description="Change the current app theme">
 
 				<ui:SettingsExpander.Footer>
 					<ComboBox SelectedItem="{Binding CurrentAppTheme}"
-                              ItemsSource="{Binding AppThemes}"
-                              MinWidth="150" />
+							  ItemsSource="{Binding AppThemes}"
+							  MinWidth="150" />
 				</ui:SettingsExpander.Footer>
 
 			</ui:SettingsExpander>
 
 			<ui:SettingsExpander Header="Flow Direction"
-                                 IconSource="AlignRight"
-                                 Description="Change the current app flow direction">
+								 IconSource="AlignRight"
+								 Description="Change the current app flow direction">
 
 				<ui:SettingsExpander.Footer>
 					<ComboBox SelectedItem="{Binding CurrentFlowDirection}"
-                              ItemsSource="{Binding AppFlowDirections}"
-                              MinWidth="150" />
+							  ItemsSource="{Binding AppFlowDirections}"
+							  MinWidth="150" />
 				</ui:SettingsExpander.Footer>
 
 			</ui:SettingsExpander>
 
 			<ui:SettingsExpander Header="App Accent Color"
-                                 IconSource="ColorLine"
-                                 Description="Set a custom accent color for the App"
-                                 IsExpanded="True">
+								 IconSource="ColorLine"
+								 Description="Set a custom accent color for the App"
+								 IsExpanded="True">
 
 				<ui:SettingsExpanderItem Content="Preview">
 					<ui:SettingsExpanderItem.Footer>
 						<Grid RowDefinitions="*,*,*,*"
-                                  ColumnDefinitions="*,*"
-                                  HorizontalAlignment="Right"
-                                  Grid.Column="1">
+							  ColumnDefinitions="*,*"
+							  HorizontalAlignment="Right"
+							  Grid.Column="1">
 							<Border Background="{DynamicResource SystemAccentColor}"
-                                    Height="40" Grid.ColumnSpan="2">
+									Height="40" Grid.ColumnSpan="2">
 								<TextBlock Text="SystemAccentColor"
-                                           Foreground="{DynamicResource TextOnAccentFillColorPrimaryBrush}"
-                                           HorizontalAlignment="Center" VerticalAlignment="Center"/>
+										   Foreground="{DynamicResource TextOnAccentFillColorPrimaryBrush}"
+										   HorizontalAlignment="Center" VerticalAlignment="Center"/>
 							</Border>
 
 							<Border Background="{DynamicResource SystemAccentColorLight1}"
-                                    Height="40" Width="90" Grid.Column="0" Grid.Row="1">
+									Height="40" Width="90" Grid.Column="0" Grid.Row="1">
 								<TextBlock Text="Light1"
-                                           Foreground="{DynamicResource TextOnAccentFillColorPrimaryBrush}"
-                                           HorizontalAlignment="Center" VerticalAlignment="Center"/>
+										   Foreground="{DynamicResource TextOnAccentFillColorPrimaryBrush}"
+										   HorizontalAlignment="Center" VerticalAlignment="Center"/>
 							</Border>
 							<Border Background="{DynamicResource SystemAccentColorLight2}"
-                                    Height="40" Width="90" Grid.Column="0" Grid.Row="2">
+									Height="40" Width="90" Grid.Column="0" Grid.Row="2">
 								<TextBlock Text="Light2"
-                                           Foreground="{DynamicResource TextOnAccentFillColorPrimaryBrush}"
-                                           HorizontalAlignment="Center" VerticalAlignment="Center"/>
+										   Foreground="{DynamicResource TextOnAccentFillColorPrimaryBrush}"
+										   HorizontalAlignment="Center" VerticalAlignment="Center"/>
 							</Border>
 							<Border Background="{DynamicResource SystemAccentColorLight3}"
-                                    Height="40" Width="90" Grid.Column="0" Grid.Row="3">
+									Height="40" Width="90" Grid.Column="0" Grid.Row="3">
 								<TextBlock Text="Light3"
-                                           Foreground="{DynamicResource TextOnAccentFillColorPrimaryBrush}"
-                                           HorizontalAlignment="Center" VerticalAlignment="Center"/>
+										   Foreground="{DynamicResource TextOnAccentFillColorPrimaryBrush}"
+										   HorizontalAlignment="Center" VerticalAlignment="Center"/>
 							</Border>
 
 							<Border Background="{DynamicResource SystemAccentColorDark1}"
-                                    Height="40" Width="90" Grid.Column="1" Grid.Row="1">
+									Height="40" Width="90" Grid.Column="1" Grid.Row="1">
 								<TextBlock Text="Dark1"
-                                           Foreground="{DynamicResource TextOnAccentFillColorPrimaryBrush}"
-                                           HorizontalAlignment="Center" VerticalAlignment="Center"/>
+										   Foreground="{DynamicResource TextOnAccentFillColorPrimaryBrush}"
+										   HorizontalAlignment="Center" VerticalAlignment="Center"/>
 							</Border>
 							<Border Background="{DynamicResource SystemAccentColorDark2}"
-                                    Height="40" Width="90" Grid.Column="1" Grid.Row="2">
+									Height="40" Width="90" Grid.Column="1" Grid.Row="2">
 								<TextBlock Text="Dark2"
-                                           Foreground="{DynamicResource TextOnAccentFillColorPrimaryBrush}"
-                                           HorizontalAlignment="Center" VerticalAlignment="Center"/>
+										   Foreground="{DynamicResource TextOnAccentFillColorPrimaryBrush}"
+										   HorizontalAlignment="Center" VerticalAlignment="Center"/>
 							</Border>
 							<Border Background="{DynamicResource SystemAccentColorDark3}"
-                                    Height="40" Width="90" Grid.Column="1" Grid.Row="3">
+									Height="40" Width="90" Grid.Column="1" Grid.Row="3">
 								<TextBlock Text="Dark3"
-                                           Foreground="{DynamicResource TextOnAccentFillColorPrimaryBrush}"
-                                           HorizontalAlignment="Center" VerticalAlignment="Center"/>
+										   Foreground="{DynamicResource TextOnAccentFillColorPrimaryBrush}"
+										   HorizontalAlignment="Center" VerticalAlignment="Center"/>
 							</Border>
 						</Grid>
 					</ui:SettingsExpanderItem.Footer>
@@ -126,21 +126,21 @@
 
 				<ui:SettingsExpanderItem>
 					<CheckBox Content="Use Custom Accent Color?"
-                                      IsChecked="{Binding UseCustomAccent}"
-                                      HorizontalAlignment="Right" />
+							  IsChecked="{Binding UseCustomAccent}"
+							  HorizontalAlignment="Right" />
 					<ui:SettingsExpanderItem.Footer>
 						<StackPanel>
 							<TextBlock Text="Pre-set Colors"
-                                       Margin="24 24 0 0"
-                                       IsVisible="{Binding UseCustomAccent}" />
+									   Margin="24 24 0 0"
+									   IsVisible="{Binding UseCustomAccent}" />
 
 							<ListBox ItemsSource="{Binding PredefinedColors}"
-                                     SelectedItem="{Binding ListBoxColor}"
-                                     MaxWidth="441"
-                                     AutoScrollToSelectedItem="False"
-                                     Margin="24 0 24 12"
-                                     HorizontalAlignment="Left"
-                                     IsVisible="{Binding UseCustomAccent}" >
+									 SelectedItem="{Binding ListBoxColor}"
+									 MaxWidth="441"
+									 AutoScrollToSelectedItem="False"
+									 Margin="24 0 24 12"
+									 HorizontalAlignment="Left"
+									 IsVisible="{Binding UseCustomAccent}" >
 								<ListBox.ItemsPanel>
 									<ItemsPanelTemplate>
 										<WrapPanel />
@@ -157,22 +157,22 @@
 											<ControlTemplate>
 												<Panel>
 													<Border CornerRadius="{StaticResource ControlCornerRadius}"
-                                                            BorderThickness="2"
-                                                            Name="Root">
+															BorderThickness="2"
+															Name="Root">
 														<Border.Background>
 															<SolidColorBrush Color="{Binding}" />
 														</Border.Background>
 													</Border>
 
 													<Border Name="Check"
-                                                            Background="{DynamicResource FocusStrokeColorOuter}"
-                                                            Width="20" Height="20"
-                                                            HorizontalAlignment="Right"
-                                                            VerticalAlignment="Top"
-                                                            Margin="0 2 2 0">
+															Background="{DynamicResource FocusStrokeColorOuter}"
+															Width="20" Height="20"
+															HorizontalAlignment="Right"
+															VerticalAlignment="Top"
+															Margin="0 2 2 0">
 														<ui:SymbolIcon Symbol="Checkmark"
-                                                                       Foreground="{DynamicResource SystemAccentColor}"
-                                                                       FontSize="18"/>
+																	   Foreground="{DynamicResource SystemAccentColor}"
+																	   FontSize="18"/>
 													</Border>
 												</Panel>
 											</ControlTemplate>
@@ -196,23 +196,23 @@
 							</ListBox>
 
 							<Rectangle Fill="{DynamicResource ApplicationPageBackgroundThemeBrush}"
-                                       Height="1"
-                                       IsVisible="{Binding UseCustomAccent}" />
+									   Height="1"
+									   IsVisible="{Binding UseCustomAccent}" />
 
 							<DockPanel LastChildFill="False" Margin="24 6 0 0"
-                                       IsVisible="{Binding UseCustomAccent}" >
+									   IsVisible="{Binding UseCustomAccent}" >
 								<TextBlock Text="Custom Color"
-                                           VerticalAlignment="Center"
-                                           DockPanel.Dock="Left" />
+										   VerticalAlignment="Center"
+										   DockPanel.Dock="Left" />
 
 								<ui:ColorPickerButton Color="{Binding CustomAccentColor}"
-                                                      IsMoreButtonVisible="True"
-                                                      UseSpectrum="True"
-                                                      UseColorWheel="False"
-                                                      UseColorTriangle="False"
-                                                      UseColorPalette="False"
-                                                      IsCompact="True" ShowAcceptDismissButtons="True"
-                                                      DockPanel.Dock="Right"/>
+													  IsMoreButtonVisible="True"
+													  UseSpectrum="True"
+													  UseColorWheel="False"
+													  UseColorTriangle="False"
+													  UseColorPalette="False"
+													  IsCompact="True" ShowAcceptDismissButtons="True"
+													  DockPanel.Dock="Right"/>
 							</DockPanel>
 						</StackPanel>
 					</ui:SettingsExpanderItem.Footer>

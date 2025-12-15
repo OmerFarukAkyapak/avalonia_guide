@@ -1,6 +1,6 @@
+using System;
 using Avalonia.Threading;
 using System.Threading.Tasks;
-using System;
 using FluentAvalonia.UI.Windowing;
 
 namespace AvaloniaGuideApp;

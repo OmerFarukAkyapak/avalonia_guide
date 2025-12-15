@@ -1,9 +1,9 @@
 <UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="700"
-             x:Class="AvaloniaGuideApp.AboutPageView">
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="700"
+			 x:Class="AvaloniaGuideApp.AboutPageView">
 
 	<ScrollViewer Padding="20">
 
@@ -38,8 +38,7 @@
 								HorizontalAlignment="Center"
 								Spacing="10">
 
-						<Button Content="LinkedIn"
-								Click="LinkedIn_Click">
+						<Button Click="LinkedIn_Click">
 							<Button.Content>
 								<Image Source="/Assets/linkedin.png"
 									   Width="24"
@@ -47,8 +46,7 @@
 									   RenderOptions.BitmapInterpolationMode="HighQuality"/>
 							</Button.Content>
 						</Button>
-						<Button Content="GitHub"
-								Click="GitHub_Click">
+						<Button Click="GitHub_Click">
 							<Button.Content>
 								<Image Source="/Assets/github.png"
 									   Width="24"
@@ -56,8 +54,7 @@
 									   RenderOptions.BitmapInterpolationMode="HighQuality"/>
 							</Button.Content>
 						</Button>
-						<Button Content="Medium"
-								Click="Medium_Click">
+						<Button Click="Medium_Click">
 							<Button.Content>
 								<Image Source="/Assets/medium.png"
 									   Width="24"

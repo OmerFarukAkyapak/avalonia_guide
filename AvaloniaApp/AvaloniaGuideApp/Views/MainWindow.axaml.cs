@@ -1,4 +1,3 @@
-using Avalonia.Controls;
 using Avalonia.Styling;
 using AvaloniaGuideApp.Models;
 using AvaloniaGuideApp.Utils;
@@ -80,18 +79,12 @@ namespace AvaloniaGuideApp.Views
 
         private async void Logout_Tapped(object? sender, Avalonia.Input.TappedEventArgs e)
         {
-            var owner = VisualRoot as Window;
-            if (owner is null)
-            {
-                return;
-            }
-
-            var result = await TaskDialogHelper.ShowQuestionDialogAsync(owner, "Log Out", "Do you want to close the app ?");
+            var result = await TaskDialogHelper.ShowQuestionDialogAsync(this, "Log Out", "Do you want to close the app ?");
 
             if (result)
             {
                 //Kill the app
-                await ProgressDialog.ShowProgressDialogWithDurationTime(owner, "Closing", "The application is closing ...", 3);
+                await ProgressDialog.ShowProgressDialogWithDurationTime(this, "Closing", "The application is closing ...", 3);
                 Environment.Exit(0);
             }
         }
@@ -105,25 +98,20 @@ namespace AvaloniaGuideApp.Views
                 e.Cancel = true;
             }
 
-            var owner = VisualRoot as Window;
-            if (owner is null)
-            {
-                return;
-            }
-
             string message = "Are you sure you want to exit?";
 
-            var result = await TaskDialogHelper.ShowQuestionDialogAsync(owner, "Exit", message);
+            var result = await TaskDialogHelper.ShowQuestionDialogAsync(this, "Exit", message);
             if (result)
             {
 
-                if (App.Current.RequestedThemeVariant is null)
+                if (App.Current?.RequestedThemeVariant is null)
                 {
                     e.Cancel = false;
                     return;
                 }
 
                 ThemeHelper.SaveSettings(App.Current.RequestedThemeVariant);
+                await ProgressDialog.ShowProgressDialogWithDurationTime(this, "Closing", "The application is closing ...", 1);
 
                 e.Cancel = false;
                 _isClosing = true;

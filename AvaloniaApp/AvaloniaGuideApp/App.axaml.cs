@@ -1,8 +1,8 @@
 using Avalonia;
-using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using AvaloniaGuideApp.ViewModels;
 using AvaloniaGuideApp.Views;
+using AvaloniaGuideApp.ViewModels;
+using Avalonia.Controls.ApplicationLifetimes;
 
 namespace AvaloniaGuideApp
 {
