@@ -62,12 +62,18 @@ Below are the main features included in the **avalonia_guide** application.
 
 ---
 
-### 💬 Modern Text Input Dialog
+### 💬 Modern Text Input & Task Dialog
 
-> A reusable and modern dialog for collecting text input from users.
+> A collection of reusable and modern dialogs, including text input dialogs, Yes/No confirmation task dialogs, and informational dialogs such as success, warning, and error messages.
 
 <!-- Screenshot -->
+**Task Dialogs**
+
 <img width="2229" height="1553" alt="Adsız" src="https://github.com/user-attachments/assets/9e19aee1-43b1-4bdd-b583-808254658ac7" />
+
+**Text Input Dialog**
+
+<img width="1113" height="776" alt="image" src="https://github.com/user-attachments/assets/b4b98c21-78e2-40fe-8391-0c001df33757" />
 
 ---
 
