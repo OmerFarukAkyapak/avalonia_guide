@@ -210,7 +210,7 @@ These converters demonstrate how Avalonia enables flexible UI logic through XAML
 
 ---
 
-### 🔗 ReactiveUI (TwoWay,OneWay Data Binding)
+### 🔗 ReactiveUI (TwoWay, OneWay Data Binding)
 
 > Two-way binding and ViewModel interaction implemented using ReactiveUI.
 
