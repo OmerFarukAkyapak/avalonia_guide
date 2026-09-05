@@ -1,33 +1,29 @@
-using System;
+using Avalonia.Controls;
 using Avalonia.Threading;
+using System;
 using System.Threading.Tasks;
-using FluentAvalonia.UI.Windowing;
 
 namespace AvaloniaGuideApp;
 
-public partial class SplashScreenWindow : AppWindow
+public partial class SplashScreenWindow : Window
 {
     private readonly Action? _mainAction;
     public SplashScreenWindow()
     {
         InitializeComponent();
-        CanResize = false;
-        ShowAsDialog = true;
-        TitleBar.Height = 0;
     }
-    public SplashScreenWindow(Action mainAction)
+    public SplashScreenWindow(Action mainAction) : this()
     {
-        InitializeComponent();
-        TitleBar.Height = 0;
-        this.CanResize = false;
-        this.ShowAsDialog = true;
 
         _mainAction = mainAction;
 
     }
-    private void Window_Loaded(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    private async void Window_Loaded(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        InitApp();
+        if (Design.IsDesignMode)
+            return;
+
+        await InitApp();
     }
 
     public async Task InitApp()

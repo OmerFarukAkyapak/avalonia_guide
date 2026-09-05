@@ -8,7 +8,7 @@ using System;
 
 namespace AvaloniaGuideApp.Views
 {
-    public partial class MainWindow : AppWindow
+    public partial class MainWindow : FAAppWindow
     {
         private MainWindowViewModel _viewModel = new();
         public MainWindow()
@@ -36,12 +36,12 @@ namespace AvaloniaGuideApp.Views
 
             if (ThemeVariant.Dark.Key.ToString() == appTheme)
             {
-                themeSymbol.Symbol = Symbol.WeatherMoon;
+                themeSymbol.Symbol = FASymbol.WeatherMoon;
 
             }
             else if (ThemeVariant.Light.Key.ToString() == appTheme)
             {
-                themeSymbol.Symbol = Symbol.WeatherSunny;
+                themeSymbol.Symbol = FASymbol.WeatherSunny;
             }
         }
 
@@ -57,13 +57,13 @@ namespace AvaloniaGuideApp.Views
             if (ThemeVariant.Dark.Key.ToString() == appTheme)
             {
                 App.Current.RequestedThemeVariant = ThemeVariant.Light;
-                themeSymbol.Symbol = Symbol.WeatherSunny;
+                themeSymbol.Symbol = FASymbol.WeatherSunny;
 
             }
             else if (ThemeVariant.Light.Key.ToString() == appTheme)
             {
                 App.Current.RequestedThemeVariant = ThemeVariant.Dark;
-                themeSymbol.Symbol = Symbol.WeatherMoon;
+                themeSymbol.Symbol = FASymbol.WeatherMoon;
             }
         }
 

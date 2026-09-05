@@ -85,7 +85,7 @@
 								Spacing="10">
 
 						<TextBox Text="{Binding NewPersonName, Mode=TwoWay}"
-								 Watermark="Name"
+								 PlaceholderText="Name"
 								 Width="200"/>
 
 						<ComboBox ItemsSource="{Binding SexTypeList}"
@@ -93,7 +93,7 @@
 								  Height="38"/>
 
 						<TextBox Text="{Binding NewPersonAge, Mode=TwoWay}"
-								 Watermark="Age"/>
+								 PlaceholderText="Age"/>
 
 
 						<Button Command="{Binding AddPersonCommand}">
@@ -131,11 +131,11 @@
 
 					</StackPanel>
 
-					<ui:TeachingTip Title="Error"
-									PreferredPlacement="BottomLeft"
-									Background="Red"
-									IsOpen="{Binding IsOpenError, Mode=TwoWay}"
-									Subtitle="{Binding ErrorMessage}"/>
+					<ui:FATeachingTip Title="Error"
+									  PreferredPlacement="BottomLeft"
+									  Background="Red"
+									  IsOpen="{Binding IsOpenError, Mode=TwoWay}"
+									  Subtitle="{Binding ErrorMessage}"/>
 				</StackPanel>
 
 			</Grid>

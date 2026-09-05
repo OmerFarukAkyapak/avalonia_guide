@@ -36,7 +36,7 @@ public partial class InputDialogPageView : UserControl
 
     private async void btnTextInputDialog_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        var owner = VisualRoot as Window;
+        var owner = TopLevel.GetTopLevel(this) as Window;
         if (owner is null)
         {
             return;
@@ -81,7 +81,7 @@ public partial class InputDialogPageView : UserControl
 
         <TextBox Grid.Row=""2""
                  Name=""txtBox""
-                 Watermark=""Type..""/>
+                 PlaceholderText=""Type..""/>
 
         <StackPanel Grid.Row=""3""
                     Margin=""0 20 0 0""

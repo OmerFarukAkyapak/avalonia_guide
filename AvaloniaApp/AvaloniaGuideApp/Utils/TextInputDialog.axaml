@@ -10,7 +10,6 @@
 		Title="TextInputDialog"
 		WindowStartupLocation="CenterScreen"
 		ExtendClientAreaToDecorationsHint="True"
-		ExtendClientAreaChromeHints="NoChrome"
 		ExtendClientAreaTitleBarHeightHint="0"
 		CanResize="False"
 		KeyDown="Window_KeyDown">
@@ -40,7 +39,7 @@
 
 			<TextBox Grid.Row="2"
 					 Name="txtBox"
-					 Watermark="Type.."/>
+					 PlaceholderText="Type.."/>
 
 			<StackPanel Grid.Row="3"
 						Margin="0 20 0 0"

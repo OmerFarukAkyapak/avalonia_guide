@@ -37,7 +37,7 @@ public partial class TaskDialogPageView : UserControl
 
     private async void btnWarning_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        var owner = VisualRoot as Window;
+        var owner = TopLevel.GetTopLevel(this) as Window;
         if (owner is null)
         {
             return;
@@ -49,7 +49,7 @@ public partial class TaskDialogPageView : UserControl
 
     private async void btnError_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        var owner = VisualRoot as Window;
+        var owner = TopLevel.GetTopLevel(this) as Window;
         if (owner is null)
         {
             return;
@@ -60,7 +60,7 @@ public partial class TaskDialogPageView : UserControl
 
     private async void btnSuccess_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        var owner = VisualRoot as Window;
+        var owner = TopLevel.GetTopLevel(this) as Window;
         if (owner is null)
         {
             return;
@@ -71,7 +71,7 @@ public partial class TaskDialogPageView : UserControl
 
     private async void btnInformation_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        var owner = VisualRoot as Window;
+        var owner = TopLevel.GetTopLevel(this) as Window;
         if (owner is null)
         {
             return;
@@ -82,7 +82,7 @@ public partial class TaskDialogPageView : UserControl
 
     private async void btnQuestion_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        var owner = VisualRoot as Window;
+        var owner = TopLevel.GetTopLevel(this) as Window;
         if (owner is null)
         {
             return;
@@ -111,18 +111,18 @@ public partial class TaskDialogPageView : UserControl
         string content,
         TaskDialogType dialogType)
     {
-        var taskDialog = new TaskDialog
+        var taskDialog = new FATaskDialog
         {
             Header = header,
             Content = content,
-            FooterVisibility = TaskDialogFooterVisibility.Never,
+            FooterVisibility = FATaskDialogFooterVisibility.Never,
             IsFooterExpanded = false,
             ShowProgressBar = false,
             XamlRoot = owner
         };
 
         taskDialog.Buttons.Add(
-            new TaskDialogButton
+            new FATaskDialogButton
             {
                 Text = ""OK"",
                 DialogResult = ""OK""
@@ -132,9 +132,9 @@ public partial class TaskDialogPageView : UserControl
         {
             case TaskDialogType.Warning:
                 taskDialog.IconSource =
-                    new SymbolIconSource
+                    new FASymbolIconSource
                     {
-                        Symbol = Symbol.AlertOn,
+                        Symbol = FASymbol.AlertOn,
                         Foreground = Brushes.Orange
                     };
                 taskDialog.Title = ""Warning"";
@@ -142,9 +142,9 @@ public partial class TaskDialogPageView : UserControl
 
             case TaskDialogType.Error:
                 taskDialog.IconSource =
-                    new SymbolIconSource
+                    new FASymbolIconSource
                     {
-                        Symbol = Symbol.Clear,
+                        Symbol = FASymbol.Clear,
                         Foreground = Brushes.Red
                     };
                 taskDialog.Title = ""Error"";
@@ -152,9 +152,9 @@ public partial class TaskDialogPageView : UserControl
 
             case TaskDialogType.Success:
                 taskDialog.IconSource =
-                    new SymbolIconSource
+                    new FASymbolIconSource
                     {
-                        Symbol = Symbol.Accept,
+                        Symbol = FASymbol.Accept,
                         Foreground = Brushes.Green
                     };
                 taskDialog.Title = ""Success"";
@@ -162,9 +162,9 @@ public partial class TaskDialogPageView : UserControl
 
             case TaskDialogType.Information:
                 taskDialog.IconSource =
-                    new SymbolIconSource
+                    new FASymbolIconSource
                     {
-                        Symbol = Symbol.Important,
+                        Symbol = FASymbol.Important,
                         Foreground = Brushes.Blue
                     };
                 taskDialog.Title = ""Information"";
@@ -179,32 +179,32 @@ public partial class TaskDialogPageView : UserControl
         string header,
         string content)
     {
-        var taskDialog = new TaskDialog
+        var taskDialog = new FATaskDialog
         {
             Title = ""Question"",
             Header = header,
             Content = content,
-            FooterVisibility = TaskDialogFooterVisibility.Never,
+            FooterVisibility = FATaskDialogFooterVisibility.Never,
             IsFooterExpanded = false,
             ShowProgressBar = false,
             IconSource =
-                new SymbolIconSource
+                new FASymbolIconSource
                 {
-                    Symbol = Symbol.Help,
+                    Symbol = FASymbol.Help,
                     Foreground = Brushes.BlueViolet
                 },
             XamlRoot = owner
         };
 
         var yesButton =
-            new TaskDialogButton
+            new FATaskDialogButton
             {
                 Text = ""Yes"",
                 DialogResult = ""Yes""
             };
 
         var noButton =
-            new TaskDialogButton
+            new FATaskDialogButton
             {
                 Text = ""No"",
                 DialogResult = ""No""
@@ -222,7 +222,7 @@ public partial class TaskDialogPageView : UserControl
 
         var result = await taskDialog.ShowAsync(true);
 
-        return result == ""Yes"";
+            return result is ""Yes"";
     }
 }
 

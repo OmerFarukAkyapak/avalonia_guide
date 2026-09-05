@@ -1,6 +1,6 @@
-﻿using System;
-using Avalonia;
-using Avalonia.ReactiveUI;
+﻿using Avalonia;
+using ReactiveUI.Avalonia;
+using System;
 
 namespace AvaloniaGuideApp
 {
@@ -19,6 +19,6 @@ namespace AvaloniaGuideApp
                 .UsePlatformDetect()
                 .WithInterFont()
                 .LogToTrace()
-                .UseReactiveUI();
+                .UseReactiveUI(_ => { });
     }
 }

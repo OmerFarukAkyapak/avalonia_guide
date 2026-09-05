@@ -36,7 +36,7 @@ public partial class ProgressRingPageView : UserControl
 
     private async void btnShowProgressRing_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        var owner = VisualRoot as Window;
+        var owner = TopLevel.GetTopLevel(this) as Window;
         if (owner is null)
         {
             return;
@@ -55,7 +55,7 @@ public partial class ProgressRingPageView : UserControl
     
         <StackPanel Orientation=""Horizontal"" Spacing=""20"">
             <Border Padding=""20"">
-                <ui:ProgressRing IsIndeterminate=""True""
+                <ui:FAProgressRing IsIndeterminate=""True""
                                  BorderThickness=""10""
                                  Width=""75""
                                  Height=""75""/>

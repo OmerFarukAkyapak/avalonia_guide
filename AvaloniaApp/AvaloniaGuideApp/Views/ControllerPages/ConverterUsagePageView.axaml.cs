@@ -115,7 +115,7 @@ public partial class ConverterUsagePageView : UserControl
                             Spacing=""10"">
 
                     <TextBox Text=""{Binding NewPersonName, Mode=TwoWay}""
-                             Watermark=""Name""
+                             PlaceholderText=""Name""
                              Width=""200""/>
 
                     <ComboBox ItemsSource=""{Binding SexTypeList}""
@@ -123,7 +123,7 @@ public partial class ConverterUsagePageView : UserControl
                               Height=""38""/>
 
                     <TextBox Text=""{Binding NewPersonAge, Mode=TwoWay}""
-                             Watermark=""Age""/>
+                             PlaceholderText=""Age""/>
 
                     <Button Command=""{Binding AddPersonCommand}"">
                         <Button.Content>
@@ -154,7 +154,7 @@ public partial class ConverterUsagePageView : UserControl
 
                 </StackPanel>
 
-                <ui:TeachingTip Title=""Error""
+                <ui:FATeachingTip Title=""Error""
                                 PreferredPlacement=""BottomLeft""
                                 Background=""Red""
                                 IsOpen=""{Binding IsOpenError, Mode=TwoWay}""

@@ -1,7 +1,7 @@
 using Avalonia.Controls;
-using System.Threading.Tasks;
-using System;
 using Avalonia.Input;
+using System;
+using System.Threading.Tasks;
 
 namespace AvaloniaGuideApp;
 
@@ -39,7 +39,7 @@ public partial class TextInputDialog : Window
     {
         if (_isInputRequired && string.IsNullOrWhiteSpace(txtBox.Text))
         {
-            txtBox.Watermark = "Error : Please provide a value!";
+            txtBox.PlaceholderText = "Error : Please provide a value!";
             return;
         }
 

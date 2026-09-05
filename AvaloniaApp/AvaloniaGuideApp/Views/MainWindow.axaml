@@ -17,68 +17,68 @@
 
 	<Grid ColumnDefinitions="*">
 
-		<ui:NavigationView Grid.Row="0"
-						   Name="navigateView"
-						   IsPaneToggleButtonVisible="False"
-						   IsSettingsVisible="False"
-						   PaneDisplayMode="LeftCompact"
-						   Content="{Binding CurrentPage}">
+		<ui:FANavigationView Grid.Row="0"
+							 Name="navigateView"
+							 IsPaneToggleButtonVisible="False"
+							 IsSettingsVisible="False"
+							 PaneDisplayMode="LeftCompact"
+							 Content="{Binding CurrentPage}">
 
-			<ui:NavigationView.MenuItems>
+			<ui:FANavigationView.MenuItems>
 
-				<ui:NavigationViewItem IsHitTestVisible="False"
-									   Margin="0 5 0 20">
+				<ui:FANavigationViewItem IsHitTestVisible="False"
+										 Margin="0 5 0 20">
 
-					<ui:NavigationViewItem.Content>
+					<ui:FANavigationViewItem.Content>
 						<Image Source="/Assets/avalonia-logo.ico"
 							   Width="32"
 							   Height="32"
 							   RenderOptions.BitmapInterpolationMode="HighQuality"/>
-					</ui:NavigationViewItem.Content>
+					</ui:FANavigationViewItem.Content>
 
-				</ui:NavigationViewItem>
+				</ui:FANavigationViewItem>
 
-				<ui:NavigationViewItem Tapped="HomePage_Tapped">
+				<ui:FANavigationViewItem Tapped="HomePage_Tapped">
 
-					<ui:NavigationViewItem.Content>
-						<ui:SymbolIcon Symbol="Home"
-									   Height="14"
-									   Width="14"
-									   ToolTip.Tip="Home"/>
-					</ui:NavigationViewItem.Content>
+					<ui:FANavigationViewItem.Content>
+						<ui:FASymbolIcon Symbol="Home"
+										 Height="14"
+										 Width="14"
+										 ToolTip.Tip="Home"/>
+					</ui:FANavigationViewItem.Content>
 
-				</ui:NavigationViewItem>
+				</ui:FANavigationViewItem>
 
-				<ui:NavigationViewItem Tapped="AboutPage_Tapped">
+				<ui:FANavigationViewItem Tapped="AboutPage_Tapped">
 
 					<PathIcon Data="{DynamicResource info_regular}"
 							  Width="14" Height="14"
 							  ToolTip.Tip="About"/>
-				</ui:NavigationViewItem>
+				</ui:FANavigationViewItem>
 
-			</ui:NavigationView.MenuItems>
+			</ui:FANavigationView.MenuItems>
 
 
-			<ui:NavigationView.FooterMenuItems>
+			<ui:FANavigationView.FooterMenuItems>
 
-				<ui:NavigationViewItem Tapped="Theme_Tapped">
-					<ui:NavigationViewItem.Content>
-						<ui:SymbolIcon Name="themeSymbol"
-									   Symbol="WeatherSunny"
-									   Height="14"
-									   Width="14"/>
-					</ui:NavigationViewItem.Content>
-				</ui:NavigationViewItem>
+				<ui:FANavigationViewItem Tapped="Theme_Tapped">
+					<ui:FANavigationViewItem.Content>
+						<ui:FASymbolIcon Name="themeSymbol"
+										 Symbol="WeatherSunny"
+										 Height="14"
+										 Width="14"/>
+					</ui:FANavigationViewItem.Content>
+				</ui:FANavigationViewItem>
 
-				<ui:NavigationViewItem Tapped="Logout_Tapped">
-					<ui:NavigationViewItem.Content>
+				<ui:FANavigationViewItem Tapped="Logout_Tapped">
+					<ui:FANavigationViewItem.Content>
 						<PathIcon Data="{DynamicResource power_regular}"
 								  Width="14" Height="14"
 								  ToolTip.Tip="Logout"/>
-					</ui:NavigationViewItem.Content>
-				</ui:NavigationViewItem>
-			</ui:NavigationView.FooterMenuItems>
-		</ui:NavigationView>
+					</ui:FANavigationViewItem.Content>
+				</ui:FANavigationViewItem>
+			</ui:FANavigationView.FooterMenuItems>
+		</ui:FANavigationView>
 
 	</Grid>
 

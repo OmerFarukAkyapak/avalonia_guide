@@ -34,13 +34,10 @@ public partial class SplashScreenPageView : UserControl
 
     }
 
-    private async void ShowSplash_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    private void ShowSplash_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
         var splashScreen = new SplashScreenWindow();
         splashScreen.Show();
-
-        await splashScreen.InitApp();
-        splashScreen.Close();
     }
 
     private const string SplashXamlCode =

@@ -82,7 +82,7 @@
 
 					<StackPanel>
 						<TextBlock FontSize="24"  FontWeight="Bold">
-							<Run Text="🌱 My Interests"/>
+							<Run Text="🦊 My Interests"/>
 						</TextBlock>
 						<TextBlock  TextWrapping="Wrap">
 							<LineBreak/>

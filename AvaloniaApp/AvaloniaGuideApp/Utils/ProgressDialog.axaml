@@ -9,7 +9,6 @@
 		x:Class="AvaloniaGuideApp.ProgressDialog"
 		WindowStartupLocation="CenterOwner"
 		ExtendClientAreaToDecorationsHint="True"
-		ExtendClientAreaChromeHints="NoChrome"
 		ExtendClientAreaTitleBarHeightHint="0">
 
 	<StackPanel Margin="20">
@@ -21,10 +20,10 @@
 
 		<StackPanel Orientation="Horizontal" Spacing="20">
 			<Border Padding="20">
-				<ui:ProgressRing IsIndeterminate="True"
-								 BorderThickness="10"
-								 Width="75"
-								 Height="75"/>
+				<ui:FAProgressRing IsIndeterminate="True"
+								   BorderThickness="10"
+								   Width="75"
+								   Height="75"/>
 			</Border>
 
 			<TextBlock Name="txtContent"

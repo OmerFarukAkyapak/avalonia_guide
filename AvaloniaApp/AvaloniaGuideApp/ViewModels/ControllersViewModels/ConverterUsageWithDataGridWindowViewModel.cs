@@ -1,9 +1,9 @@
 ﻿using AvaloniaGuideApp.Models;
 using ReactiveUI;
+using ReactiveUI.Primitives;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Reactive;
 
 namespace AvaloniaGuideApp.ViewModels
 {
@@ -60,8 +60,8 @@ namespace AvaloniaGuideApp.ViewModels
             set => RaiseAndSetIfChanged(ref _errorMessage, value);
         }
 
-        public ReactiveCommand<Unit, Unit> AddPersonCommand { get; }
-        public ReactiveCommand<Unit, Unit> DeleteSelectedPersonCommand { get; }
+        public ReactiveCommand<RxVoid, RxVoid> AddPersonCommand { get; }
+        public ReactiveCommand<RxVoid, RxVoid> DeleteSelectedPersonCommand { get; }
         public ConverterUsageWithDataGridWindowViewModel()
         {
             SexTypeList = new ObservableCollection<SexTypes>(Enum.GetValues(typeof(SexTypes)).Cast<SexTypes>());
