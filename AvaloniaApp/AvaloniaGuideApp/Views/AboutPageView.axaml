@@ -1,132 +1,220 @@
-<UserControl xmlns="https://github.com/avaloniaui"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-			 mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="700"
-			 x:Class="AvaloniaGuideApp.AboutPageView">
-
-	<ScrollViewer Padding="20">
-
-		<StackPanel>
-
-			<StackPanel Spacing="10">
-				<TextBlock Text="About Page"
-						   FontWeight="Bold"
-						   FontSize="24"/>
-				<Separator/>
-			</StackPanel>
-
-			<Grid ColumnDefinitions="2*,1.2*">
-
-				<StackPanel Spacing="20"
-							Grid.Column="1"
-							VerticalAlignment="Center"
-							HorizontalAlignment="Center">
-
-					<Border BorderThickness="5"
-							BorderBrush="Black"
-							CornerRadius="5"
-							HorizontalAlignment="Center"
-							Margin="0 10 0 0">
-						<Image Source="/Assets/me.png"
-							   RenderOptions.BitmapInterpolationMode="HighQuality"/>
-					</Border>
-
-
-					<StackPanel Orientation="Horizontal"
-								VerticalAlignment="Center"
-								HorizontalAlignment="Center"
-								Spacing="10">
-
-						<Button Click="LinkedIn_Click">
-							<Button.Content>
-								<Image Source="/Assets/linkedin.png"
-									   Width="24"
-									   Height="24"
-									   RenderOptions.BitmapInterpolationMode="HighQuality"/>
-							</Button.Content>
-						</Button>
-						<Button Click="GitHub_Click">
-							<Button.Content>
-								<Image Source="/Assets/github.png"
-									   Width="24"
-									   Height="24"
-									   RenderOptions.BitmapInterpolationMode="HighQuality"/>
-							</Button.Content>
-						</Button>
-						<Button Click="Medium_Click">
-							<Button.Content>
-								<Image Source="/Assets/medium.png"
-									   Width="24"
-									   Height="24"
-									   RenderOptions.BitmapInterpolationMode="HighQuality"/>
-							</Button.Content>
-						</Button>
-					</StackPanel>
-				</StackPanel>
-
-				<StackPanel Grid.Column="0"
-							Spacing="20"
-							Margin="0 0 40 0"
-							VerticalAlignment="Top"
-							HorizontalAlignment="Center">
-					<StackPanel>
-						<TextBlock TextWrapping="Wrap">
-							<LineBreak/>
-							Hi! I’m Ömer Faruk Akyapak, a passionate software developer with a strong focus on backend, mobile, web, and desktop development.
-							I currently work at trex Digital Manufacturing, where I’m part of the Platform and Services team, solving complex problems and delivering platform-based solutions.
-						</TextBlock>
-					</StackPanel>
-
-					<Separator/>
-
-					<StackPanel>
-						<TextBlock FontSize="24"  FontWeight="Bold">
-							<Run Text="🦊 My Interests"/>
-						</TextBlock>
-						<TextBlock  TextWrapping="Wrap">
-							<LineBreak/>
-							Since my university years, I've been deeply interested in Process Tracking with IoT, MES, MOM, SCADA, and ERP systems.
-							In 2021, I developed my first MOM project with two talented colleagues, and that experience sparked my continued passion for these areas.
-						</TextBlock>
-					</StackPanel>
-
-					<Separator/>
-
-					<StackPanel>
-						<TextBlock FontSize="24" FontWeight="Bold">
-							<Run Text="💻 Technologies and Skills"/>
-						</TextBlock>
-						<TextBlock>
-							<LineBreak/>
-							- C#, ASP.NET, .NET Core, Avalonia
-							<LineBreak/>
-							- React, React Native, Flutter
-							<LineBreak/>
-							- JavaScript, HTML, CSS, XAML
-							<LineBreak/>
-							- SQL
-						</TextBlock>
-					</StackPanel>
-
-					<Separator/>
-
-					<StackPanel>
-						<TextBlock FontSize="24"  FontWeight="Bold">
-							<Run Text="📚 Sharing Knowledge"/>
-						</TextBlock>
-						<TextBlock TextWrapping="Wrap">
-							<LineBreak/>
-							I believe in continuous learning and the importance of sharing knowledge.
-							I frequently write about my experiences and insights on platforms like Medium.
-							If you're interested in reading about my work, feel free to check out my Medium account.
-						</TextBlock>
-					</StackPanel>
-				</StackPanel>
-			</Grid>
-		</StackPanel>
-
-	</ScrollViewer>
-
-
+<UserControl xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="700" x:Class="AvaloniaGuideApp.AboutPageView">
+    <!-- Curated from faruk-akyapak-source.md; keep profile claims and dates in sync. -->
+    <UserControl.Styles>
+        <Style Selector="TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+        <Style Selector="TextBlock.section">
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Margin" Value="0,8,0,0"/>
+        </Style>
+        <Style Selector="TextBlock.title">
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>
+        <Style Selector="TextBlock.meta">
+            <Setter Property="Opacity" Value="0.75"/>
+            <Setter Property="FontSize" Value="13"/>
+        </Style>
+        <Style Selector="Border.card">
+            <Setter Property="Background" Value="{DynamicResource CardBackgroundFillColorDefaultBrush}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource CardStrokeColorDefaultBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="12"/>
+            <Setter Property="Padding" Value="20"/>
+        </Style>
+        <Style Selector="Button.link">
+            <Setter Property="Margin" Value="0,4,8,4"/>
+            <Setter Property="Padding" Value="12,8"/>
+        </Style>
+    </UserControl.Styles>
+    <Grid RowDefinitions="Auto,*" Margin="24,20">
+        <StackPanel Spacing="4" Margin="0,0,0,16">
+            <TextBlock Text="About" FontSize="28" FontWeight="Bold"/>
+            <TextBlock Text="Engineering for industry. Learning through research. Sharing with the community." Classes="meta"/>
+        </StackPanel>
+        <TabControl Grid.Row="1" x:Name="AboutTabs">
+            <TabItem Header="Profile &amp; Experience">
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                    <StackPanel Spacing="14" Margin="0,16,12,16" MaxWidth="1040">
+                        <Border Classes="card">
+                            <Grid ColumnDefinitions="*,Auto">
+                                <StackPanel Spacing="10" Margin="0,0,20,0">
+                                    <TextBlock Text="Ömer Faruk Akyapak" FontSize="30" FontWeight="Bold"/>
+                                    <TextBlock Text="Software Engineer | .NET · Industrial Software · MES / MOM / IoT" Classes="title"/>
+                                    <TextBlock Text="Bursa, Türkiye" Classes="meta"/>
+                                    <TextBlock Text="I build software that connects production needs with maintainable solutions. My work at trex Digital Manufacturing spans .NET platform services, cross-platform desktop applications, mobile clients and selected web workloads."/>
+                                    <WrapPanel>
+                                        <Button Classes="link" Content="LinkedIn ↗" Tag="https://www.linkedin.com/in/farukakyapak/" Click="Link_Click"/>
+                                        <Button Classes="link" Content="GitHub ↗" Tag="https://github.com/OmerFarukAkyapak" Click="Link_Click"/>
+                                        <Button Classes="link" Content="Medium ↗" Tag="https://medium.com/@faruk.akyapak" Click="Link_Click"/>
+                                    </WrapPanel>
+                                </StackPanel>
+                                <Border Grid.Column="1" CornerRadius="10" ClipToBounds="True" Width="136" Height="168" VerticalAlignment="Top">
+                                    <Image Source="/Assets/me.png" Stretch="UniformToFill" AutomationProperties.Name="Portrait of Ömer Faruk Akyapak" RenderOptions.BitmapInterpolationMode="HighQuality"/>
+                                </Border>
+                            </Grid>
+                        </Border>
+                        <TextBlock Classes="section" Text="Experience"/>
+                        <Border Classes="card">
+                            <StackPanel Spacing="10">
+                                <TextBlock Classes="title" Text="trex Digital Manufacturing"/>
+                                <TextBlock Classes="meta" Text="Software Developer, Platform &amp; Services · Sep 2023 – Present · Bursa"/>
+                                <TextBlock Text="Developing and maintaining .NET solutions for digital manufacturing and MES/MOM environments, including industrial data collection, IoT, real-time monitoring and platform integrations."/>
+                                <TextBlock Text="I contribute to service architecture, authentication and authorization flows, and Avalonia desktop applications, including EasyThings Configurator, listed in the official Avalonia UI App Showcase."/>
+                                <Separator/>
+                                <TextBlock Classes="meta" Text="Software Developer Intern · Aug – Sep 2023"/>
+                                <TextBlock Text="Worked with layered .NET Core backend architecture and developed a WinForms Farm Management System before joining the team full-time."/>
+                            </StackPanel>
+                        </Border>
+                        <Border Classes="card">
+                            <StackPanel Spacing="10">
+                                <TextBlock Classes="title" Text="TÜBİTAK 1005 Research Project"/>
+                                <TextBlock Classes="meta" Text="Software Developer / Bursary Research Intern · Oct 2022 – Aug 2023 · Çanakkale"/>
+                                <TextBlock Text="Contributed web and mobile components to a smart tracking system for detecting geographical indication violations and counterfeit or non-standard products."/>
+                                <TextBlock Classes="meta" Text="React.js · Node.js · React Native"/>
+                            </StackPanel>
+                        </Border>
+                        <Border Classes="card">
+                            <StackPanel Spacing="10">
+                                <TextBlock Classes="title" Text="NANO SPRINGS"/>
+                                <TextBlock Classes="meta" Text="Software Developer · Self-employed / Project-based · Aug 2021 – Jun 2023 · Bursa"/>
+                                <TextBlock Text="Built a custom production tracking / ERP application with two colleagues. Worked directly with the company on requirements, workflow design, development and maintenance over approximately two years."/>
+                                <TextBlock Classes="meta" Text="C# · WinForms · .NET Framework 4.7.2 · Microsoft SQL Server"/>
+                            </StackPanel>
+                        </Border>
+                        <Border Classes="card">
+                            <StackPanel Spacing="10">
+                                <TextBlock Classes="title" Text="AKYAPAK"/>
+                                <TextBlock Classes="meta" Text="Software Developer Intern · Jul – Aug 2022 · Bursa"/>
+                                <TextBlock Text="Developed a WinForms HMI application using OPC for industrial machine data communication."/>
+                                <TextBlock Classes="meta" Text="C# · .NET Framework 4.7.2 · OPC · QuickOPC"/>
+                                <Separator/>
+                                <TextBlock Classes="title" Text="Earlier freelance work"/>
+                                <TextBlock Text="Delivered web projects for small businesses using existing platforms before starting full-time employment."/>
+                            </StackPanel>
+                        </Border>
+                        <TextBlock Classes="section" Text="Education &amp; research interests"/>
+                        <Border Classes="card">
+                            <StackPanel Spacing="10">
+                                <TextBlock Classes="title" Text="Bursa Technical University"/>
+                                <TextBlock Classes="meta" Text="M.Eng., Computer Engineering · Mar 2025 – Present"/>
+                                <TextBlock Text="Moving into the thesis stage, with interests in artificial intelligence, reinforcement learning, machine learning, predictive maintenance and explainable AI."/>
+                                <Separator/>
+                                <TextBlock Classes="title" Text="Çanakkale Onsekiz Mart University"/>
+                                <TextBlock Classes="meta" Text="B.Eng., Computer Engineering · 2019 – 2023"/>
+                                <TextBlock Text="Served as the Computer Engineering Department Representative."/>
+                            </StackPanel>
+                        </Border>
+                        <TextBlock Classes="section" Text="Technical skills"/>
+                        <Border Classes="card">
+                            <StackPanel Spacing="10">
+                                <TextBlock Classes="title" Text="Core development"/>
+                                <TextBlock Text="C# · .NET / .NET Core / .NET Framework · Avalonia UI · WinForms · XAML · REST APIs · OpenID Connect · SQL · Microsoft SQL Server"/>
+                                <TextBlock Classes="title" Text="Industrial software"/>
+                                <TextBlock Text="MES · MOM · IoT / Industrial IoT · OPC UA · SCADA · ERP · Real-time monitoring · Industrial data collection · Platform integrations"/>
+                                <TextBlock Classes="title" Text="Additional technologies"/>
+                                <TextBlock Text="React · React Native · Node.js · JavaScript · HTML / CSS · Flutter · Python · Reinforcement Learning"/>
+                                <Separator/>
+                                <TextBlock Classes="meta" Text="Languages: Turkish (native) · English (B1)"/>
+                            </StackPanel>
+                        </Border>
+                        <Expander Header="Certifications &amp; additional learning" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                            <Border Classes="card">
+                                <StackPanel Spacing="10">
+                                    <TextBlock Classes="title" Text="Patika.dev"/>
+                                    <TextBlock Classes="meta" Text="2023"/>
+                                    <TextBlock Text="Beginner .NET Core Path · Mobile App Path with React Native · Beginner Frontend Web Development Path"/>
+                                    <TextBlock Classes="title" Text="Udemy · 2023"/>
+                                    <TextBlock Text=".NET Core 3.0 &amp; C# 7 Backend–Frontend courses (Engin Demiroğ) — C# from Beginner to Advanced (Taner Saydam) · Java with Practical Projects (Emre Altunbilek)"/>
+                                    <TextBlock Classes="title" Text="Additional training"/>
+                                    <TextBlock Text="Career Planning · YTNK.TV · 2023&#10;Disaster Awareness · Bursa Provincial Disaster and Emergency Directorate · 2024"/>
+                                </StackPanel>
+                            </Border>
+                        </Expander>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="Projects &amp; Community">
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                    <StackPanel Spacing="14" Margin="0,16,12,16" MaxWidth="1040">
+                        <TextBlock Classes="section" Text="Selected projects"/>
+                        <Border Classes="card">
+                            <StackPanel Spacing="10">
+                                <TextBlock Classes="title" Text="EasyThings Configurator"/>
+                                <TextBlock Classes="meta" Text="trex Cloud Edge · Production application · Avalonia UI App Showcase"/>
+                                <TextBlock Text="A cross-platform desktop application developed at trex Digital Manufacturing for industrial service management and machine configuration. I contributed to this Avalonia UI application, which is featured in the official showcase."/>
+                                <TextBlock Classes="meta" Text="C# · .NET · Avalonia UI · Industrial software"/>
+                            </StackPanel>
+                        </Border>
+                        <Border Classes="card">
+                            <StackPanel Spacing="10">
+                                <TextBlock Classes="title" Text="Production tracking &amp; smart tracking"/>
+                                <TextBlock Text="Nano Yay Process Tracking System — A custom production tracking / ERP solution for NANO SPRINGS, built with C# WinForms, .NET Framework and SQL Server."/>
+                                <TextBlock Text="TÜBİTAK 1005 Smart Tracking Project — Research software for detecting geographical indication violations and counterfeit or non-standard products, using React.js, Node.js and React Native."/>
+                            </StackPanel>
+                        </Border>
+                        <Border Classes="card">
+                            <StackPanel Spacing="10">
+                                <TextBlock Classes="title" Text="Open source &amp; learning resources"/>
+                                <TextBlock Text="Avalonia Guide App — A public guide demonstrating Avalonia UI features and development patterns."/>
+                                <TextBlock Text="OpenID .NET — Examples of centralized authentication and authorization in .NET."/>
+                                <TextBlock Text="HMI / OPC UA — C# industrial HMI work focused on PLC connections, asynchronous programming, desktop UI and OPC communication."/>
+                                <TextBlock Text="C#101 and Turkish .NET/C# interview resources — Practical examples, language fundamentals and detailed interview preparation material for developers."/>
+                                <Button Classes="link" Content="Explore on GitHub ↗" Tag="https://github.com/OmerFarukAkyapak" Click="Link_Click"/>
+                            </StackPanel>
+                        </Border>
+                        <TextBlock Classes="section" Text="Research &amp; publication"/>
+                        <Border Classes="card">
+                            <StackPanel Spacing="10">
+                                <TextBlock Classes="title" Text="A Reinforcement Learning Approach to Stock Trading with Macroeconomic Indicators"/>
+                                <TextBlock Classes="meta" Text="Ömer Faruk Akyapak &amp; İlhan Tunç · ASYU 2025 / IEEE"/>
+                                <TextBlock Text="A comparison of Q-Learning and SARSA for stock trading decisions using macroeconomic indicators. Presented and published at the 2025 Innovations in Intelligent Systems and Applications Conference."/>
+                                <Button Classes="link" Content="Read publication (DOI) ↗" Tag="https://doi.org/10.1109/ASYU67174.2025.11208408" Click="Link_Click"/>
+                            </StackPanel>
+                        </Border>
+                        <TextBlock Classes="section" Text="Speaking &amp; teaching"/>
+                        <Border Classes="card">
+                            <StackPanel Spacing="10">
+                                <TextBlock Classes="title" Text="trexAcademy Instructor"/>
+                                <TextBlock Classes="meta" Text="2026 – Present · trex Digital Manufacturing"/>
+                                <TextBlock Text="Teaching industrial data collection, platform architecture and operational monitoring through NightWatch and IoT applications. Sessions connect .NET/C#, Industrial IoT, MES/MOM/SCADA/ERP integrations and real-time monitoring with practical examples from production projects."/>
+                            </StackPanel>
+                        </Border>
+                        <Border Classes="card">
+                            <StackPanel Spacing="10">
+                                <TextBlock Classes="title" Text="Cross-platform development with Avalonia UI"/>
+                                <TextBlock Classes="meta" Text="GDG Bursa DevFest · 2025"/>
+                                <TextBlock Text="Building Cross-Platform Apps with Avalonia UI — A talk on cross-platform .NET application development."/>
+                                <TextBlock Classes="meta" Text="Bursa Bilişim Topluluğu · 6 Aug 2026 · Online"/>
+                                <TextBlock Text="Build Cross-Platform Apps with Avalonia UI — Exploring a single codebase for Windows, macOS, Linux, web and mobile."/>
+                            </StackPanel>
+                        </Border>
+                        <Border Classes="card">
+                            <StackPanel Spacing="10">
+                                <TextBlock Classes="title" Text="Industry, research &amp; career conversations"/>
+                                <TextBlock Classes="meta" Text="TECH PANEL · Bursa Technical University · 2 Apr 2026"/>
+                                <TextBlock Text="Shared industry perspectives on real-world software development, tools and expectations of developers."/>
+                                <TextBlock Classes="meta" Text="ASYU · Bursa Technical University · 10–12 Sep 2025"/>
+                                <TextBlock Text="Presented the published reinforcement learning research on stock trading with macroeconomic indicators."/>
+                                <TextBlock Classes="meta" Text="trexAcademy career events · Jun 2025"/>
+                                <TextBlock Text="Spoke with students at Özlüce Anadolu Lisesi and Ali Osman Sönmez Mesleki ve Teknik Anadolu Lisesi about software careers, industry developments and entering computer engineering."/>
+                                <TextBlock Classes="meta" Text="OpenID training · trexAcademy · Mar 2025"/>
+                                <TextBlock Text="Delivered internal training on OpenID, modern authentication and centralized authentication/authorization, alongside other technical knowledge-sharing sessions."/>
+                            </StackPanel>
+                        </Border>
+                        <Border Classes="card">
+                            <StackPanel Spacing="10">
+                                <TextBlock Classes="title" Text="Writing &amp; knowledge sharing"/>
+                                <TextBlock Classes="meta" Text="20,000+ views on Medium"/>
+                                <TextBlock Text="I write about Avalonia UI, OpenID Connect, software architecture and design, security and development practices."/>
+                                <Button Classes="link" Content="Read on Medium ↗" Tag="https://medium.com/@faruk.akyapak" Click="Link_Click"/>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
+    </Grid>
 </UserControl>

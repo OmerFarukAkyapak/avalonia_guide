@@ -1,4 +1,7 @@
 using Avalonia.Controls;
+using Avalonia.Interactivity;
+using System;
+using System.ComponentModel;
 using System.Diagnostics;
 
 namespace AvaloniaGuideApp;
@@ -10,28 +13,23 @@ public partial class AboutPageView : UserControl
         InitializeComponent();
     }
 
-    private void OpenUrl(string url)
+    private void Link_Click(object? sender, RoutedEventArgs e)
     {
-        Process.Start(new ProcessStartInfo
+        if (sender is not Button { Tag: string url } button ||
+            !Uri.TryCreate(url, UriKind.Absolute, out var uri) || uri.Scheme != Uri.UriSchemeHttps)
         {
-            FileName = url,
-            UseShellExecute = true
-        });
-    }
+            return;
+        }
 
-    private void LinkedIn_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
-    {
-        OpenUrl("https://www.linkedin.com/in/farukakyapak/");
-
-    }
-    private void GitHub_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
-    {
-        OpenUrl("https://github.com/OmerFarukAkyapak");
-
-    }
-    private void Medium_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
-    {
-        OpenUrl("https://medium.com/@faruk.akyapak");
-
+        try
+        {
+            Process.Start(new ProcessStartInfo(uri.AbsoluteUri) { UseShellExecute = true });
+            ToolTip.SetTip(button, null);
+        }
+        catch (Exception ex) when (ex is Win32Exception or InvalidOperationException or NotSupportedException)
+        {
+            ToolTip.SetTip(button, $"Could not open your browser. Visit {uri.AbsoluteUri}");
+            ToolTip.SetIsOpen(button, true);
+        }
     }
 }
