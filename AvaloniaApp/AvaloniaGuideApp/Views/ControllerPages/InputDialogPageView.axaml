@@ -2,53 +2,67 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
 			 xmlns:AvaloniaEdit="clr-namespace:AvaloniaEdit;assembly=AvaloniaEdit"
+			 mc:Ignorable="d"
+			 d:DesignWidth="800"
+			 d:DesignHeight="450"
 			 x:Class="AvaloniaGuideApp.InputDialogPageView">
-	<ScrollViewer Padding="20" >
-		<StackPanel Spacing="20">
-
-			<StackPanel Spacing="10">
-				<TextBlock Text="Text Input Dialog Page"
-						   FontWeight="Bold"
-						   FontSize="24"/>
-				<Separator/>
+	
+	<ScrollViewer Padding="24,20"
+				  HorizontalScrollBarVisibility="Disabled">
+		<StackPanel Spacing="20"
+					MaxWidth="1120"
+					HorizontalAlignment="Stretch">
+			<StackPanel Spacing="8"
+						Margin="0,0,0,8">
+				<TextBlock Text="Text input dialog"
+						   Classes="pageTitle"/>
+				<TextBlock Text="Collect a value in a focused dialog and display the response."
+						   Classes="pageDescription"/>
 			</StackPanel>
-
-			<StackPanel VerticalAlignment="Center"
-						Spacing="20">
-				<Button Name="btnTextInputDialog"
-						Content="Show Text Input Dialog"
-						HorizontalAlignment="Center"
-						VerticalAlignment="Center"
-						Click="btnTextInputDialog_Click"/>
-
-				<StackPanel Orientation="Horizontal"
-							HorizontalAlignment="Center"
-							VerticalAlignment="Center"
-							Spacing="10">
-
-					<TextBlock Text="Text Input Result :"
-							   VerticalAlignment="Center"/>
-
-					<TextBox Name="txtTextInputResult"
-							 IsReadOnly="True"/>
-				</StackPanel>
-
-
-			</StackPanel>
-			<AvaloniaEdit:TextEditor Name="splashCodeEditor"
-									 Margin="20 0"
-									 Height="600"
-									 BorderThickness="5"
-									 BorderBrush="Gray"
-									 Padding="10"
+			<Border Classes="exampleCard">
+				<StackPanel Spacing="16">
+					<TextBlock Text="Try a text input"
+							   Classes="sectionTitle"/>
+					<TextBlock Text="Open the dialog, enter a value and confirm to see the result below."
+							   Classes="pageDescription"/>
+					<StackPanel VerticalAlignment="Center"
+								Spacing="16">
+						<Button Name="btnTextInputDialog"
+								Content="Show Text Input Dialog"
+								HorizontalAlignment="Left"
+								VerticalAlignment="Center"
+								Click="btnTextInputDialog_Click"
+								Classes="exampleAction"/>
+						<StackPanel Spacing="8">
+							<TextBlock Text="Result"
+									   VerticalAlignment="Center"/>
+							<TextBox Name="txtTextInputResult"
 									 IsReadOnly="True"
-									 FontFamily="Cascadia Code,Consolas,Menlo,Monospace"
-									 FontSize="14"/>
+									 HorizontalAlignment="Stretch"
+									 TextWrapping="Wrap"
+									 PlaceholderText="Your confirmed value will appear here"/>
+						</StackPanel>
+					</StackPanel>
+				</StackPanel>
+			</Border>
+			<Border Classes="exampleCard"
+					Padding="0"
+					ClipToBounds="True">
+				<StackPanel>
+					<StackPanel Spacing="4"
+								Margin="20,16">
+						<TextBlock Text="Source code"
+								   Classes="sectionTitle"/>
+						<TextBlock Text="Reference implementation"
+								   Classes="pageDescription"/>
+					</StackPanel>
+					<AvaloniaEdit:TextEditor Name="splashCodeEditor"
+											 IsReadOnly="True"
+											 FontFamily="Cascadia Code,Consolas,Menlo,Monospace"
+											 Classes="exampleCode"/>
+				</StackPanel>
+			</Border>
 		</StackPanel>
-
 	</ScrollViewer>
-
-
 </UserControl>

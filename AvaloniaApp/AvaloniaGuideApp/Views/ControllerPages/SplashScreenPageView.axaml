@@ -2,40 +2,58 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
 			 xmlns:AvaloniaEdit="clr-namespace:AvaloniaEdit;assembly=AvaloniaEdit"
+			 mc:Ignorable="d"
+			 d:DesignWidth="800"
+			 d:DesignHeight="450"
 			 x:Class="AvaloniaGuideApp.SplashScreenPageView">
 
-	<ScrollViewer Padding="20">
-
-		<StackPanel Spacing="20">
-
-			<StackPanel Spacing="10">
-				<TextBlock Text="Splash Screen Page"
-						   FontWeight="Bold"
-						   FontSize="24"/>
-				<Separator/>
+	<ScrollViewer Padding="24,20"
+				  HorizontalScrollBarVisibility="Disabled">
+		<StackPanel Spacing="20"
+					MaxWidth="1120"
+					HorizontalAlignment="Stretch">
+			<StackPanel Spacing="8"
+						Margin="0,0,0,8">
+				<TextBlock Text="Splash screen"
+						   Classes="pageTitle"/>
+				<TextBlock Text="Create a welcoming startup experience while your application gets ready."
+						   Classes="pageDescription"/>
 			</StackPanel>
-
-			<StackPanel VerticalAlignment="Center"
-						HorizontalAlignment="Center"
-						Spacing="20">
-				<Button Name="btnShowSplash"
-						Content="Show Splash Screen"
-						HorizontalAlignment="Center"
-						VerticalAlignment="Center"
-						Click="ShowSplash_Click"/>
-
-				<AvaloniaEdit:TextEditor Name="splashCodeEditor"
-										 BorderThickness="5"
-										 BorderBrush="Gray"
-										 Padding="10"
-										 IsReadOnly="True"
-										 FontFamily="Cascadia Code,Consolas,Menlo,Monospace"
-										 FontSize="14"/>
-			</StackPanel>
-
+			<Border Classes="exampleCard">
+				<StackPanel Spacing="16">
+					<TextBlock Text="Preview the startup window"
+							   Classes="sectionTitle"/>
+					<TextBlock Text="Open the splash screen to see the loading sequence."
+							   Classes="pageDescription"/>
+					<StackPanel VerticalAlignment="Center"
+								Spacing="16">
+						<Button Name="btnShowSplash"
+								Content="Show Splash Screen"
+								HorizontalAlignment="Left"
+								VerticalAlignment="Center"
+								Click="ShowSplash_Click"
+								Classes="exampleAction"/>
+					</StackPanel>
+				</StackPanel>
+			</Border>
+			<Border Classes="exampleCard"
+					Padding="0"
+					ClipToBounds="True">
+				<StackPanel>
+					<StackPanel Spacing="4"
+								Margin="20,16">
+						<TextBlock Text="Source code"
+								   Classes="sectionTitle"/>
+						<TextBlock Text="Reference implementation"
+								   Classes="pageDescription"/>
+					</StackPanel>
+					<AvaloniaEdit:TextEditor Name="splashCodeEditor"
+											 IsReadOnly="True"
+											 FontFamily="Cascadia Code,Consolas,Menlo,Monospace"
+											 Classes="exampleCode"/>
+				</StackPanel>
+			</Border>
 		</StackPanel>
 	</ScrollViewer>
-
 </UserControl>

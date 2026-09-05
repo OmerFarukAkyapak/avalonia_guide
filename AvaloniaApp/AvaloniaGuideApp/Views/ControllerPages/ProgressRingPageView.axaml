@@ -2,39 +2,58 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
 			 xmlns:AvaloniaEdit="clr-namespace:AvaloniaEdit;assembly=AvaloniaEdit"
+			 mc:Ignorable="d"
+			 d:DesignWidth="800"
+			 d:DesignHeight="450"
 			 x:Class="AvaloniaGuideApp.ProgressRingPageView">
-	<ScrollViewer Padding="20" >
-		<StackPanel Spacing="20">
 
-			<StackPanel Spacing="10">
-				<TextBlock Text="Progress Ring Dialog Page"
-						   FontWeight="Bold"
-						   FontSize="24"/>
-				<Separator/>
+	<ScrollViewer Padding="24,20"
+				  HorizontalScrollBarVisibility="Disabled">
+		<StackPanel Spacing="20"
+					MaxWidth="1120"
+					HorizontalAlignment="Stretch">
+			<StackPanel Spacing="8"
+						Margin="0,0,0,8">
+				<TextBlock Text="Progress ring"
+						   Classes="pageTitle"/>
+				<TextBlock Text="Keep users informed while a background operation is running."
+						   Classes="pageDescription"/>
 			</StackPanel>
-
-			<StackPanel VerticalAlignment="Center"
-						Spacing="20">
-				<Button Name="btnShowProgressRing"
-						Content="Show Progress Ring Dialog"
-						HorizontalAlignment="Center"
-						VerticalAlignment="Center"
-						Click="btnShowProgressRing_Click"/>
-
-
-			</StackPanel>
-			<AvaloniaEdit:TextEditor Name="splashCodeEditor"
-									 Margin="20 0"
-									 Height="600"
-									 BorderThickness="5"
-									 BorderBrush="Gray"
-									 Padding="10"
-									 IsReadOnly="True"
-									 FontFamily="Cascadia Code,Consolas,Menlo,Monospace"
-									 FontSize="14"/>
+			<Border Classes="exampleCard">
+				<StackPanel Spacing="16">
+					<TextBlock Text="Preview a loading state"
+							   Classes="sectionTitle"/>
+					<TextBlock Text="Run a short demonstration of an indeterminate progress dialog."
+							   Classes="pageDescription"/>
+					<StackPanel VerticalAlignment="Center"
+								Spacing="16">
+						<Button Name="btnShowProgressRing"
+								Content="Show Progress Ring Dialog"
+								HorizontalAlignment="Left"
+								VerticalAlignment="Center"
+								Click="btnShowProgressRing_Click"
+								Classes="exampleAction"/>
+					</StackPanel>
+				</StackPanel>
+			</Border>
+			<Border Classes="exampleCard"
+					Padding="0"
+					ClipToBounds="True">
+				<StackPanel>
+					<StackPanel Spacing="4"
+								Margin="20,16">
+						<TextBlock Text="Source code"
+								   Classes="sectionTitle"/>
+						<TextBlock Text="Reference implementation"
+								   Classes="pageDescription"/>
+					</StackPanel>
+					<AvaloniaEdit:TextEditor Name="splashCodeEditor"
+											 IsReadOnly="True"
+											 FontFamily="Cascadia Code,Consolas,Menlo,Monospace"
+											 Classes="exampleCode"/>
+				</StackPanel>
+			</Border>
 		</StackPanel>
-
 	</ScrollViewer>
 </UserControl>

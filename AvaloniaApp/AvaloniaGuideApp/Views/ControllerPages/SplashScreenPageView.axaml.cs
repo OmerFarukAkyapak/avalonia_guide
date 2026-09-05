@@ -41,30 +41,44 @@ public partial class SplashScreenPageView : UserControl
     }
 
     private const string SplashXamlCode =
-    @"<Panel>
-
-        <StackPanel Spacing=""20""
-                    HorizontalAlignment=""Center""
-                    VerticalAlignment=""Center"">
-
-            <Image Source=""/Assets/avalonia-logo.ico""
-                   Width=""250""
-                   Height=""250""
-                   RenderOptions.BitmapInterpolationMode=""HighQuality""/>
-
-            <TextBlock Text=""Avalonia Guide App""
-                       FontSize=""48""/>
-
-            <ProgressBar MaxWidth=""200""
-                         Height=""10""
-                         BorderThickness=""1""
-                         Margin=""0 10 0 0""/>
-
-            <TextBlock Text=""Loading...""
-                       HorizontalAlignment=""Center""
-                       FontSize=""20""/>
-
-        </StackPanel>
-
-    </Panel>";
+    @"<Window xmlns=""https://github.com/avaloniaui""
+        xmlns:x=""http://schemas.microsoft.com/winfx/2006/xaml""
+        xmlns:d=""http://schemas.microsoft.com/expression/blend/2008""
+        xmlns:mc=""http://schemas.openxmlformats.org/markup-compatibility/2006""
+        mc:Ignorable=""d""
+        d:DesignWidth=""500""
+        d:DesignHeight=""500""
+        Width=""460""
+        Height=""380""
+        x:Class=""AvaloniaGuideApp.SplashScreenWindow""
+        Topmost=""True""
+        CanResize=""False""
+        WindowDecorations=""None""
+        WindowStartupLocation=""CenterOwner""
+        Loaded=""Window_Loaded"">
+	<Panel>
+		<StackPanel Spacing=""20""
+		            HorizontalAlignment=""Center""
+		            VerticalAlignment=""Center"">
+			<Image Source=""/Assets/avalonia-logo.ico""
+			       Width=""96""
+			       Height=""96""
+			       RenderOptions.BitmapInterpolationMode=""HighQuality""/>
+			<TextBlock Text=""Avalonia Guide App""
+			           FontSize=""28""
+			           FontWeight=""SemiBold""/>
+			<ProgressBar Name=""ProgressBar1""
+			             MaxWidth=""220""
+			             Height=""4""
+			             BorderThickness=""0""
+			             Margin=""0 10 0 0""
+			             Width=""220""/>
+			<TextBlock Text=""Loading...""
+			           Name=""LoadingText""
+			           HorizontalAlignment=""Center""
+			           FontSize=""14""
+			           Foreground=""{DynamicResource TextFillColorSecondaryBrush}""/>
+		</StackPanel>
+	</Panel>
+</Window>";
 }

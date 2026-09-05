@@ -2,77 +2,60 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
 			 xmlns:vm="using:AvaloniaGuideApp.ViewModels"
+			 mc:Ignorable="d"
+			 d:DesignWidth="800"
+			 d:DesignHeight="450"
 			 x:DataType="vm:HomePageViewModel"
 			 x:Class="AvaloniaGuideApp.HomePageView">
 
-
-	<ScrollViewer Padding="20">
-		<StackPanel Spacing="20">
-
-			<StackPanel Spacing="10">
-				<TextBlock Text="Home Page"
-						   FontWeight="Bold"
-						   FontSize="24"/>
-				<Separator/>
+	<ScrollViewer Padding="24,20"
+				  HorizontalScrollBarVisibility="Disabled">
+		<StackPanel Spacing="20"
+					MaxWidth="1120">
+			<StackPanel Spacing="8"
+						Margin="0,0,0,8">
+				<TextBlock Text="Component gallery"
+						   Classes="pageTitle"/>
+				<TextBlock Text="Explore Avalonia through working examples. Choose a component, try it live and inspect the source code."
+						   Classes="pageDescription"/>
 			</StackPanel>
-
 			<ItemsControl ItemsSource="{Binding Pages}">
 				<ItemsControl.ItemsPanel>
 					<ItemsPanelTemplate>
-						<WrapPanel />
+						<UniformGrid Columns="2"/>
 					</ItemsPanelTemplate>
 				</ItemsControl.ItemsPanel>
 				<ItemsControl.ItemTemplate>
 					<DataTemplate>
-
 						<Button Tag="{Binding Name}"
-								Margin="5"
-								Height="90"
-								Width="235"
-								Click="Page_Click">
-							<Button.Content>
-
-								<Panel Height="90"
-									   Width="235">
-
-									<StackPanel Spacing="5"
-												HorizontalAlignment="Center"
-												VerticalAlignment="Center">
-
-										<StackPanel Orientation="Horizontal"
-													HorizontalAlignment="Center"
-													Spacing="10">
-
-											<Image Source="{Binding Icon}"
-												   Width="16"
-												   Height="16"
-												   RenderOptions.BitmapInterpolationMode="HighQuality"/>
-
-											<TextBlock Text="{Binding Name}"
-													   FontWeight="DemiBold"
-													   HorizontalAlignment="Center"/>
-										</StackPanel>
-
-
-
-										<Separator />
-
-										<TextBlock Text="{Binding Description}"
-												   TextWrapping="Wrap"
-												   FontSize="10"
-												   HorizontalAlignment="Center"/>
-
-									</StackPanel>
-								</Panel>
-
-							</Button.Content>
+								Click="Page_Click"
+								Classes="galleryCard">
+							<Grid RowDefinitions="Auto,*,Auto">
+								<StackPanel Orientation="Horizontal"
+											Spacing="12">
+									<Image Source="{Binding Icon}"
+										   Width="24"
+										   Height="24"
+										   RenderOptions.BitmapInterpolationMode="HighQuality"/>
+									<TextBlock Text="{Binding Name}"
+											   Classes="sectionTitle"
+											   VerticalAlignment="Center"/>
+								</StackPanel>
+								<TextBlock Grid.Row="1"
+										   Text="{Binding Description}"
+										   Classes="pageDescription"
+										   Margin="0,14,0,18"/>
+								<TextBlock Grid.Row="2"
+										   Text="Explore example  &gt;"
+										   FontSize="13"
+										   FontWeight="SemiBold"
+										   Foreground="{DynamicResource SystemAccentColor}"/>
+							</Grid>
 						</Button>
 					</DataTemplate>
 				</ItemsControl.ItemTemplate>
 			</ItemsControl>
 		</StackPanel>
 	</ScrollViewer>
-
 </UserControl>

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Avalonia.Platform;
 using Avalonia.Media.Imaging;
 using AvaloniaGuideApp.Models;
@@ -17,42 +17,42 @@ namespace AvaloniaGuideApp.ViewModels
                 new PageModel
                 {
                     Name = "Splash Screen",
-                    Description = "Shows a splash screen.",
+                    Description = "Preview a polished startup window and loading sequence.",
                     Icon = LoadIcon("/Assets/loading.png"),
                     Page = PagesEnum.SplashPage
                 },
                 new PageModel
                 {
                     Name = "Theme Settings",
-                    Description = "Shows a window with theme settings.",
+                    Description = "Explore light and dark themes, accent colors and layout direction.",
                     Icon = LoadIcon("/Assets/color.png"),
                     Page = PagesEnum.ThemeSettingsPage
                 },
                 new PageModel
                 {
                     Name = "Text Input Dialog",
-                    Description = "Shows a dialog to input text.",
+                    Description = "Collect user input and work with the confirmed result.",
                     Icon = LoadIcon("/Assets/input.png"),
                     Page = PagesEnum.TextInputDialogPage
                 },
                 new PageModel
                 {
                     Name = "Converter Usage",
-                    Description = "Shows a window with a data grid.",
+                    Description = "Edit a people collection and see value converters in action.",
                     Icon = LoadIcon("/Assets/grid.png"),
                     Page = PagesEnum.ConverterUsagePage
                 },
                 new PageModel
                 {
                     Name = "Task Dialog",
-                    Description = "Shows a window with task dialogs.",
+                    Description = "Try status messages, warnings and confirmation dialogs.",
                     Icon = LoadIcon("/Assets/dialog.png"),
                     Page = PagesEnum.TaskDialogPage
                 },
                 new PageModel
                 {
                     Name = "Progress Ring Dialog",
-                    Description = "Shows a dialog to progressing ring.",
+                    Description = "Display progress while a background operation completes.",
                     Icon = LoadIcon("/Assets/progress.png"),
                     Page = PagesEnum.ProgressRingPage
                 }

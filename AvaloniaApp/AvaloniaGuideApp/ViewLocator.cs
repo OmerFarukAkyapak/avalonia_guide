@@ -1,13 +1,12 @@
-using System;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
 using AvaloniaGuideApp.ViewModels;
+using System;
 
 namespace AvaloniaGuideApp
 {
     public class ViewLocator : IDataTemplate
     {
-
         public Control? Build(object? data)
         {
             if (data is null)

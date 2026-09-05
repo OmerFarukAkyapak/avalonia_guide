@@ -2,155 +2,161 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
 			 xmlns:ui="using:FluentAvalonia.UI.Controls"
 			 xmlns:AvaloniaEdit="clr-namespace:AvaloniaEdit;assembly=AvaloniaEdit"
 			 xmlns:vm="using:AvaloniaGuideApp.ViewModels"
 			 xmlns:local="clr-namespace:AvaloniaGuideApp.Converters"
+			 mc:Ignorable="d"
+			 d:DesignWidth="800"
+			 d:DesignHeight="600"
 			 x:DataType="vm:ConverterUsageWithDataGridWindowViewModel"
 			 x:Class="AvaloniaGuideApp.ConverterUsagePageView">
-	<UserControl.Resources>
-		<local:AgeToIsAdultConverter x:Key="AgeToIsAdultConverter" />
-		<local:SexStatusToBackgroundColorConverter x:Key="SexStatusToBackgroundColorConverter" />
 
+	<UserControl.Resources>
+		<local:AgeToIsAdultConverter x:Key="AgeToIsAdultConverter"/>
+		<local:SexStatusToBackgroundColorConverter x:Key="SexStatusToBackgroundColorConverter"/>
 	</UserControl.Resources>
 
-	<ScrollViewer Padding="20">
-		<StackPanel Spacing="20">
-
-			<StackPanel Spacing="10">
-				<TextBlock Text="Data Grid With Converter Page"
-						   FontWeight="Bold"
-						   FontSize="24"/>
-				<Separator/>
+	<ScrollViewer Padding="24,20"
+				  HorizontalScrollBarVisibility="Disabled">
+		<StackPanel Spacing="20"
+					MaxWidth="1120"
+					HorizontalAlignment="Stretch">
+			<StackPanel Spacing="8"
+						Margin="0,0,0,8">
+				<TextBlock Text="Data grid &amp; converters"
+						   Classes="pageTitle"/>
+				<TextBlock Text="Explore data binding and value converters with an editable people collection."
+						   Classes="pageDescription"/>
 			</StackPanel>
-
-			<Grid RowDefinitions="*,Auto">
-
-				<DataGrid Grid.Row="0"
-						  GridLinesVisibility="All"
-						  ItemsSource="{Binding People}"
-						  AutoGenerateColumns="False">
-					<DataGrid.Columns>
-						<DataGridCheckBoxColumn Header="*"
-												Binding="{Binding IsSelected}"
-												Width="Auto"/>
-
-						<DataGridTextColumn Header="Name"
-											Width="*"
-											Binding="{Binding Name}" />
-
-						<DataGridTemplateColumn Header="Sex"
-												Width="*">
-							<DataGridTemplateColumn.CellTemplate>
-								<DataTemplate>
-									<Border CornerRadius="10"
-											Margin="0 5"
-											Background="{Binding Sex, Converter={StaticResource SexStatusToBackgroundColorConverter}}"
-											HorizontalAlignment="Center">
-										<TextBlock Text="{Binding Sex}"
-												   Padding="5"/>
-									</Border>
-
-								</DataTemplate>
-							</DataGridTemplateColumn.CellTemplate>
-						</DataGridTemplateColumn>
-
-						<DataGridTextColumn Header="Age"
-											Width="*"
-											Binding="{Binding Age}"/>
-
-						<DataGridTemplateColumn Header="Is Adult"
-												Width="*">
-							<DataGridTemplateColumn.CellTemplate>
-								<DataTemplate>
-									<CheckBox IsChecked="{Binding Age, Converter={StaticResource AgeToIsAdultConverter}, Mode=OneWay}"
-											  IsEnabled="False"
-											  HorizontalAlignment="Center"/>
-								</DataTemplate>
-							</DataGridTemplateColumn.CellTemplate>
-						</DataGridTemplateColumn>
-					</DataGrid.Columns>
-				</DataGrid>
-
-				<StackPanel Grid.Row="1"
-							Margin="0 100 0 0"
-							Spacing="10">
-
-					<TextBlock Text="Person Management"
-							   FontWeight="Bold"
-							   FontSize="16"/>
-
-					<StackPanel Orientation="Horizontal"
-								Spacing="10">
-
-						<TextBox Text="{Binding NewPersonName, Mode=TwoWay}"
-								 PlaceholderText="Name"
-								 Width="200"/>
-
-						<ComboBox ItemsSource="{Binding SexTypeList}"
-								  SelectedItem="{Binding SelectedSexType}"
-								  Height="38"/>
-
-						<TextBox Text="{Binding NewPersonAge, Mode=TwoWay}"
-								 PlaceholderText="Age"/>
-
-
-						<Button Command="{Binding AddPersonCommand}">
-							<Button.Content>
-								<StackPanel Orientation="Horizontal"
-											Spacing="10">
-									<Image Source="/Assets/plus.png"
-										   RenderOptions.BitmapInterpolationMode="HighQuality"
-										   Width="16"
-										   Height="16"/>
-
-
-									<Label Content="Add Person"/>
-								</StackPanel>
-
-							</Button.Content>
-						</Button>
-
-						<Button Command="{Binding DeleteSelectedPersonCommand}"
-								HorizontalAlignment="Right">
-							<Button.Content>
-								<StackPanel Orientation="Horizontal"
-											Spacing="10">
-									<Image Source="/Assets/delete.png"
-										   RenderOptions.BitmapInterpolationMode="HighQuality"
-										   Width="16"
-										   Height="16"/>
-
-
-									<Label Content="Delete Selected Person"/>
-								</StackPanel>
-
-							</Button.Content>
-						</Button>
-
-					</StackPanel>
-
-					<ui:FATeachingTip Title="Error"
-									  PreferredPlacement="BottomLeft"
-									  Background="Red"
-									  IsOpen="{Binding IsOpenError, Mode=TwoWay}"
-									  Subtitle="{Binding ErrorMessage}"/>
+			<Border Classes="exampleCard">
+				<StackPanel Spacing="16">
+					<TextBlock Text="People collection"
+							   Classes="sectionTitle"/>
+					<TextBlock Text="Add people, edit the grid and select rows for removal. Adult status is calculated from age."
+							   Classes="pageDescription"/>
+					<Grid RowDefinitions="*,Auto">
+						<DataGrid Grid.Row="0"
+								  GridLinesVisibility="Horizontal"
+								  ItemsSource="{Binding People}"
+								  AutoGenerateColumns="False"
+								  Height="280"
+								  RowHeight="42">
+							<DataGrid.Columns>
+								<DataGridCheckBoxColumn Header="*"
+														Binding="{Binding IsSelected}"
+														Width="Auto"/>
+								<DataGridTextColumn Header="Name"
+													Width="*"
+													Binding="{Binding Name}"/>
+								<DataGridTemplateColumn Header="Sex"
+														Width="*">
+									<DataGridTemplateColumn.CellTemplate>
+										<DataTemplate>
+											<Border CornerRadius="10"
+													Margin="0 5"
+													Background="{Binding Sex, Converter={StaticResource SexStatusToBackgroundColorConverter}}"
+													HorizontalAlignment="Center">
+												<TextBlock Text="{Binding Sex}"
+														   Padding="5"/>
+											</Border>
+										</DataTemplate>
+									</DataGridTemplateColumn.CellTemplate>
+								</DataGridTemplateColumn>
+								<DataGridTextColumn Header="Age"
+													Width="*"
+													Binding="{Binding Age}"/>
+								<DataGridTemplateColumn Header="Is Adult"
+														Width="*">
+									<DataGridTemplateColumn.CellTemplate>
+										<DataTemplate>
+											<CheckBox IsChecked="{Binding Age, Converter={StaticResource AgeToIsAdultConverter}, Mode=OneWay}"
+													  IsEnabled="False"
+													  HorizontalAlignment="Center"/>
+										</DataTemplate>
+									</DataGridTemplateColumn.CellTemplate>
+								</DataGridTemplateColumn>
+							</DataGrid.Columns>
+						</DataGrid>
+						<StackPanel Grid.Row="1"
+									Margin="0,20,0,0"
+									Spacing="10">
+							<TextBlock Text="Person Management"
+									   FontWeight="Bold"
+									   FontSize="16"/>
+							<WrapPanel>
+								<TextBox Text="{Binding NewPersonName, Mode=TwoWay}"
+										 PlaceholderText="Name"
+										 Width="180"
+										 Margin="0,0,10,10"
+										 AutomationProperties.Name="Name"/>
+								<ComboBox ItemsSource="{Binding SexTypeList}"
+										  SelectedItem="{Binding SelectedSexType}"
+										  Height="38"
+										  Margin="0,0,10,10"
+										  MinWidth="110"
+										  AutomationProperties.Name="Sex"/>
+								<TextBox Text="{Binding NewPersonAge, Mode=TwoWay}"
+										 PlaceholderText="Age"
+										 Margin="0,0,10,10"
+										 Width="80"
+										 AutomationProperties.Name="Age"/>
+								<Button Command="{Binding AddPersonCommand}"
+										Classes="exampleAction"
+										HorizontalAlignment="Left"
+										Margin="0,0,10,10">
+									<Button.Content>
+										<StackPanel Orientation="Horizontal"
+													Spacing="10">
+											<Image Source="/Assets/plus.png"
+												   RenderOptions.BitmapInterpolationMode="HighQuality"
+												   Width="16"
+												   Height="16"/>
+											<Label Content="Add Person"/>
+										</StackPanel>
+									</Button.Content>
+								</Button>
+								<Button Command="{Binding DeleteSelectedPersonCommand}"
+										HorizontalAlignment="Left"
+										Classes="exampleAction"
+										Margin="0,0,10,10">
+									<Button.Content>
+										<StackPanel Orientation="Horizontal"
+													Spacing="10">
+											<Image Source="/Assets/delete.png"
+												   RenderOptions.BitmapInterpolationMode="HighQuality"
+												   Width="16"
+												   Height="16"/>
+											<Label Content="Delete Selected Person"/>
+										</StackPanel>
+									</Button.Content>
+								</Button>
+							</WrapPanel>
+							<ui:FATeachingTip Title="Error"
+											  PreferredPlacement="BottomLeft"
+											  IsOpen="{Binding IsOpenError, Mode=TwoWay}"
+											  Subtitle="{Binding ErrorMessage}"/>
+						</StackPanel>
+					</Grid>
 				</StackPanel>
-
-			</Grid>
-
-			<AvaloniaEdit:TextEditor Name="splashCodeEditor"
-									 Margin="20 0"
-									 Height="600"
-									 BorderThickness="5"
-									 BorderBrush="Gray"
-									 Padding="10"
-									 IsReadOnly="True"
-									 FontFamily="Cascadia Code,Consolas,Menlo,Monospace"
-									 FontSize="14"/>
+			</Border>
+			<Border Classes="exampleCard"
+					Padding="0"
+					ClipToBounds="True">
+				<StackPanel>
+					<StackPanel Spacing="4"
+								Margin="20,16">
+						<TextBlock Text="Source code"
+								   Classes="sectionTitle"/>
+						<TextBlock Text="Reference implementation"
+								   Classes="pageDescription"/>
+					</StackPanel>
+					<AvaloniaEdit:TextEditor Name="splashCodeEditor"
+											 IsReadOnly="True"
+											 FontFamily="Cascadia Code,Consolas,Menlo,Monospace"
+											 Classes="exampleCode"/>
+				</StackPanel>
+			</Border>
 		</StackPanel>
-
-
 	</ScrollViewer>
 </UserControl>

@@ -3,39 +3,37 @@
 		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:ui="using:FluentAvalonia.UI.Controls"
-		mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="200"
-		Width="600"
-		Height="200"
+		mc:Ignorable="d"
+		d:DesignWidth="600"
+		d:DesignHeight="200"
+		Width="500"
+		Height="220"
 		x:Class="AvaloniaGuideApp.ProgressDialog"
 		WindowStartupLocation="CenterOwner"
 		ExtendClientAreaToDecorationsHint="True"
-		ExtendClientAreaTitleBarHeightHint="0">
+		ExtendClientAreaTitleBarHeightHint="0"
+		CanResize="False">
 
-	<StackPanel Margin="20">
-
+	<StackPanel Margin="24">
 		<Label Name="lblTitle"
 			   Content="Title"
 			   FontSize="24"
 			   FontWeight="Bold"/>
-
-		<StackPanel Orientation="Horizontal" Spacing="20">
+		<StackPanel Orientation="Horizontal"
+					Spacing="20">
 			<Border Padding="20">
 				<ui:FAProgressRing IsIndeterminate="True"
-								   BorderThickness="10"
-								   Width="75"
-								   Height="75"/>
+								   Width="44"
+								   Height="44"/>
 			</Border>
-
 			<TextBlock Name="txtContent"
 					   Text="Content ..."
-					   FontSize="16"
-					   FontWeight="SemiBold"
+					   FontSize="14"
+					   FontWeight="Normal"
 					   TextWrapping="Wrap"
-					   MaxWidth="400"
+					   MaxWidth="310"
 					   HorizontalAlignment="Center"
 					   VerticalAlignment="Center"/>
-
 		</StackPanel>
 	</StackPanel>
-
 </Window>

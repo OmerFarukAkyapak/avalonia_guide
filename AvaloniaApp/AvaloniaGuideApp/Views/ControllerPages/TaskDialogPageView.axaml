@@ -2,72 +2,95 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
 			 xmlns:AvaloniaEdit="clr-namespace:AvaloniaEdit;assembly=AvaloniaEdit"
+			 mc:Ignorable="d"
+			 d:DesignWidth="800"
+			 d:DesignHeight="450"
 			 x:Class="AvaloniaGuideApp.TaskDialogPageView">
-	<ScrollViewer Padding="20" >
-		<StackPanel Spacing="20">
 
-			<StackPanel Spacing="15">
-				<TextBlock Text="Task Dialogs Page"
-						   FontWeight="Bold"
-						   FontSize="24"/>
-				<Separator/>
+	<ScrollViewer Padding="24,20"
+				  HorizontalScrollBarVisibility="Disabled">
+		<StackPanel Spacing="20"
+					MaxWidth="1120"
+					HorizontalAlignment="Stretch">
+			<StackPanel Spacing="8"
+						Margin="0,0,0,8">
+				<TextBlock Text="Task dialogs"
+						   Classes="pageTitle"/>
+				<TextBlock Text="Communicate status and ask for confirmation with clear, consistent dialogs."
+						   Classes="pageDescription"/>
 			</StackPanel>
-
-			<StackPanel VerticalAlignment="Center" Spacing="20">
-				<Button Content="Show Warning Dialog"
-						HorizontalAlignment="Center"
-						VerticalAlignment="Center"
-						Click="btnWarning_Click"/>
-
-				<Button Content="Show Error Dialog"
-						HorizontalAlignment="Center"
-						VerticalAlignment="Center"
-						Click="btnError_Click"/>
-
-				<Button Content="Show Success Dialog"
-						HorizontalAlignment="Center"
-						VerticalAlignment="Center"
-						Click="btnSuccess_Click"/>
-
-				<Button Content="Show Information Dialog"
-						HorizontalAlignment="Center"
-						VerticalAlignment="Center"
-						Click="btnInformation_Click"/>
-
-				<Button Content="Show Question Dialog"
-						HorizontalAlignment="Center"
-						VerticalAlignment="Center"
-						Click="btnQuestion_Click"/>
-
-				<StackPanel Orientation="Horizontal"
-							Spacing="10"
-							HorizontalAlignment="Center">
-
-					<TextBlock Text="Dialog Result :"
-							   VerticalAlignment="Center"
-							   HorizontalAlignment="Center"/>
-
-					<TextBlock Name="txtDialogResult"
-							   VerticalAlignment="Center"
-							   HorizontalAlignment="Center"
-							   FontWeight="Bold"/>
-
+			<Border Classes="exampleCard">
+				<StackPanel Spacing="16">
+					<TextBlock Text="Choose a dialog"
+							   Classes="sectionTitle"/>
+					<TextBlock Text="Explore the different message types or ask a question to inspect the result."
+							   Classes="pageDescription"/>
+					<StackPanel VerticalAlignment="Center"
+								Spacing="16">
+						<WrapPanel>
+							<Button Content="Show Warning Dialog"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									Click="btnWarning_Click"
+									Classes="exampleAction"
+									Margin="0,0,10,10"/>
+							<Button Content="Show Error Dialog"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									Click="btnError_Click"
+									Classes="exampleAction"
+									Margin="0,0,10,10"/>
+							<Button Content="Show Success Dialog"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									Click="btnSuccess_Click"
+									Classes="exampleAction"
+									Margin="0,0,10,10"/>
+							<Button Content="Show Information Dialog"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									Click="btnInformation_Click"
+									Classes="exampleAction"
+									Margin="0,0,10,10"/>
+							<Button Content="Show Question Dialog"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									Click="btnQuestion_Click"
+									Classes="exampleAction"
+									Margin="0,0,10,10"/>
+						</WrapPanel>
+						<StackPanel Orientation="Horizontal"
+									Spacing="10"
+									HorizontalAlignment="Center">
+							<TextBlock Text="Dialog Result :"
+									   VerticalAlignment="Center"
+									   HorizontalAlignment="Center"/>
+							<TextBlock Name="txtDialogResult"
+									   VerticalAlignment="Center"
+									   HorizontalAlignment="Center"
+									   FontWeight="Bold"/>
+						</StackPanel>
+					</StackPanel>
 				</StackPanel>
-
-				<AvaloniaEdit:TextEditor Name="splashCodeEditor"
-										 Margin="20 0"
-										 Height="600"
-										 BorderThickness="5"
-										 BorderBrush="Gray"
-										 Padding="10"
-										 IsReadOnly="True"
-										 FontFamily="Cascadia Code,Consolas,Menlo,Monospace"
-										 FontSize="14"/>
-
-			</StackPanel>
+			</Border>
+			<Border Classes="exampleCard"
+					Padding="0"
+					ClipToBounds="True">
+				<StackPanel>
+					<StackPanel Spacing="4"
+								Margin="20,16">
+						<TextBlock Text="Source code"
+								   Classes="sectionTitle"/>
+						<TextBlock Text="Reference implementation"
+								   Classes="pageDescription"/>
+					</StackPanel>
+					<AvaloniaEdit:TextEditor Name="splashCodeEditor"
+											 IsReadOnly="True"
+											 FontFamily="Cascadia Code,Consolas,Menlo,Monospace"
+											 Classes="exampleCode"/>
+				</StackPanel>
+			</Border>
 		</StackPanel>
-
 	</ScrollViewer>
 </UserControl>
